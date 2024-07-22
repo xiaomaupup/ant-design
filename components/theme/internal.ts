@@ -12,13 +12,15 @@ import { PresetColors } from './interface';
 import { getLineHeight } from './themes/shared/genFontSizes';
 import useToken from './useToken';
 import type { FullToken, GetDefaultToken } from './util/genComponentStyleHook';
-import genComponentStyleHook, {
+import {
+  genComponentStyleHook,
   genStyleHooks,
   genSubStyleComponent,
 } from './util/genComponentStyleHook';
 import genPresetColor from './util/genPresetColor';
-import statisticToken, { merge as mergeToken } from './util/statistic';
 import useResetIconStyle from './util/useResetIconStyle';
+
+export { mergeToken, statisticToken } from '@ant-design/cssinjs-utils';
 
 export { DesignTokenContext, defaultConfig } from './context';
 export {
@@ -27,8 +29,6 @@ export {
   genSubStyleComponent,
   genPresetColor,
   genStyleHooks,
-  mergeToken,
-  statisticToken,
   calc,
   getLineHeight,
   // hooks

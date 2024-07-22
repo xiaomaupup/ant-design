@@ -5,6 +5,7 @@ import type { AliasToken } from './alias';
 import type { ComponentTokenMap } from './components';
 import type { MapToken } from './maps';
 import type { SeedToken } from './seeds';
+import type { GlobalToken as OrgGlobalToken } from '@ant-design/cssinjs-utils';
 
 export type MappingAlgorithm = DerivativeFunc<SeedToken, MapToken>;
 
@@ -13,7 +14,7 @@ export type OverrideToken = {
 };
 
 /** Final token which contains the components level override */
-export type GlobalToken = AliasToken & ComponentTokenMap;
+export type GlobalToken = OrgGlobalToken<ComponentTokenMap, AliasToken>;
 
 export type { AliasToken } from './alias';
 export type { ComponentTokenMap } from './components';
