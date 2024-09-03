@@ -8,6 +8,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:markdown/recommended-legacy',
   ],
+  files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.md', '**/*.json'],
   env: {
     browser: true,
     node: true,
