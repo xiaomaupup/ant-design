@@ -14,6 +14,8 @@ export default [
       '.dumi/tmp',
       '.dumi/tmp-production',
     ],
+  },
+  {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.md'],
     languageOptions: { globals: globals.browser },
   },
