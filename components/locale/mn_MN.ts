@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import Pagination from 'rc-pagination/lib/locale/mn_MN';
 
 import type { Locale } from '.';

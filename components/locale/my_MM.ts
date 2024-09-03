@@ -1,6 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
 import Pagination from 'rc-pagination/lib/locale/my_MM';
-
 import type { Locale } from '.';
 import Calendar from '../calendar/locale/my_MM';
 import DatePicker from '../date-picker/locale/my_MM';
