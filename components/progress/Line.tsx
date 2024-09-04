@@ -33,7 +33,7 @@ interface LineProps extends ProgressProps {
 export const sortGradient = (gradients: StringGradients) => {
   let tempArr: any[] = [];
   Object.keys(gradients).forEach((key) => {
-    const formattedKey = Number.parseFloat(key.replace(/%/g, ''));
+    const formattedKey = parseFloat(key.replace(/%/g, ''));
     if (!isNaN(formattedKey)) {
       tempArr.push({
         key: formattedKey,

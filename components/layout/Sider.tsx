@@ -155,7 +155,7 @@ const Sider = React.forwardRef<HTMLDivElement, SiderProps>((props, ref) => {
     const siderWidth = isNumeric(rawWidth) ? `${rawWidth}px` : String(rawWidth);
     // special trigger when collapsedWidth == 0
     const zeroWidthTrigger =
-      Number.parseFloat(String(collapsedWidth || 0)) === 0 ? (
+      parseFloat(String(collapsedWidth || 0)) === 0 ? (
         <span
           onClick={toggle}
           className={classNames(
@@ -197,7 +197,7 @@ const Sider = React.forwardRef<HTMLDivElement, SiderProps>((props, ref) => {
         [`${prefixCls}-collapsed`]: !!collapsed,
         [`${prefixCls}-has-trigger`]: collapsible && trigger !== null && !zeroWidthTrigger,
         [`${prefixCls}-below`]: !!below,
-        [`${prefixCls}-zero-width`]: Number.parseFloat(siderWidth) === 0,
+        [`${prefixCls}-zero-width`]: parseFloat(siderWidth) === 0,
       },
       className,
     );
