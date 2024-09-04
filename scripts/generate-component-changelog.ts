@@ -145,7 +145,7 @@ const miscKeys = [
 
       let changelogLine = line.trim().replace('- ', '');
       changelogLine = changelogLine
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (...match) => {
+        .replace(/\[([^\]]+)]\(([^)]+)\)/g, (...match) => {
           const [, title, ref] = match;
           if (ref.includes('/pull/')) {
             refs.push(ref);

@@ -18,10 +18,10 @@ const range = (start: number, end: number) => {
   return result;
 };
 
-const disabledDate: RangePickerProps['disabledDate'] = (current) => {
+const disabledDate: RangePickerProps['disabledDate'] = (current) => 
   // Can not select days before today and today
-  return current && current < dayjs().endOf('day');
-};
+   current && current < dayjs().endOf('day')
+;
 
 const disabledDateTime = () => ({
   disabledHours: () => range(0, 24).splice(4, 20),
