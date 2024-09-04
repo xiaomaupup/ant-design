@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 
-// eslint-disable-next-line import/no-unresolved
 import type { InputProps, InputRef } from '..';
 import Input from '..';
 import { resetWarned } from '../../_util/warning';
@@ -11,7 +10,7 @@ import { fireEvent, render } from '../../../tests/utils';
 import Form from '../../form';
 import { triggerFocus } from '../Input';
 
-describe('Input', () => {
+describe('input', () => {
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
   afterEach(() => {
@@ -156,7 +155,7 @@ describe('prefix and suffix', () => {
   });
 });
 
-describe('Input setting hidden', () => {
+describe('input setting hidden', () => {
   it('should support hidden when has prefix or suffix or showCount or allowClear or addonBefore or addonAfter', () => {
     const { container } = render(
       <>
@@ -188,7 +187,7 @@ describe('Input setting hidden', () => {
           showCount
           allowClear
           prefix="11"
-          // @ts-ignore
+          // @ts-expect-error fix it later
           suffix="22"
           addonBefore="http://"
           addonAfter=".com"
@@ -215,7 +214,7 @@ describe('Input setting hidden', () => {
   });
 });
 
-describe('As Form Control', () => {
+describe('as Form Control', () => {
   it('should be reset when wrapped in form.getFieldDecorator without initialValue', () => {
     const Demo = () => {
       const [form] = Form.useForm();
@@ -291,7 +290,7 @@ describe('should support showCount', () => {
   });
 });
 
-describe('Input allowClear', () => {
+describe('input allowClear', () => {
   it('should change type when click', () => {
     const { asFragment, container } = render(<Input allowClear />);
     fireEvent.change(container.querySelector('input')!, { target: { value: '111' } });
@@ -303,7 +302,7 @@ describe('Input allowClear', () => {
   });
 
   it('should not show icon if value is undefined, null or empty string', () => {
-    // @ts-ignore
+    // @ts-expect-error fix it later
     const wrappers = [null, undefined, ''].map((val) => render(<Input allowClear value={val} />));
     wrappers.forEach(({ asFragment, container }) => {
       expect(container.querySelector('input')?.value).toEqual('');
@@ -314,7 +313,7 @@ describe('Input allowClear', () => {
 
   it('should not show icon if defaultValue is undefined, null or empty string', () => {
     const wrappers = [null, undefined, ''].map((val) =>
-      // @ts-ignore
+      // @ts-expect-error fix it later
       render(<Input allowClear defaultValue={val} />),
     );
     wrappers.forEach(({ asFragment, container }) => {
@@ -427,10 +426,10 @@ describe('Input allowClear', () => {
   });
 
   it('should display boolean value as string', () => {
-    // @ts-ignore
+    // @ts-expect-error fix it later
     const { container, rerender } = render(<Input value />);
     expect(container.querySelector('input')?.value).toBe('true');
-    // @ts-ignore
+    // @ts-expect-error fix it later
     rerender(<Input value={false} />);
     expect(container.querySelector('input')?.value).toBe('false');
   });
@@ -539,7 +538,7 @@ describe('Input allowClear', () => {
 });
 
 describe('typescript types', () => {
-  it('InputProps type should support data-* attributes', () => {
+  it('inputProps type should support data-* attributes', () => {
     const props: InputProps = {
       value: 123,
 

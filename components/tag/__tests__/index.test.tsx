@@ -20,7 +20,7 @@ function waitRaf() {
   });
 }
 
-describe('Tag', () => {
+describe('tag', () => {
   mountTest(Tag);
   mountTest(() => <Tag.CheckableTag checked={false} />);
   rtlTest(Tag);
@@ -168,7 +168,7 @@ describe('Tag', () => {
     });
   });
 
-  describe('CheckableTag', () => {
+  describe('checkableTag', () => {
     it('support onChange', () => {
       const onChange = jest.fn();
       const { container } = render(<Tag.CheckableTag checked={false} onChange={onChange} />);

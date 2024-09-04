@@ -4,8 +4,8 @@ import Menu from '..';
 import type { MenuItemProps } from '..';
 import type { MenuItemType } from '../interface';
 
-describe('Menu.typescript', () => {
-  it('Menu.items', () => {
+describe('menu.typescript', () => {
+  it('menu.items', () => {
     const menu = (
       <Menu
         items={[
@@ -41,7 +41,7 @@ describe('Menu.typescript', () => {
     expect(menu).toBeTruthy();
   });
 
-  it('Menu.items should accept custom item type', () => {
+  it('menu.items should accept custom item type', () => {
     interface CustomItemType extends MenuItemType {
       'data-x': number;
     }
@@ -81,7 +81,7 @@ describe('Menu.typescript', () => {
     expect(menu).toBeTruthy();
   });
 
-  it('MenuItem.props should accept custom props', () => {
+  it('menuItem.props should accept custom props', () => {
     interface CustomItemProps extends MenuItemProps {
       'data-x': number;
     }

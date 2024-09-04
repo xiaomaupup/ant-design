@@ -1,10 +1,10 @@
 /* eslint-disable no-template-curly-in-string */
 import Pagination from 'rc-pagination/lib/locale/is_IS';
 
-import type { Locale } from '.';
 import Calendar from '../calendar/locale/is_IS';
 import DatePicker from '../date-picker/locale/is_IS';
 import TimePicker from '../time-picker/locale/is_IS';
+import type { Locale } from '.';
 
 const typeTemplate = '${label} er ekki gilt ${type}';
 

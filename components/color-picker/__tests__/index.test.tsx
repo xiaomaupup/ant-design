@@ -48,7 +48,7 @@ function doMouseMove(
   fireEvent(document, mouseUp);
 }
 
-describe('ColorPicker', () => {
+describe('colorPicker', () => {
   mountTest(ColorPicker);
   rtlTest(ColorPicker);
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
@@ -62,19 +62,19 @@ describe('ColorPicker', () => {
     jest.useRealTimers();
   });
 
-  it('Should component render correct', () => {
+  it('should component render correct', () => {
     const { container } = render(<ColorPicker />);
     expect(container.querySelector('.ant-color-picker-trigger')).toBeTruthy();
   });
 
-  it('Should component defaultValue work', () => {
+  it('should component defaultValue work', () => {
     const { container } = render(<ColorPicker defaultValue="#000000" />);
     expect(
       container.querySelector('.ant-color-picker-color-block-inner')?.getAttribute('style'),
     ).toEqual('background: rgb(0, 0, 0);');
   });
 
-  it('Should component custom trigger work', async () => {
+  it('should component custom trigger work', async () => {
     const App: React.FC = () => {
       const [color, setColor] = useState<AggregationColor | string>('hsb(215, 91%, 100%)');
       const colorString = useMemo(
@@ -105,7 +105,7 @@ describe('ColorPicker', () => {
     expect(container.querySelector('.custom-trigger')?.innerHTML).toEqual('hsb(0, 78%, 39%)');
   });
 
-  it('Should popup open work', async () => {
+  it('should popup open work', async () => {
     const { container } = render(<ColorPicker />);
     fireEvent.click(container.querySelector('.ant-color-picker-trigger')!);
     await waitFakeTimer();
@@ -115,7 +115,7 @@ describe('ColorPicker', () => {
     expect(container.querySelector('.ant-popover-hidden')).toBeTruthy();
   });
 
-  it('Should disabled work', async () => {
+  it('should disabled work', async () => {
     const { container } = render(<ColorPicker disabled />);
     expect(container.querySelector('.ant-color-picker-trigger-disabled')).toBeTruthy();
     expect(container).toMatchSnapshot();
@@ -124,7 +124,7 @@ describe('ColorPicker', () => {
     expect(container.querySelector('.ant-color-picker')).toBeFalsy();
   });
 
-  it('Should allowClear and onClear work', async () => {
+  it('should allowClear and onClear work', async () => {
     const onClear = jest.fn();
     const { container } = render(
       <ColorPicker defaultValue="#1677ff" allowClear onClear={onClear} />,
@@ -151,7 +151,7 @@ describe('ColorPicker', () => {
     ).toEqual('100%');
   });
 
-  it('Should render trigger work', async () => {
+  it('should render trigger work', async () => {
     const { container } = render(
       <ColorPicker>
         <div className="trigger" />
@@ -167,7 +167,7 @@ describe('ColorPicker', () => {
     expect(container.querySelector('.ant-popover-hidden')).toBeTruthy();
   });
 
-  it('Should preset color work', async () => {
+  it('should preset color work', async () => {
     const handleColorChange = jest.fn();
 
     const { container } = render(
@@ -247,13 +247,13 @@ describe('ColorPicker', () => {
 
     const selector = '.ant-color-picker-presets .ant-collapse-item.ant-collapse-item-active';
 
-    it('Should default collapsed work', async () => {
+    it('should default collapsed work', async () => {
       const { container } = render(<ColorPicker open presets={[recommendedPreset]} />);
 
       expect(container.querySelectorAll(selector)).toHaveLength(1);
     });
 
-    it('Should collapsed work', async () => {
+    it('should collapsed work', async () => {
       const { container } = render(
         <ColorPicker
           open
@@ -272,7 +272,7 @@ describe('ColorPicker', () => {
     });
   });
 
-  it('Should format change work', async () => {
+  it('should format change work', async () => {
     const { container } = render(<ColorPicker />);
     fireEvent.click(container.querySelector('.ant-color-picker-trigger')!);
     await waitFakeTimer();
@@ -294,7 +294,7 @@ describe('ColorPicker', () => {
     expect(container.querySelector('.ant-color-picker-rgb-input')).toBeTruthy();
   });
 
-  it('Should hex input work', async () => {
+  it('should hex input work', async () => {
     const { container } = render(<ColorPicker open format="hex" />);
     fireEvent.change(container.querySelector('.ant-color-picker-hex-input input')!, {
       target: { value: 631515 },
@@ -304,7 +304,7 @@ describe('ColorPicker', () => {
     ).toEqual('background: rgb(99, 21, 21);');
   });
 
-  it('Should rgb input work', async () => {
+  it('should rgb input work', async () => {
     const { container } = render(<ColorPicker open format="rgb" />);
     const rgbInputEls = container.querySelectorAll('.ant-color-picker-rgb-input input');
     fireEvent.change(rgbInputEls[0], {
@@ -321,7 +321,7 @@ describe('ColorPicker', () => {
     ).toEqual('background: rgb(99, 21, 21);');
   });
 
-  it('Should hsb input work', async () => {
+  it('should hsb input work', async () => {
     const { container } = render(<ColorPicker open format="hsb" />);
     const hsbInputEls = container.querySelectorAll('.ant-color-picker-hsb-input input');
     fireEvent.change(hsbInputEls[0], {
@@ -338,7 +338,7 @@ describe('ColorPicker', () => {
     ).toEqual('background: rgb(99, 22, 22);');
   });
 
-  it('Should not trigger onChange when click clear after clearing', async () => {
+  it('should not trigger onChange when click clear after clearing', async () => {
     const onChange = jest.fn();
     const { container } = render(
       <ColorPicker defaultValue="#1677ff" allowClear onChange={onChange} />,
@@ -350,7 +350,7 @@ describe('ColorPicker', () => {
     expect(onChange).toHaveBeenCalledTimes(1);
   });
 
-  it('Should fix hover boundary issues', async () => {
+  it('should fix hover boundary issues', async () => {
     const spyRect = spyElementPrototypes(HTMLElement, {
       getBoundingClientRect: () => ({
         x: 0,
@@ -371,7 +371,7 @@ describe('ColorPicker', () => {
     spyRect.mockRestore();
   });
 
-  it('Should work at dark mode', async () => {
+  it('should work at dark mode', async () => {
     const { container } = render(
       <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
         <ColorPicker
@@ -389,7 +389,7 @@ describe('ColorPicker', () => {
     expect(container.querySelector('.ant-color-picker-presets-color-bright')).toBeFalsy();
   });
 
-  it('Should showText as render function work', async () => {
+  it('should showText as render function work', async () => {
     const { container } = render(
       <ColorPicker defaultValue="#1677ff" showText={(color) => color.toHexString()} />,
     );
@@ -404,7 +404,7 @@ describe('ColorPicker', () => {
     expect(targetEle?.textContent).toBe('Transparent');
   });
 
-  it('Should showText work', async () => {
+  it('should showText work', async () => {
     const { container } = render(<ColorPicker defaultValue="#1677ff" open showText />);
     const targetEle = container.querySelector('.ant-color-picker-trigger-text');
     expect(targetEle).toBeTruthy();
@@ -434,14 +434,14 @@ describe('ColorPicker', () => {
     expect(targetEle?.innerHTML).toEqual('#1677FF');
   });
 
-  it('Should size work', async () => {
+  it('should size work', async () => {
     const { container: lg } = render(<ColorPicker size="large" />);
     expect(lg.querySelector('.ant-color-picker-lg')).toBeTruthy();
     const { container: sm } = render(<ColorPicker size="small" />);
     expect(sm.querySelector('.ant-color-picker-sm')).toBeTruthy();
   });
 
-  it('Should panelRender work', async () => {
+  it('should panelRender work', async () => {
     const { container: panelContainer } = render(
       <ColorPicker open panelRender={(panel) => <div className="custom-panel">{panel}</div>} />,
     );
@@ -466,7 +466,7 @@ describe('ColorPicker', () => {
     expect(componentContainer).toMatchSnapshot();
   });
 
-  it('Should null work as expect', async () => {
+  it('should null work as expect', async () => {
     const spyRect = spyElementPrototypes(HTMLElement, {
       getBoundingClientRect: () => ({
         x: 0,
@@ -522,7 +522,7 @@ describe('ColorPicker', () => {
     );
   });
 
-  it('Should onChangeComplete work', async () => {
+  it('should onChangeComplete work', async () => {
     const spyRect = spyElementPrototypes(HTMLElement, {
       getBoundingClientRect: () => ({
         x: 0,
@@ -556,14 +556,14 @@ describe('ColorPicker', () => {
     spyRect.mockRestore();
   });
 
-  it('Should disabledAlpha work', async () => {
+  it('should disabledAlpha work', async () => {
     const { container } = render(<ColorPicker open disabledAlpha />);
     expect(container.querySelector('.ant-color-picker-slider-group-disabled-alpha')).toBeTruthy();
     expect(container.querySelector('.ant-color-picker-slider-alpha')).toBeFalsy();
     expect(container.querySelector('.ant-color-picker-alpha-input')).toBeFalsy();
   });
 
-  it('Should disabledAlpha work with value', async () => {
+  it('should disabledAlpha work with value', async () => {
     const spyRect = spyElementPrototypes(HTMLElement, {
       getBoundingClientRect: () => ({
         x: 0,
@@ -603,12 +603,12 @@ describe('ColorPicker', () => {
     spyRect.mockRestore();
   });
 
-  it('Should warning work when set disabledAlpha true and color is alpha color', () => {
+  it('should warning work when set disabledAlpha true and color is alpha color', () => {
     render(<ColorPicker disabledAlpha value="#1677ff" />);
     expect(errorSpy).not.toHaveBeenCalled();
   });
 
-  it('Should not show popup when disabled', async () => {
+  it('should not show popup when disabled', async () => {
     const Demo = () => {
       const [disabled, setDisabled] = useState(false);
       return (
@@ -645,20 +645,18 @@ describe('ColorPicker', () => {
     expect(document.body.querySelector('.ant-popover')).toBeFalsy();
   });
 
-  it('Should defaultFormat work', () => {
+  it('should defaultFormat work', () => {
     const { container } = render(<ColorPicker open defaultFormat="hsb" />);
     expect(container.querySelector('.ant-color-picker-hsb-input')).toBeTruthy();
   });
 
-  it('Should clear show when value not set', () => {
+  it('should clear show when value not set', () => {
     const { container } = render(<ColorPicker />);
     expect(container.querySelector('.ant-color-picker-clear')).toBeTruthy();
   });
 
   ['', null].forEach((value) => {
-    it(`When controlled and without an initial value, then changing the controlled value to valid color should be reflected correctly on the DOM. [${String(
-      value,
-    )}]`, async () => {
+    it(`when controlled and without an initial value, then changing the controlled value to valid color should be reflected correctly on the DOM. [`, async () => {
       const Demo = () => {
         const [color, setColor] = useState<ColorValueType>(value);
         useEffect(() => {
@@ -673,9 +671,7 @@ describe('ColorPicker', () => {
       });
     });
 
-    it(`When controlled and has an initial value, then changing the controlled value to cleared color should be reflected correctly on the DOM. [${String(
-      value,
-    )}]`, async () => {
+    it(`when controlled and has an initial value, then changing the controlled value to cleared color should be reflected correctly on the DOM. [`, async () => {
       const Demo = () => {
         const [color, setColor] = useState<ColorValueType>(generateColor('red'));
         useEffect(() => {
@@ -689,7 +685,7 @@ describe('ColorPicker', () => {
     });
   });
 
-  it('Controlled string value should work with allowClear correctly', async () => {
+  it('controlled string value should work with allowClear correctly', async () => {
     const Demo = (props: any) => {
       const [color, setColor] = useState<ColorValueType>(generateColor('#FF0000'));
 
@@ -728,7 +724,7 @@ describe('ColorPicker', () => {
     ).toBeFalsy();
   });
 
-  it('Controlled value should work with allowClear correctly', async () => {
+  it('controlled value should work with allowClear correctly', async () => {
     const Demo = (props: any) => {
       const [color, setColor] = useState<ColorValueType>(generateColor('red'));
 

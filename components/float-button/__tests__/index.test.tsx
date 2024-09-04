@@ -6,7 +6,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 import getOffset from '../util';
 
-describe('FloatButton', () => {
+describe('floatButton', () => {
   mountTest(FloatButton);
   rtlTest(FloatButton);
   it('should correct render', () => {

@@ -6,7 +6,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { render } from '../../../tests/utils';
 import Button from '../../button';
 
-describe('Result', () => {
+describe('result', () => {
   mountTest(Result);
   rtlTest(Result);
 

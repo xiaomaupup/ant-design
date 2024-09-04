@@ -7,7 +7,7 @@ import { render } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 import theme from '../../theme';
 
-describe('Empty', () => {
+describe('empty', () => {
   mountTest(Empty);
   rtlTest(Empty);
 

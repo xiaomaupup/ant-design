@@ -5,7 +5,7 @@ import { render } from '../../../tests/utils';
 
 jest.mock('rc-util/lib/Dom/canUseDom', () => () => false);
 
-describe('Grid.Server', () => {
+describe('grid.Server', () => {
   it('use compatible gap logic', () => {
     const { container } = render(
       <Row gutter={[8, 16]}>

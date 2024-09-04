@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Icon image', () => {
+describe('icon image', () => {
   imageDemoTest('icon', { skip: ['basic.tsx'] });
 });

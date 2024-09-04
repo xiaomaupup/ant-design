@@ -1,6 +1,6 @@
 import ConfigProvider, { defaultPrefixCls, globalConfig } from '..';
 
-describe('ConfigProvider.config', () => {
+describe('configProvider.config', () => {
   it('rootPrefixCls', () => {
     expect(globalConfig().getRootPrefixCls()).toEqual(defaultPrefixCls);
 

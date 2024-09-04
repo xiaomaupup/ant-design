@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Modal image', () => {
+describe('modal image', () => {
   imageDemoTest('modal');
 });

@@ -4,7 +4,7 @@ import ConfigProvider from '..';
 import { render } from '../../../tests/utils';
 import Pagination from '../../pagination';
 
-describe('ConfigProvider.Pagination', () => {
+describe('configProvider.Pagination', () => {
   it('showSizeChanger', () => {
     // Default have
     const sharedNode = <Pagination total={1000} />;

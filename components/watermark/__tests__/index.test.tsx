@@ -7,7 +7,7 @@ import { render, waitFakeTimer } from '../../../tests/utils';
 import Drawer from '../../drawer';
 import Modal from '../../modal';
 
-describe('Watermark', () => {
+describe('watermark', () => {
   mountTest(Watermark);
   rtlTest(Watermark);
 
@@ -15,7 +15,7 @@ describe('Watermark', () => {
 
   beforeAll(() => {
     mockSrcSet.mockImplementation(function fn() {
-      // @ts-ignore
+      // @ts-expect-error fix it later
       this.onload?.();
     });
   });
@@ -32,13 +32,13 @@ describe('Watermark', () => {
     jest.useRealTimers();
   });
 
-  it('The watermark should render successfully', () => {
+  it('the watermark should render successfully', () => {
     const { container } = render(<Watermark className="watermark" content="Ant Design" />);
     expect(container.querySelector('.watermark div')).toBeTruthy();
     expect(container).toMatchSnapshot();
   });
 
-  it('The offset should be correct', () => {
+  it('the offset should be correct', () => {
     const { container } = render(
       <Watermark
         className="watermark"
@@ -54,7 +54,7 @@ describe('Watermark', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Interleaved watermark backgroundSize is correct', () => {
+  it('interleaved watermark backgroundSize is correct', () => {
     const { container } = render(
       <Watermark
         className="watermark"
@@ -69,16 +69,16 @@ describe('Watermark', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Image watermark snapshot', () => {
+  it('image watermark snapshot', () => {
     const { container } = render(
       <Watermark image="https://gw.alipayobjects.com/zos/bmw-prod/59a18171-ae17-4fc5-93a0-2645f64a3aca.svg" />,
     );
     expect(container).toMatchSnapshot();
   });
 
-  it('Invalid image watermark', () => {
+  it('invalid image watermark', () => {
     mockSrcSet.mockImplementation(function fn() {
-      // @ts-ignore
+      // @ts-expect-error fix it later
       this.onerror?.();
     });
     const { container } = render(
@@ -88,7 +88,7 @@ describe('Watermark', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('MutationObserver should work properly', async () => {
+  it('mutationObserver should work properly', async () => {
     const { container } = render(<Watermark className="watermark" content="MutationObserver" />);
     const target = container.querySelector<HTMLDivElement>('.watermark div');
     await waitFakeTimer();
@@ -97,7 +97,7 @@ describe('Watermark', () => {
     expect(container).toMatchSnapshot();
   });
 
-  describe('Observe the modification of style', () => {
+  describe('observe the modification of style', () => {
     it('watermark', async () => {
       const { container } = render(
         <Watermark offset={[-200, -200]} className="watermark" content="MutationObserver" />,

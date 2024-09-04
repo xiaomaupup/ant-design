@@ -7,8 +7,8 @@ import DatePicker from '../../date-picker';
 import Drawer from '../../drawer';
 import Slider from '../../slider';
 
-describe('ConfigProvider.GetPopupContainer', () => {
-  it('Datepicker', () => {
+describe('configProvider.GetPopupContainer', () => {
+  it('datepicker', () => {
     const getPopupContainer = jest.fn((node) => node.parentNode);
     render(
       <ConfigProvider getPopupContainer={getPopupContainer}>
@@ -18,7 +18,7 @@ describe('ConfigProvider.GetPopupContainer', () => {
     expect(getPopupContainer).toHaveBeenCalled();
   });
 
-  it('Slider', () => {
+  it('slider', () => {
     const getPopupContainer = jest.fn((node) => node.parentNode);
     const wrapper = render(
       <ConfigProvider getPopupContainer={getPopupContainer}>
@@ -29,7 +29,7 @@ describe('ConfigProvider.GetPopupContainer', () => {
     expect(getPopupContainer).toHaveBeenCalled();
   });
 
-  it('Drawer', () => {
+  it('drawer', () => {
     const getPopupContainer = jest.fn((node) => node.parentNode);
     const Demo: React.FC<{ open?: boolean }> = ({ open }) => (
       <ConfigProvider getPopupContainer={getPopupContainer}>
@@ -40,7 +40,7 @@ describe('ConfigProvider.GetPopupContainer', () => {
     expect(getPopupContainer).toHaveBeenCalled();
   });
 
-  it('Cascader', () => {
+  it('cascader', () => {
     const getPopupContainer = jest.fn((node) => node.parentNode);
     render(<Cascader getPopupContainer={getPopupContainer} open />);
     expect(getPopupContainer).toHaveBeenCalled();

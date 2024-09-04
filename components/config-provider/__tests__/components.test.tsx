@@ -61,7 +61,7 @@ import Upload from '../../upload';
 dayjs.extend(customParseFormat);
 jest.mock('rc-util/lib/Portal');
 
-describe('ConfigProvider', () => {
+describe('configProvider', () => {
   describe('components', () => {
     function testPair(name: string, renderComponent: (props?: any) => React.ReactElement): void {
       const isArray = ['Menu', 'TimePicker', 'Tooltip'].includes(name);
@@ -237,7 +237,7 @@ describe('ConfigProvider', () => {
     testPair('ColorPicker', (props) => <ColorPicker {...props} />);
 
     // DatePicker
-    describe('DatePicker', () => {
+    describe('datePicker', () => {
       testPair('DatePicker', (props) => (
         <div>
           <DatePicker {...props} />

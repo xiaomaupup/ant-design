@@ -17,7 +17,7 @@ dayjs.extend(customParseFormat);
 
 const { MonthPicker, WeekPicker } = DatePicker;
 
-describe('Picker format by locale', () => {
+describe('picker format by locale', () => {
   const myLocale = {
     ...locale,
     DatePicker: {
@@ -47,7 +47,7 @@ describe('Picker format by locale', () => {
   matchPicker('month', MonthPicker);
 });
 
-describe('MonthPicker and WeekPicker', () => {
+describe('monthPicker and WeekPicker', () => {
   it('render MonthPicker', () => {
     const birthday = dayjs('2000-01-01', 'YYYY-MM-DD').locale('zh-cn');
     const { container } = render(<MonthPicker open value={birthday} />);
@@ -61,8 +61,8 @@ describe('MonthPicker and WeekPicker', () => {
   });
 });
 
-describe('Override locale setting of the ConfigProvider', () => {
-  it('DatePicker', () => {
+describe('override locale setting of the ConfigProvider', () => {
+  it('datePicker', () => {
     const { container } = render(
       <ConfigProvider locale={jaJP}>
         <DatePicker locale={zhTW} />
@@ -70,7 +70,7 @@ describe('Override locale setting of the ConfigProvider', () => {
     );
     expect(container.querySelector('input')?.placeholder).toEqual('請選擇日期');
   });
-  it('RangePicker', () => {
+  it('rangePicker', () => {
     const { container } = render(
       <ConfigProvider locale={jaJP}>
         <DatePicker.RangePicker locale={zhTW} />

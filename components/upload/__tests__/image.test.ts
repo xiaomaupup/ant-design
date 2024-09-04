@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Upload image', () => {
+describe('upload image', () => {
   imageDemoTest('upload', { skip: ['crop-image.tsx'] });
 });

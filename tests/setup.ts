@@ -1,9 +1,8 @@
-/* eslint-disable no-console, import/prefer-default-export */
-import util from 'util';
+/* eslint-disable no-console */
+import util from 'node:util';
 import React from 'react';
 import type { DOMWindow } from 'jsdom';
 
-// eslint-disable-next-line no-console
 console.log('Current React Version:', React.version);
 
 const originConsoleErr = console.error;
@@ -55,10 +54,9 @@ export function fillWindowEnv(window: Window | DOMWindow) {
   Object.defineProperty(win, 'TextDecoder', { writable: true, value: util.TextDecoder });
 }
 
-/* eslint-disable global-require */
 if (typeof window !== 'undefined') {
   fillWindowEnv(window);
 }
 
-global.requestAnimationFrame = global.requestAnimationFrame || global.setTimeout;
-global.cancelAnimationFrame = global.cancelAnimationFrame || global.clearTimeout;
+globalThis.requestAnimationFrame = globalThis.requestAnimationFrame || globalThis.setTimeout;
+globalThis.cancelAnimationFrame = globalThis.cancelAnimationFrame || globalThis.clearTimeout;

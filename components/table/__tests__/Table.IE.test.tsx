@@ -4,10 +4,10 @@ import type { TableRef } from '..';
 import Table from '..';
 import { render } from '../../../tests/utils';
 
-describe('Table.IE', () => {
+describe('table.IE', () => {
   beforeAll(() => {
     window.Proxy = undefined as any;
-    global.Proxy = undefined as any;
+    globalThis.Proxy = undefined as any;
   });
 
   it('support reference', () => {

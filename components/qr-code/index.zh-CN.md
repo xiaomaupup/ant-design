@@ -55,11 +55,11 @@ tag: 5.1.0
 ### StatusRenderInfo
 
 ```typescript
-type StatusRenderInfo = {
+interface StatusRenderInfo {
   status: QRStatus;
   locale: Locale['QRCode'];
   onRefresh?: () => void;
-};
+}
 ```
 
 ## 主题变量（Design Token）

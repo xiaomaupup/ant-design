@@ -7,7 +7,7 @@ import mountTest from '../../../tests/shared/mountTest';
 import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render } from '../../../tests/utils';
 
-describe('Checkbox', () => {
+describe('checkbox', () => {
   focusTest(Checkbox, { refFocus: true });
   mountTest(Checkbox);
   rtlTest(Checkbox);

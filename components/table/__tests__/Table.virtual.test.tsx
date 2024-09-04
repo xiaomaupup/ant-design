@@ -3,7 +3,7 @@ import React from 'react';
 import Table from '..';
 import { render } from '../../../tests/utils';
 
-describe('Table.Virtual', () => {
+describe('table.Virtual', () => {
   it('should work', () => {
     const { container } = render(
       <Table

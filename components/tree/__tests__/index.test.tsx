@@ -6,7 +6,7 @@ import type { AntTreeNodeProps } from '../Tree';
 
 const { TreeNode } = Tree;
 
-describe('Tree', () => {
+describe('tree', () => {
   it('icon and switcherIcon of Tree with showLine should render correctly', () => {
     const { asFragment } = render(
       <Tree showLine showIcon>

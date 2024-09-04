@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Table image', () => {
+describe('table image', () => {
   imageDemoTest('table', { skip: ['virtual-list.tsx'] });
 });

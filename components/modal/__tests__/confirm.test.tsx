@@ -57,7 +57,7 @@ jest.mock('../../_util/ActionButton', () => {
   };
 });
 
-describe('Modal.confirm triggers callbacks correctly', () => {
+describe('modal.confirm triggers callbacks correctly', () => {
   // Inject CSSMotion to replace with No transition support
   const MockCSSMotion = genCSSMotion(false);
   Object.keys(MockCSSMotion).forEach((key) => {
@@ -82,7 +82,6 @@ describe('Modal.confirm triggers callbacks correctly', () => {
 
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
-  /* eslint-disable no-console */
   // Hack error to remove act warning
   const originError = console.error;
   console.error = (...args) => {
@@ -93,7 +92,6 @@ describe('Modal.confirm triggers callbacks correctly', () => {
 
     originError(...args);
   };
-  /* eslint-enable */
 
   beforeEach(() => {
     jest.useFakeTimers();
@@ -341,7 +339,7 @@ describe('Modal.confirm triggers callbacks correctly', () => {
         Modal[type]?.({
           title: 'title',
           content: 'content',
-          onOk: (_) => null, // eslint-disable-line no-unused-vars
+          onOk: (_) => null,
         });
         await waitFakeTimer();
         expect($$(`.ant-modal-confirm-${type}`)).toHaveLength(1);
@@ -561,7 +559,7 @@ describe('Modal.confirm triggers callbacks correctly', () => {
     await open({
       onOk(close?: any) {
         onOk();
-        // @ts-ignore
+        // @ts-expect-error fix it later
         (() => {})(close); // do nothing
       },
     });
@@ -767,7 +765,7 @@ describe('Modal.confirm triggers callbacks correctly', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/37461
-  it('Update should closable', async () => {
+  it('update should closable', async () => {
     resetWarned();
     jest.useFakeTimers();
     const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
@@ -801,7 +799,7 @@ describe('Modal.confirm triggers callbacks correctly', () => {
     expect($$('.ant-modal-confirm-btns')).toHaveLength(0);
   });
 
-  it('Update Footer', async () => {
+  it('update Footer', async () => {
     Modal.confirm({
       footer: (
         <div>
@@ -857,7 +855,7 @@ describe('Modal.confirm triggers callbacks correctly', () => {
     warnSpy.mockRestore();
   });
 
-  it('Should custom footer function work width confirm', async () => {
+  it('should custom footer function work width confirm', async () => {
     Modal.confirm({
       content: 'hai',
       footer: (_, { OkBtn, CancelBtn }) => (

@@ -2,14 +2,14 @@ import * as React from 'react';
 
 import Modal from '..';
 
-describe('Modal.typescript', () => {
-  it('Modal.okType', () => {
+describe('modal.typescript', () => {
+  it('modal.okType', () => {
     const modal = <Modal okType="danger" />;
 
     expect(modal).toBeTruthy();
   });
 
-  it('Modal.styles', () => {
+  it('modal.styles', () => {
     const style: React.CSSProperties = {
       position: 'absolute',
     };

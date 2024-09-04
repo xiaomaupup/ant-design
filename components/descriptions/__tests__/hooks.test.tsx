@@ -5,8 +5,8 @@ import { render } from '../../../tests/utils';
 import useBreakpoint from '../../grid/hooks/useBreakpoint';
 import useItems from '../hooks/useItems';
 
-describe('Descriptions.Hooks', () => {
-  it('Should Descriptions not throw react key prop error in jsx mode', () => {
+describe('descriptions.Hooks', () => {
+  it('should Descriptions not throw react key prop error in jsx mode', () => {
     const Demo = () => {
       const screens = useBreakpoint();
       const items = useItems(

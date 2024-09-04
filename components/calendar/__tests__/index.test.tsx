@@ -46,7 +46,7 @@ jest.mock('rc-picker', () => {
   };
 });
 
-describe('Calendar', () => {
+describe('calendar', () => {
   mountTest(Calendar);
   rtlTest(Calendar, true);
 
@@ -73,7 +73,7 @@ describe('Calendar', () => {
     }).not.toThrow();
   });
 
-  it('Calendar should be selectable', () => {
+  it('calendar should be selectable', () => {
     MockDate.set(Dayjs('2000-01-01').valueOf());
 
     const onSelect = jest.fn();
@@ -174,13 +174,13 @@ describe('Calendar', () => {
     expect(ref.calendarProps?.disabledDate?.(Dayjs('2018-06-01'), {} as any)).toBe(true);
   });
 
-  it('Calendar MonthSelect should display correct label', () => {
+  it('calendar MonthSelect should display correct label', () => {
     const validRange: [Dayjs.Dayjs, Dayjs.Dayjs] = [Dayjs('2018-02-02'), Dayjs('2019-06-1')];
     const wrapper = render(<Calendar validRange={validRange} defaultValue={Dayjs('2019-01-01')} />);
     expect(wrapper.container.children[0]).toMatchSnapshot();
   });
 
-  it('Calendar should change mode by prop', () => {
+  it('calendar should change mode by prop', () => {
     const monthMode = 'month';
     const yearMode = 'year';
     const wrapper = render(<Calendar />);
@@ -189,7 +189,7 @@ describe('Calendar', () => {
     expect(ref.calendarHeaderProps?.mode).toEqual(yearMode);
   });
 
-  it('Calendar should switch mode', () => {
+  it('calendar should switch mode', () => {
     const monthMode = 'month';
     const yearMode = 'year';
     const onPanelChangeStub = jest.fn();
@@ -200,20 +200,20 @@ describe('Calendar', () => {
     expect(onPanelChangeStub).toHaveBeenCalledTimes(0);
   });
 
-  it('Calendar should support locale', () => {
+  it('calendar should support locale', () => {
     MockDate.set(Dayjs('2018-10-19').valueOf());
-    // eslint-disable-next-line global-require
+
     const zhCN = require('../locale/zh_CN').default;
     const wrapper = render(<Calendar locale={zhCN} />);
     expect(wrapper.container.children[0]).toMatchSnapshot();
     MockDate.reset();
   });
 
-  it('Calendar locale support should override ConfigProvider locale', () => {
+  it('calendar locale support should override ConfigProvider locale', () => {
     MockDate.set(Dayjs('2018-10-19').valueOf());
-    // eslint-disable-next-line global-require
+
     const zhCN = require('../locale/zh_CN').default;
-    // eslint-disable-next-line global-require
+
     const enUs = require('../../locale/en_US').default;
     const wrapper = render(
       <ConfigProvider locale={enUs}>
@@ -272,7 +272,7 @@ describe('Calendar', () => {
     onValueChange: (v: Dayjs.Dayjs) => void,
   ) => {
     const wrapper = render(
-      // @ts-ignore
+      // @ts-expect-error fix it later
       <Header
         prefixCls="ant-picker-calendar"
         generateConfig={dayjsGenerateConfig}
@@ -316,7 +316,7 @@ describe('Calendar', () => {
         onChange={onValueChange}
         value={value}
         validRange={[start, end]}
-        // @ts-ignore
+        // @ts-expect-error fix it later
         locale={{ year: '年' }}
       />,
     );
@@ -339,7 +339,7 @@ describe('Calendar', () => {
         onChange={onValueChange}
         value={value}
         validRange={[start, end]}
-        // @ts-ignore
+        // @ts-expect-error fix it later
         locale={{ year: '年', locale: 'zh_CN' }}
         mode="month"
       />,
@@ -359,7 +359,7 @@ describe('Calendar', () => {
         onModeChange={onTypeChange}
         locale={{ year: '年', month: '月', locale: 'zh_CN' } as any}
         value={value}
-        // @ts-ignore
+        // @ts-expect-error fix it later
         type="date"
       />,
     );

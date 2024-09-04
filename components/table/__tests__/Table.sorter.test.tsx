@@ -6,7 +6,7 @@ import Table from '..';
 import { act, fireEvent, render } from '../../../tests/utils';
 import type { SortOrder, TablePaginationConfig } from '../interface';
 
-describe('Table.sorter', () => {
+describe('table.sorter', () => {
   const sorterFn: ColumnType<any>['sorter'] = (a, b) =>
     a.name[0].charCodeAt() - b.name[0].charCodeAt();
 
@@ -579,7 +579,7 @@ describe('Table.sorter', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/11246#issuecomment-405009167
-  it('Allow column title as render props with sortOrder argument', () => {
+  it('allow column title as render props with sortOrder argument', () => {
     const title: NonNullable<TableProps['columns']>[number]['title'] = ({ sortOrder }) => (
       <div className="custom-title">{sortOrder}</div>
     );
@@ -702,7 +702,7 @@ describe('Table.sorter', () => {
         title: 'name',
         dataIndex: 'name',
         sorter: true,
-        // @ts-ignore
+        // @ts-expect-error fix it later
         array: ['1', '2', 3],
         render: (text: string) => text,
       },
@@ -764,7 +764,7 @@ describe('Table.sorter', () => {
         dataIndex: 'name',
         sorter: true,
         key: 'a',
-        // @ts-ignore
+        // @ts-expect-error fix it later
         style: { fontSize: 18 },
       },
     ];

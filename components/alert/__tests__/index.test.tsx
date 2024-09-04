@@ -13,7 +13,7 @@ import type { AlertRef } from '../Alert';
 
 const { ErrorBoundary } = Alert;
 
-describe('Alert', () => {
+describe('alert', () => {
   rtlTest(Alert);
   accessibilityTest(Alert);
 
@@ -83,7 +83,7 @@ describe('Alert', () => {
   it('should show error as ErrorBoundary when children have error', () => {
     const warnSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     expect(warnSpy).toHaveBeenCalledTimes(0);
-    // @ts-expect-error
+    // @ts-expect-error fix it later
     // eslint-disable-next-line react/jsx-no-undef
     const ThrowError = () => <NotExisted />;
     render(

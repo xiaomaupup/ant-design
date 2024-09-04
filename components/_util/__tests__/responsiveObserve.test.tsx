@@ -3,7 +3,7 @@ import React from 'react';
 import { render } from '../../../tests/utils';
 import useResponsiveObserver from '../responsiveObserver';
 
-describe('Test ResponsiveObserve', () => {
+describe('test ResponsiveObserve', () => {
   it('test ResponsiveObserve subscribe and unsubscribe', () => {
     let responsiveObserveRef: any;
     const Demo = () => {

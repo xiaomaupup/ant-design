@@ -3,7 +3,7 @@ import React from 'react';
 import { render } from '../../../tests/utils';
 import Breadcrumb from '../index';
 
-describe('Breadcrumb.ItemRender', () => {
+describe('breadcrumb.ItemRender', () => {
   it('render as expect', () => {
     const { container } = render(
       <Breadcrumb

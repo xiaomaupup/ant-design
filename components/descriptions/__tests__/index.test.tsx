@@ -7,7 +7,7 @@ import mountTest from '../../../tests/shared/mountTest';
 import { render } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 
-describe('Descriptions', () => {
+describe('descriptions', () => {
   mountTest(Descriptions);
 
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
@@ -37,7 +37,6 @@ describe('Descriptions', () => {
   });
 
   it('when max-width: 575px, column=2', () => {
-    // eslint-disable-next-line global-require
     const wrapper = render(
       <Descriptions column={{ xs: 2 }}>
         <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>
@@ -51,7 +50,6 @@ describe('Descriptions', () => {
   });
 
   it('when max-width: 575px, column=2, span=2', () => {
-    // eslint-disable-next-line global-require
     const { container } = render(
       <Descriptions
         column={{ xs: 2 }}
@@ -81,7 +79,6 @@ describe('Descriptions', () => {
   });
 
   it('column is number', () => {
-    // eslint-disable-next-line global-require
     const wrapper = render(
       <Descriptions column={3}>
         <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>
@@ -146,7 +143,6 @@ describe('Descriptions', () => {
   });
 
   it('vertical layout', () => {
-    // eslint-disable-next-line global-require
     const wrapper = render(
       <Descriptions layout="vertical">
         <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>
@@ -159,7 +155,7 @@ describe('Descriptions', () => {
     wrapper.unmount();
   });
 
-  it('Descriptions.Item support className', () => {
+  it('descriptions.Item support className', () => {
     const wrapper = render(
       <Descriptions>
         <Descriptions.Item label="Product" className="my-class">
@@ -170,7 +166,7 @@ describe('Descriptions', () => {
     expect(wrapper.container.firstChild).toMatchSnapshot();
   });
 
-  it('Descriptions support colon', () => {
+  it('descriptions support colon', () => {
     const wrapper = render(
       <Descriptions colon={false}>
         <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>
@@ -179,7 +175,7 @@ describe('Descriptions', () => {
     expect(wrapper.container.firstChild).toMatchSnapshot();
   });
 
-  it('Descriptions support style', () => {
+  it('descriptions support style', () => {
     const wrapper = render(
       <Descriptions style={{ backgroundColor: '#e8e8e8' }}>
         <Descriptions.Item>Cloud Database</Descriptions.Item>
@@ -188,7 +184,7 @@ describe('Descriptions', () => {
     expect(wrapper.container.firstChild).toMatchSnapshot();
   });
 
-  it('Descriptions support id', () => {
+  it('descriptions support id', () => {
     const wrapper = render(
       <Descriptions id="descriptions">
         <Descriptions.Item>Cloud Database</Descriptions.Item>
@@ -273,7 +269,7 @@ describe('Descriptions', () => {
     expect(wrapper.container.querySelector('td')).toHaveClass('ant-descriptions-item-content');
   });
 
-  it('Descriptions support extra', () => {
+  it('descriptions support extra', () => {
     const wrapper1 = render(
       <Descriptions extra="Edit">
         <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>
@@ -310,7 +306,7 @@ describe('Descriptions', () => {
     expect(container).toHaveAttribute('aria-describedby', 'some-label');
   });
 
-  it('Descriptions should inherit the size from ConfigProvider if the componentSize is set', () => {
+  it('descriptions should inherit the size from ConfigProvider if the componentSize is set', () => {
     const { container } = render(
       <ConfigProvider componentSize="small">
         <Descriptions bordered>
@@ -348,7 +344,7 @@ describe('Descriptions', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Descriptions nested within an Item are unaffected by the external borderless style', () => {
+  it('descriptions nested within an Item are unaffected by the external borderless style', () => {
     const { container } = render(
       <Descriptions bordered>
         <Descriptions.Item>
@@ -362,7 +358,7 @@ describe('Descriptions', () => {
     expect(getComputedStyle(view!).border).toBeFalsy();
   });
 
-  it('Should Descriptions not throw react key prop error in jsx mode', () => {
+  it('should Descriptions not throw react key prop error in jsx mode', () => {
     render(
       <Descriptions title="User Info">
         <Descriptions.Item key="1" label="UserName">

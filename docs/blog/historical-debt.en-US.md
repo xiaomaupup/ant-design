@@ -57,8 +57,8 @@ As mentioned above, there is no silver bullet in API design. In order to prevent
 ```tsx
 export interface SampleRef {
   nativeElement: HTMLElement;
-  focus(): void;
-  blur(): void;
+  focus: () => void;
+  blur: () => void;
 }
 ```
 

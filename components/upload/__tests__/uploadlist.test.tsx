@@ -28,7 +28,7 @@ const fileList: UploadProps['fileList'] = [
   },
 ];
 
-describe('Upload List', () => {
+describe('upload List', () => {
   // Mock for rc-util raf
   window.requestAnimationFrame = (callback) => window.setTimeout(callback, 16);
   window.cancelAnimationFrame = (id) => window.clearTimeout(id);
@@ -74,9 +74,9 @@ describe('Upload List', () => {
     mockWidthGet.mockImplementation(() => size.width);
     mockHeightGet.mockImplementation(() => size.height);
     mockSrcSet.mockImplementation(function fn() {
-      // @ts-ignore
+      // @ts-expect-error fix it later
       if (this.onload) {
-        // @ts-ignore
+        // @ts-expect-error fix it later
         this.onload();
       }
     });
@@ -269,7 +269,7 @@ describe('Upload List', () => {
     unmount();
   });
 
-  it('In the case of listType=picture, the error status does not show the download.', () => {
+  it('in the case of listType=picture, the error status does not show the download.', () => {
     (global as any).testName =
       'In the case of listType=picture, the error status does not show the download.';
     const file = { status: 'error', uid: 'file' };
@@ -291,7 +291,7 @@ describe('Upload List', () => {
     unmount();
   });
 
-  it('In the case of listType=picture-card, the error status does not show the download.', () => {
+  it('in the case of listType=picture-card, the error status does not show the download.', () => {
     (global as any).testName =
       'In the case of listType=picture-card, the error status does not show the download.';
     const file = { status: 'error', uid: 'file' };
@@ -309,7 +309,7 @@ describe('Upload List', () => {
     unmount();
   });
 
-  it('In the case of listType=text, the error status does not show the download.', () => {
+  it('in the case of listType=text, the error status does not show the download.', () => {
     const file = { status: 'error', uid: 'file' };
     const { container: wrapper, unmount } = render(
       <Upload
@@ -1413,7 +1413,7 @@ describe('Upload List', () => {
     unmount();
   });
 
-  it('LIST_IGNORE should not add in list', async () => {
+  it('lIST_IGNORE should not add in list', async () => {
     const beforeUpload = jest.fn(() => Upload.LIST_IGNORE);
     const { container: wrapper, unmount } = render(<Upload beforeUpload={beforeUpload} />);
 
@@ -1429,7 +1429,7 @@ describe('Upload List', () => {
     unmount();
   });
 
-  it('Not crash when fileList is null', () => {
+  it('not crash when fileList is null', () => {
     const defaultWrapper = render(
       <Upload defaultFileList={null as unknown as UploadProps['defaultFileList']} />,
     );

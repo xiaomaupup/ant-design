@@ -7,7 +7,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render } from '../../../tests/utils';
 import Form from '../../form';
 
-describe('Radio', () => {
+describe('radio', () => {
   focusTest(Radio, { refFocus: true });
   mountTest(Radio);
   mountTest(Group);

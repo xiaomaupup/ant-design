@@ -17,7 +17,7 @@ var mockCanUseDom = true;
 
 jest.mock('rc-util/lib/Dom/canUseDom', () => () => mockCanUseDom);
 
-describe('ConfigProvider.Theme', () => {
+describe('configProvider.Theme', () => {
   beforeEach(() => {
     mockCanUseDom = true;
   });
@@ -159,7 +159,7 @@ describe('ConfigProvider.Theme', () => {
     theme.defaultConfig.hashed = false;
   });
 
-  it('The order does not affect the result', () => {
+  it('the order does not affect the result', () => {
     const tokens: Record<'a' | 'b', Partial<GlobalToken>> = {
       a: {},
       b: {},

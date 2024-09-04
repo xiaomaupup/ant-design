@@ -7,7 +7,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render, screen } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 
-describe('Steps', () => {
+describe('steps', () => {
   mountTest(Steps);
   rtlTest(Steps);
 
@@ -69,7 +69,7 @@ describe('Steps', () => {
     expect(
       container.querySelectorAll('.ant-steps-item')[1].classList.contains('ant-steps-item-process'),
     ).toBe(false);
-    fireEvent.click(screen.getByText(/进行中/i));
+    fireEvent.click(screen.getByText(/进行中/));
     expect(
       container.querySelectorAll('.ant-steps-item')[1].classList.contains('ant-steps-item-process'),
     ).toBe(true);
@@ -109,7 +109,7 @@ describe('Steps', () => {
     errorSpy.mockRestore();
   });
 
-  it('Steps should inherit the size from ConfigProvider if the componentSize is set ', () => {
+  it('steps should inherit the size from ConfigProvider if the componentSize is set ', () => {
     const { container } = render(
       <ConfigProvider componentSize="small">
         <Steps items={[{ title: 'In Progress' }, { title: 'Finished' }]} />

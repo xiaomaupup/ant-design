@@ -6,7 +6,7 @@ import { render } from '../../../tests/utils';
 import Button from '../../button';
 import Divider from '../../divider';
 
-describe('ConfigProvider.DynamicTheme', () => {
+describe('configProvider.DynamicTheme', () => {
   beforeEach(() => {
     Array.from(document.querySelectorAll('style')).forEach((style) => {
       style.parentNode?.removeChild(style);

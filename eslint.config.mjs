@@ -16,4 +16,10 @@ export default antfu({
   stylistic: false,
   typescript: true,
   react: true,
+  rules: {
+    'node/prefer-global/process': 'off',
+    'jsdoc/empty-tags': 'off',
+    'jest/no-export': 'off',
+    'ts/explicit-function-return-type': 'off',
+  },
 });

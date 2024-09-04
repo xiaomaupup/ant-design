@@ -7,7 +7,7 @@ import Tree from '../index';
 
 const { DirectoryTree } = Tree;
 
-describe('Tree.TypeScript', () => {
+describe('tree.TypeScript', () => {
   it('without generic', () => {
     const { container } = render(
       <Tree

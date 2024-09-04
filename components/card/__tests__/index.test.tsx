@@ -9,7 +9,7 @@ import { render, screen } from '../../../tests/utils';
 import Button from '../../button/index';
 import Card from '../index';
 
-describe('Card', () => {
+describe('card', () => {
   mountTest(Card);
   rtlTest(Card);
 
@@ -63,7 +63,7 @@ describe('Card', () => {
   it('should not render when actions is number', () => {
     const numberStub = 11;
     render(
-      // @ts-ignore ignore for the wrong action value
+      // @ts-expect-error fix it later ignore for the wrong action value
       <Card title="Card title" actions={numberStub}>
         <p>Card content</p>
       </Card>,

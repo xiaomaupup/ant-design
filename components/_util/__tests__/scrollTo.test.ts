@@ -1,7 +1,7 @@
 import { waitFakeTimer } from '../../../tests/utils';
 import scrollTo from '../scrollTo';
 
-describe('Test ScrollTo function', () => {
+describe('test ScrollTo function', () => {
   const dateNowMock = jest.spyOn(Date, 'now');
 
   beforeAll(() => {

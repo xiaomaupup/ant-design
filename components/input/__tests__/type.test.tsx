@@ -4,7 +4,7 @@ import Input from '..';
 import { render } from '../../../tests/utils';
 import type { InputProps } from '../Input';
 
-describe('Input types', () => {
+describe('input types', () => {
   it('should support data-attributes', () => {
     const dataProps: InputProps = {
       'data-test': 'test',

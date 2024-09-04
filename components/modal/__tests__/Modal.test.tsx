@@ -25,7 +25,7 @@ const ModalTester: React.FC<ModalProps> = (props) => {
   );
 };
 
-describe('Modal', () => {
+describe('modal', () => {
   mountTest(Modal);
   rtlTest(Modal);
 
@@ -140,7 +140,7 @@ describe('Modal', () => {
     expect(document.querySelector('.custom-footer')).toBeTruthy();
   });
 
-  it('Should custom footer function second param work', () => {
+  it('should custom footer function second param work', () => {
     const footerFn = jest.fn();
     render(<Modal open footer={footerFn} />);
 
@@ -152,7 +152,7 @@ describe('Modal', () => {
     });
   });
 
-  it('Should custom footer function work', () => {
+  it('should custom footer function work', () => {
     render(
       <Modal
         open
@@ -169,7 +169,7 @@ describe('Modal', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/
-  it('Both ways should be rendered normally on the page', () => {
+  it('both ways should be rendered normally on the page', () => {
     render(
       <Modal
         open

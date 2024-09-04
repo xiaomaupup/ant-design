@@ -11,7 +11,7 @@ import type { SkeletonInputProps } from '../Input';
 import type { SkeletonNodeProps } from '../Node';
 import type { SkeletonProps } from '../Skeleton';
 
-describe('Skeleton', () => {
+describe('skeleton', () => {
   const genSkeleton = (props: SkeletonProps) =>
     render(
       <Skeleton loading {...props}>

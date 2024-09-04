@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Timeline image', () => {
+describe('timeline image', () => {
   imageDemoTest('timeline', { skip: ['pending.tsx'] });
 });

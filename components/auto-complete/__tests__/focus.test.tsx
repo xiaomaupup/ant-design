@@ -3,7 +3,7 @@ import React from 'react';
 import AutoComplete from '..';
 import { act, render } from '../../../tests/utils';
 
-describe('AutoComplete children could be focus', () => {
+describe('autoComplete children could be focus', () => {
   beforeAll(() => {
     jest.useFakeTimers();
   });

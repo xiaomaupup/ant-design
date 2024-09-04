@@ -36,7 +36,7 @@ const AffixMounter: React.FC<AffixProps> = (props) => {
   );
 };
 
-describe('Affix Render', () => {
+describe('affix Render', () => {
   rtlTest(() => <Affix>test</Affix>);
   accessibilityTest(() => <Affix>test</Affix>);
 
@@ -72,7 +72,7 @@ describe('Affix Render', () => {
     await waitFakeTimer();
   };
 
-  it('Anchor render perfectly', async () => {
+  it('anchor render perfectly', async () => {
     const { container } = render(<AffixMounter />);
     await waitFakeTimer();
 
@@ -86,7 +86,7 @@ describe('Affix Render', () => {
     expect(container.querySelector('.ant-affix')).toBeFalsy();
   });
 
-  it('Anchor correct render when target is null', async () => {
+  it('anchor correct render when target is null', async () => {
     render(<Affix target={() => null}>test</Affix>);
     await waitFakeTimer();
   });

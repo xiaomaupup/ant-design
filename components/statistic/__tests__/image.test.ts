@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Statistic image', () => {
+describe('statistic image', () => {
   imageDemoTest('statistic', { skip: ['countdown.tsx'] });
 });

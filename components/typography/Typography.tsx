@@ -74,7 +74,7 @@ const Typography = React.forwardRef<
   const mergedStyle: React.CSSProperties = { ...typography?.style, ...style };
 
   return wrapCSSVar(
-    // @ts-expect-error: Expression produces a union type that is too complex to represent.
+    // @ts-expect-error fix it later: Expression produces a union type that is too complex to represent.
     <Component className={componentClassName} style={mergedStyle} ref={mergedRef} {...restProps}>
       {children}
     </Component>,

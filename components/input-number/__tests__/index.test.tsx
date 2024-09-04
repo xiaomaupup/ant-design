@@ -8,7 +8,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render } from '../../../tests/utils';
 import Button from '../../button';
 
-describe('InputNumber', () => {
+describe('inputNumber', () => {
   focusTest(InputNumber, { refFocus: true });
   mountTest(InputNumber);
   rtlTest(InputNumber);
@@ -98,7 +98,7 @@ describe('InputNumber', () => {
     ).toBe(true);
   });
 
-  it('Deprecation and usage tips', () => {
+  it('deprecation and usage tips', () => {
     const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     const { container } = render(<InputNumber bordered={false} type="number" changeOnWheel />);
     expect(errorSpy).toHaveBeenNthCalledWith(

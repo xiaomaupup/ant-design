@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Divider image', () => {
+describe('divider image', () => {
   imageDemoTest('divider');
 });

@@ -35,7 +35,7 @@ function simulateInput(wrapper: ReturnType<typeof render>, text: string, keyEven
   fireEvent.keyUp(wrapper.container.querySelector('textarea')!, myKeyEvent);
 }
 
-describe('Mentions', () => {
+describe('mentions', () => {
   beforeAll(() => {
     jest.useFakeTimers();
   });

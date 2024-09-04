@@ -12,7 +12,7 @@ interface TestProps {
   onRef: (node: React.ReactNode, originRef: InputRef) => void;
 }
 
-describe('Form.Ref', () => {
+describe('form.Ref', () => {
   const Test: React.FC<TestProps> = ({ show, onRef }) => {
     const [form] = Form.useForm();
     const removeRef = React.useRef<InputRef>(null);

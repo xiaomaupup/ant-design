@@ -5,7 +5,7 @@ import { act, fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 import Input from '../../input';
 import type { FormListOperation } from '../FormList';
 
-describe('Form.List.NoStyle', () => {
+describe('form.List.NoStyle', () => {
   it('nest error should clean up', async () => {
     jest.useFakeTimers();
 

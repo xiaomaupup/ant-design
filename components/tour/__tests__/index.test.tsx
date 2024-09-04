@@ -26,7 +26,7 @@ const mockBtnRect = (
     },
   });
 };
-describe('Tour', () => {
+describe('tour', () => {
   mountTest(Tour);
   rtlTest(Tour);
 
@@ -174,7 +174,7 @@ describe('Tour', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Primary', () => {
+  it('primary', () => {
     const App: React.FC = () => {
       const coverBtnRef = useRef<HTMLButtonElement>(null);
       return (
@@ -690,7 +690,7 @@ describe('Tour', () => {
     expect(baseElement).toMatchSnapshot();
   });
   // This test is for PurePanel which means safe to remove.
-  describe('PurePanel', () => {
+  describe('purePanel', () => {
     const PurePanel = Tour._InternalPanelDoNotUseOrYouWillBeFired;
 
     it('closeIcon', () => {

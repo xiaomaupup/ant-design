@@ -10,7 +10,7 @@ interface DataSourceItem {
   key: React.Key;
 }
 
-describe('List.pagination', () => {
+describe('list.pagination', () => {
   const data: ListProps<DataSourceItem>['dataSource'] = [
     { key: 0, name: 'Jack' },
     { key: 1, name: 'Lucy' },

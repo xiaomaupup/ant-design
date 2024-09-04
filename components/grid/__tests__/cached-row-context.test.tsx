@@ -28,7 +28,7 @@ const CacheOuter: React.FC = memo(() => (
   </>
 ));
 
-it('Cached RowContext is working', () => {
+it('cached RowContext is working', () => {
   const { container, unmount } = pureRender(<CacheOuter />);
   expect(outerCount).toBe(0);
   expect(innerCount).toBe(1);

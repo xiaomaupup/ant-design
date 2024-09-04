@@ -54,11 +54,11 @@ Common props ref：[Common props](/docs/react/common-props)
 ### StatusRenderInfo
 
 ```typescript
-type StatusRenderInfo = {
+interface StatusRenderInfo {
   status: QRStatus;
   locale: Locale['QRCode'];
   onRefresh?: () => void;
-};
+}
 ```
 
 ## Design Token

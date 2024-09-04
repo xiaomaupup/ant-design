@@ -18,7 +18,7 @@ jest.mock('../../tooltip', () => {
   });
 });
 
-describe('Slider.Tooltip', () => {
+describe('slider.Tooltip', () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });
@@ -28,7 +28,7 @@ describe('Slider.Tooltip', () => {
     jest.useRealTimers();
   });
 
-  it('Correct show the tooltip', async () => {
+  it('correct show the tooltip', async () => {
     const { container } = render(<Slider defaultValue={30} />);
 
     const handleEle = container.querySelector('.ant-slider-handle')!;

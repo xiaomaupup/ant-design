@@ -1,6 +1,6 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Carousel image', () => {
+describe('carousel image', () => {
   imageDemoTest('carousel', {
     ssr: true,
   });

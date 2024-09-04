@@ -3,7 +3,7 @@ import { act, fireEvent } from '../../../tests/utils';
 import type { ArgsProps, GlobalConfigProps } from '../interface';
 import { awaitPromise, triggerMotionEnd } from './util';
 
-describe('Notification.placement', () => {
+describe('notification.placement', () => {
   function open(args?: Partial<ArgsProps>) {
     notification.open({
       message: 'Notification Title',

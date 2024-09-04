@@ -39,7 +39,7 @@ const data = [
   },
 ];
 
-describe('Table.expand', () => {
+describe('table.expand', () => {
   it('click to expand', () => {
     const { container, asFragment } = render(<Table columns={columns} dataSource={data} />);
     fireEvent.click(container.querySelector('.ant-table-row-expand-icon')!);

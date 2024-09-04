@@ -10,7 +10,7 @@ import { render, waitFakeTimer } from '../../../tests/utils';
 import type { AppConfig } from '../context';
 import { AppConfigContext } from '../context';
 
-describe('App', () => {
+describe('app', () => {
   mountTest(App);
   rtlTest(App);
 

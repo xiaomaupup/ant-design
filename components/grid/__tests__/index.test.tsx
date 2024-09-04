@@ -34,7 +34,7 @@ jest.mock('../../_util/responsiveObserver', () => {
   };
 });
 
-describe('Grid', () => {
+describe('grid', () => {
   mountTest(Row);
   mountTest(Col);
 
@@ -212,7 +212,7 @@ describe('Grid', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/39690
-  it('Justify and align properties should reactive for Row', () => {
+  it('justify and align properties should reactive for Row', () => {
     const ReactiveTest = () => {
       const [justify, setjustify] = useState<any>('start');
       return (
@@ -231,7 +231,7 @@ describe('Grid', () => {
     expect(container.innerHTML).toContain('ant-row-end');
   });
 
-  it('The column spacing should be evenly spaced', () => {
+  it('the column spacing should be evenly spaced', () => {
     const { container } = render(
       <Row justify="space-evenly">
         <Col span={4}>col-1</Col>

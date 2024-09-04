@@ -158,7 +158,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>((props, ref) =>
   );
 
   return wrapCSSVar(
-    // @ts-ignore
+    // @ts-expect-error fix it later
     <RcCollapse
       ref={ref}
       openMotion={openMotion}

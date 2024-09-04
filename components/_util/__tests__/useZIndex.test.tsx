@@ -227,7 +227,7 @@ function getConsumerSelector(baseSelector: string, consumer: ZIndexConsumer): st
   return selector;
 }
 
-describe('Test useZIndex hooks', () => {
+describe('test useZIndex hooks', () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });
@@ -239,8 +239,8 @@ describe('Test useZIndex hooks', () => {
 
   containers.forEach((containerKey) => {
     consumers.forEach((key) => {
-      describe(`Test ${key} zIndex in ${containerKey}`, () => {
-        it('Test hooks', () => {
+      describe(`test `, () => {
+        it('test hooks', () => {
           const fn = jest.fn();
           const Child = () => {
             const [zIndex] = useZIndex(key as ZIndexConsumer);
@@ -267,7 +267,7 @@ describe('Test useZIndex hooks', () => {
           );
         });
 
-        it('Test Component', async () => {
+        it('test Component', async () => {
           const Container = containerComponent[containerKey as ZIndexContainer];
           const Consumer = consumerComponent[key as ZIndexConsumer];
 
@@ -367,7 +367,7 @@ describe('Test useZIndex hooks', () => {
     });
   });
 
-  it('Modal static func should always use max zIndex', async () => {
+  it('modal static func should always use max zIndex', async () => {
     jest.useFakeTimers();
 
     const instance = Modal.confirm({

@@ -24,14 +24,14 @@ const renderFactory = (timeLineProps: TimelineProps) =>
     />,
   );
 
-describe('TimeLine', () => {
+describe('timeLine', () => {
   mountTest(TimeLine);
   mountTest(TimeLine.Item);
   rtlTest(TimeLine);
   rtlTest(TimeLine.Item);
 
   describe('render TimeLine.Item', () => {
-    it('TimeLine.Item  should correctly', () => {
+    it('timeLine.Item  should correctly', () => {
       const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
       const { container } = render(
@@ -208,7 +208,7 @@ describe('TimeLine', () => {
     expect(container.querySelector('.ant-timeline-item-label')).toHaveTextContent(label);
   });
 
-  it('TimeLine className should correctly', () => {
+  it('timeLine className should correctly', () => {
     const { container } = renderFactory({ className: 'timelineBox' });
 
     expect(container.querySelector('.ant-timeline')).toHaveClass('timelineBox');
@@ -216,7 +216,7 @@ describe('TimeLine', () => {
     expect(container.querySelectorAll('li.ant-timeline-item')[0]).not.toHaveClass('timelineBox');
   });
 
-  it('TimeLineItem className should correctly', () => {
+  it('timeLineItem className should correctly', () => {
     const { container } = render(
       <TimeLine
         items={[

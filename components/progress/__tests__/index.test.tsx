@@ -10,7 +10,7 @@ import { handleGradient, sortGradient } from '../Line';
 import { ProgressTypes } from '../progress';
 import ProgressSteps from '../Steps';
 
-describe('Progress', () => {
+describe('progress', () => {
   mountTest(Progress);
   rtlTest(Progress);
   it('successPercent should decide the progress status when it exists', () => {
@@ -312,7 +312,7 @@ describe('Progress', () => {
 
   describe('github issues', () => {
     // https://github.com/ant-design/ant-design/issues/30685
-    it('Rendered more hooks than during the previous render', () => {
+    it('rendered more hooks than during the previous render', () => {
       expect(() => {
         const { rerender } = render(
           <Progress percent={60} success={{ percent: 0 }} type="circle" />,

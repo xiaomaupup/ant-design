@@ -40,7 +40,7 @@ function getCell(text: string) {
   return cells.find((cell) => cell.textContent === text);
 }
 
-describe('DatePicker', () => {
+describe('datePicker', () => {
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
   focusTest(DatePicker, { refFocus: true });
@@ -340,7 +340,7 @@ describe('DatePicker', () => {
     ).toBe(60);
   });
 
-  it('DatePicker.RangePicker with defaultValue and showTime', () => {
+  it('datePicker.RangePicker with defaultValue and showTime', () => {
     const startDate = dayjs('1982-02-12');
     const endDate = dayjs('1982-02-22');
 
@@ -355,7 +355,7 @@ describe('DatePicker', () => {
     expect(container.querySelectorAll('.ant-picker-time-panel').length).toBe(1);
   });
 
-  it('DatePicker placement api work correctly', () => {
+  it('datePicker placement api work correctly', () => {
     const { rerender } = render(<DatePicker open placement="topLeft" />);
     expect(triggerProps?.popupPlacement).toEqual('topLeft');
     rerender(<DatePicker open placement="topRight" />);
@@ -366,7 +366,7 @@ describe('DatePicker', () => {
     expect(triggerProps?.popupPlacement).toEqual('bottomRight');
   });
 
-  it('RangePicker placement api work correctly', () => {
+  it('rangePicker placement api work correctly', () => {
     const { rerender } = render(<DatePicker.RangePicker open placement="topLeft" />);
     expect(triggerProps?.builtinPlacements).toEqual(
       expect.objectContaining({

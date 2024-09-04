@@ -1,7 +1,7 @@
 import React from 'react';
 import { UploadOutlined } from '@ant-design/icons';
 import type { UploadProps } from 'antd';
-import { Button, message, Upload } from 'antd';
+import { Button, Upload, message } from 'antd';
 
 const props: UploadProps = {
   name: 'file',
@@ -25,7 +25,7 @@ const props: UploadProps = {
       '100%': '#87d068',
     },
     strokeWidth: 3,
-    format: (percent) => percent && `${parseFloat(percent.toFixed(2))}%`,
+    format: (percent) => percent && `${Number.parseFloat(percent.toFixed(2))}%`,
   },
 };
 

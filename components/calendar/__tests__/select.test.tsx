@@ -8,7 +8,7 @@ import { resetWarned } from 'rc-util/lib/warning';
 import Calendar from '..';
 import { fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 
-describe('Calendar.onSelect', () => {
+describe('calendar.onSelect', () => {
   beforeEach(() => {
     resetWarned();
     jest.useFakeTimers().setSystemTime(new Date('2000-02-01'));

@@ -1,6 +1,6 @@
-import { createHash } from 'crypto';
-import fs from 'fs';
-import path from 'path';
+import { createHash } from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
 import createEmotionServer from '@emotion/server/create-instance';
 import chalk from 'chalk';
 import type { IApi, IRoute } from 'dumi';
@@ -12,7 +12,7 @@ import { dependencies, devDependencies } from '../../package.json';
 function extractEmotionStyle(html: string) {
   // copy from emotion ssr
   // https://github.com/vercel/next.js/blob/deprecated-main/examples/with-emotion-vanilla/pages/_document.js
-  const styles = global.__ANTD_STYLE_CACHE_MANAGER_FOR_SSR__.getCacheList().map((cache) => {
+  const styles = globalThis.__ANTD_STYLE_CACHE_MANAGER_FOR_SSR__.getCacheList().map((cache) => {
     const result = createEmotionServer(cache).extractCritical(html);
     if (!result.css) {
       return null;
@@ -37,7 +37,6 @@ export const getHash = (str: string, length = 8) =>
  * extends dumi internal tech stack, for customize previewer props
  */
 class AntdReactTechStack extends ReactTechStack {
-  // eslint-disable-next-line class-methods-use-this
   generatePreviewerProps(...[props, opts]: any) {
     props.pkgDependencyList = { ...devDependencies, ...dependencies };
     props.jsx ??= '';

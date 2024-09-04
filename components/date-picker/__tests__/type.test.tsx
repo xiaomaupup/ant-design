@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import DatePicker from '..';
 
-describe('DatePicker.typescript', () => {
-  it('DatePicker ref methods', () => {
+describe('datePicker.typescript', () => {
+  it('datePicker ref methods', () => {
     const datePicker = (
       <DatePicker
         ref={(picker) => {
@@ -16,7 +16,7 @@ describe('DatePicker.typescript', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/33417
-  it('DatePicker ref methods with forwardRef', () => {
+  it('datePicker ref methods with forwardRef', () => {
     const datePicker = (
       <DatePicker
         ref={(picker) => {
@@ -28,7 +28,7 @@ describe('DatePicker.typescript', () => {
     expect(datePicker).toBeTruthy();
   });
 
-  it('RangePicker ref methods', () => {
+  it('rangePicker ref methods', () => {
     const rangePicker = (
       <DatePicker.RangePicker
         ref={(picker) => {
@@ -40,7 +40,7 @@ describe('DatePicker.typescript', () => {
     expect(rangePicker).toBeTruthy();
   });
 
-  it('RangePicker ref methods with forwardRef', () => {
+  it('rangePicker ref methods with forwardRef', () => {
     const datePicker = (
       <DatePicker.RangePicker
         ref={(picker) => {
@@ -52,7 +52,7 @@ describe('DatePicker.typescript', () => {
     expect(datePicker).toBeTruthy();
   });
 
-  it('DatePicker and RangePicker supports popupClassName', () => {
+  it('datePicker and RangePicker supports popupClassName', () => {
     const datePicker = <DatePicker popupClassName="popupClassName" />;
     expect(datePicker).toBeTruthy();
     const rangePicker = <DatePicker.RangePicker popupClassName="popupClassName" />;

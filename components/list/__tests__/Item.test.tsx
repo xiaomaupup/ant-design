@@ -5,7 +5,7 @@ import type { GetRef } from '../../_util/type';
 import { pureRender, render } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 
-describe('List Item Layout', () => {
+describe('list Item Layout', () => {
   const data = [
     {
       key: 1,
@@ -231,7 +231,7 @@ describe('List Item Layout', () => {
     expect(loadId).toEqual([1, 3, 5]);
   });
 
-  it('List.Item.Meta title should have no default margin', () => {
+  it('list.Item.Meta title should have no default margin', () => {
     const { container } = render(
       <List
         dataSource={[{ id: 1, title: `ant design` }]}
@@ -247,7 +247,7 @@ describe('List Item Layout', () => {
     expect(title && getComputedStyle(title).margin).toEqual('0px 0px 4px 0px');
   });
 
-  it('List.Item support styles and classNames', () => {
+  it('list.Item support styles and classNames', () => {
     const dataSource = [{ id: 1, title: `ant design` }];
     const getItem = (item: any, provider?: boolean) => {
       const styles = provider ? { extra: { color: 'red' }, actions: { color: 'blue' } } : undefined;

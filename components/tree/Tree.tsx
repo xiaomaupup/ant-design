@@ -235,7 +235,7 @@ const Tree = React.forwardRef<RcTree, TreeProps>((props, ref) => {
   );
 
   return wrapCSSVar(
-    // @ts-ignore
+    // @ts-expect-error fix it later
     <RcTree
       itemHeight={itemHeight}
       ref={ref}

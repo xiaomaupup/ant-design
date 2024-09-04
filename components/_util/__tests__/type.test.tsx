@@ -27,8 +27,8 @@ describe('type', () => {
     return <div ref={eleRef}>{props.bamboo}</div>;
   });
 
-  describe('GetProps', () => {
-    it('FC', () => {
+  describe('getProps', () => {
+    it('fC', () => {
       const FC = (props: { bamboo: number }) => props.bamboo;
       type Props = GetProps<typeof FC>;
       const props: Props = { bamboo: 123 };
@@ -37,14 +37,14 @@ describe('type', () => {
       expect(props).toBeTruthy();
     });
 
-    it('CC', () => {
+    it('cC', () => {
       type Props = GetProps<typeof CC>;
       const props: Props = { bamboo: 123 };
 
       expect(props).toBeTruthy();
     });
 
-    it('RefFc', () => {
+    it('refFc', () => {
       type Props = GetProps<typeof RefFC>;
       const props: Props = { bamboo: 123 };
 
@@ -52,22 +52,22 @@ describe('type', () => {
     });
   });
 
-  describe('GetRef', () => {
-    it('CC', () => {
+  describe('getRef', () => {
+    it('cC', () => {
       type Ref = GetRef<CC>;
       const ref = React.createRef<Ref>();
 
       expect(<CC ref={ref} />).toBeTruthy();
     });
 
-    it('RefFC', () => {
+    it('refFC', () => {
       type Ref = GetRef<typeof RefFC>;
       const ref = React.createRef<Ref>();
 
       expect(<RefFC ref={ref} />).toBeTruthy();
     });
 
-    it('Support ForwardRefExoticComponent type', () => {
+    it('support ForwardRefExoticComponent type', () => {
       interface InnerProps {
         test: number;
       }
@@ -84,7 +84,7 @@ describe('type', () => {
     });
   });
 
-  describe('GetProp', () => {
+  describe('getProp', () => {
     it('optional', () => {
       const Optional = (props: { list?: { bamboo: string }[] }) => props.list?.length;
       type ListItemType = GetProp<typeof Optional, 'list'>[number];

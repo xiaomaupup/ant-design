@@ -8,7 +8,7 @@ import { fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 
 const { OTP } = Input;
 
-describe('Input.OTP', () => {
+describe('input.OTP', () => {
   focusTest(Input.OTP, { refFocus: true });
   mountTest(Input.OTP);
   rtlTest(Input.OTP);

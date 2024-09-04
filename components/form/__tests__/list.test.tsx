@@ -6,7 +6,7 @@ import { fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 import Button from '../../button';
 import Input from '../../input';
 
-describe('Form.List', () => {
+describe('form.List', () => {
   // const change = async (
   //   wrapper: ReturnType<typeof render>['container'],
   //   index: number,

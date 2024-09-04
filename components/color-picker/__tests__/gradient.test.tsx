@@ -7,7 +7,7 @@ import { createEvent, fireEvent } from '../../../tests/utils';
 import { AggregationColor } from '../color';
 import ColorPicker from '../ColorPicker';
 
-describe('ColorPicker.gradient', () => {
+describe('colorPicker.gradient', () => {
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
   beforeAll(() => {

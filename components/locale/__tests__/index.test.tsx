@@ -73,6 +73,7 @@ import MockDate from 'mockdate';
 
 import type { Locale } from '..';
 import LocaleProvider from '..';
+import type { TableProps } from '../..';
 import {
   Calendar,
   DatePicker,
@@ -81,7 +82,6 @@ import {
   Popconfirm,
   Select,
   Table,
-  TableProps,
   TimePicker,
   Transfer,
 } from '../..';
@@ -267,7 +267,7 @@ const App: React.FC = () => (
   </div>
 );
 
-describe('Locale Provider', () => {
+describe('locale Provider', () => {
   mountTest(() => (
     <LocaleProvider locale={null as unknown as Locale}>
       <div />

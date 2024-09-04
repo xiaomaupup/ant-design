@@ -9,16 +9,16 @@ import ConfigProvider from '../../config-provider';
 
 const src = 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png';
 
-describe('Image', () => {
+describe('image', () => {
   mountTest(Image);
   rtlTest(Image);
-  it('Image preview props set false', () => {
+  it('image preview props set false', () => {
     const { container } = render(<Image src={src} preview={false} />);
 
     fireEvent.click(container.querySelector('.ant-image')!);
     expect(container.querySelector('.ant-image-preview-root')).toBe(null);
   });
-  it('Group preview props set false', () => {
+  it('group preview props set false', () => {
     const { container } = render(
       <Image.PreviewGroup preview={false}>
         <Image src={src} />
@@ -30,7 +30,7 @@ describe('Image', () => {
     expect(container.querySelector('.ant-image-preview-root')).toBe(null);
   });
 
-  it('Default preview props', () => {
+  it('default preview props', () => {
     const { container, baseElement } = render(<Image src={src} preview={{ visible: true }} />);
 
     fireEvent.click(container.querySelector('.ant-image')!);
@@ -38,7 +38,7 @@ describe('Image', () => {
     expect(baseElement.querySelector('.ant-image-preview-mask')).toHaveClass('ant-fade');
     expect(baseElement.querySelector('.ant-image-preview')).toHaveClass('ant-zoom');
   });
-  it('Default Group preview props', () => {
+  it('default Group preview props', () => {
     const { container, baseElement } = render(
       <Image.PreviewGroup preview={{ visible: true }}>
         <Image src={src} />
@@ -51,7 +51,7 @@ describe('Image', () => {
     expect(baseElement.querySelector('.ant-image-preview')).toHaveClass('ant-zoom');
     expect(baseElement).toMatchSnapshot();
   });
-  it('Customize preview props', () => {
+  it('customize preview props', () => {
     const { container, baseElement } = render(
       <Image
         src={src}
@@ -71,7 +71,7 @@ describe('Image', () => {
     expect(baseElement.querySelector('.ant-image-preview')).toHaveClass('abc');
     expect(baseElement.querySelector('.ant-image-preview-mask')).toHaveClass('def');
   });
-  it('Customize Group preview props', () => {
+  it('customize Group preview props', () => {
     const { container, baseElement } = render(
       <Image.PreviewGroup
         preview={{ visible: true, transitionName: 'abc', maskTransitionName: 'def' }}
@@ -85,7 +85,7 @@ describe('Image', () => {
     expect(baseElement.querySelector('.ant-image-preview')).toHaveClass('abc');
     expect(baseElement.querySelector('.ant-image-preview-mask')).toHaveClass('def');
   });
-  it('ConfigProvider getPopupContainer', () => {
+  it('configProvider getPopupContainer', () => {
     const { container, baseElement } = render(
       <>
         <div className="container" />
@@ -97,7 +97,7 @@ describe('Image', () => {
     fireEvent.click(container.querySelector('.ant-image')!);
     expect(baseElement.querySelector('.container')?.children.length).not.toBe(0);
   });
-  it('Preview forceRender props', async () => {
+  it('preview forceRender props', async () => {
     const onLoadCb = jest.fn();
     const PreviewImage: React.FC = () => (
       <Image
@@ -114,7 +114,7 @@ describe('Image', () => {
     fireEvent.load(baseElement.querySelector('.ant-image-preview-img')!);
     expect(onLoadCb).toHaveBeenCalled();
   });
-  it('Preview should support rootClassName', () => {
+  it('preview should support rootClassName', () => {
     const { container, baseElement } = render(
       <Image.PreviewGroup preview={{ visible: true, rootClassName: 'test-root-class' }}>
         <Image src={src} />
@@ -125,7 +125,7 @@ describe('Image', () => {
 
     expect(baseElement.querySelector('.test-root-class')).toBeTruthy();
   });
-  it('Image.PreviewGroup preview in a nested modal where z-index Settings should be correct', () => {
+  it('image.PreviewGroup preview in a nested modal where z-index Settings should be correct', () => {
     const App = () => (
       <Modal open>
         <Modal open>

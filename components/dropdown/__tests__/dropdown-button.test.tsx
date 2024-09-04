@@ -34,7 +34,7 @@ jest.mock('../dropdown', () => {
   };
 });
 
-describe('DropdownButton', () => {
+describe('dropdownButton', () => {
   mountTest(DropdownButton);
   rtlTest(DropdownButton);
 

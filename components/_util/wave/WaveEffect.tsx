@@ -55,8 +55,8 @@ const WaveEffect: React.FC<WaveEffectProps> = (props) => {
 
     // Rect
     const { borderLeftWidth, borderTopWidth } = nodeStyle;
-    setLeft(isStatic ? target.offsetLeft : validateNum(-parseFloat(borderLeftWidth)));
-    setTop(isStatic ? target.offsetTop : validateNum(-parseFloat(borderTopWidth)));
+    setLeft(isStatic ? target.offsetLeft : validateNum(-Number.parseFloat(borderLeftWidth)));
+    setTop(isStatic ? target.offsetTop : validateNum(-Number.parseFloat(borderTopWidth)));
     setWidth(target.offsetWidth);
     setHeight(target.offsetHeight);
 
@@ -74,7 +74,7 @@ const WaveEffect: React.FC<WaveEffectProps> = (props) => {
         borderTopRightRadius,
         borderBottomRightRadius,
         borderBottomLeftRadius,
-      ].map((radius) => validateNum(parseFloat(radius))),
+      ].map((radius) => validateNum(Number.parseFloat(radius))),
     );
   }
 

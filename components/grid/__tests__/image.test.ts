@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Grid image', () => {
+describe('grid image', () => {
   imageDemoTest('grid');
 });

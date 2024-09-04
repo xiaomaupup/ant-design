@@ -6,7 +6,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { act, render, waitFakeTimer } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 
-describe('Spin', () => {
+describe('spin', () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });

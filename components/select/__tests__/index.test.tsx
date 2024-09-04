@@ -11,7 +11,7 @@ import { act, fireEvent, render } from '../../../tests/utils';
 
 const { Option } = Select;
 
-describe('Select', () => {
+describe('select', () => {
   focusTest(Select, { refFocus: true });
   mountTest(Select);
   rtlTest(Select);
@@ -99,7 +99,7 @@ describe('Select', () => {
     expect(container.querySelectorAll('.anticon-search').length).toBe(1);
   });
 
-  describe('Select Custom Icons', () => {
+  describe('select Custom Icons', () => {
     it('should support customized icons', () => {
       const { rerender, asFragment } = render(
         <Select
@@ -126,7 +126,7 @@ describe('Select', () => {
     });
   });
 
-  describe('Deprecated', () => {
+  describe('deprecated', () => {
     it('should ignore mode="combobox"', () => {
       const { asFragment } = render(
         <Select mode={'combobox' as SelectProps['mode']}>
@@ -187,7 +187,7 @@ describe('Select', () => {
       errSpy.mockRestore();
     });
 
-    it('Select maxCount warning', () => {
+    it('select maxCount warning', () => {
       resetWarned();
       const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
       render(<Select maxCount={10} />);

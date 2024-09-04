@@ -14,11 +14,11 @@ import type { ModalFunc } from '../confirm';
 jest.mock('rc-util/lib/Portal');
 jest.mock('rc-motion');
 
-describe('Modal.hook', () => {
+describe('modal.hook', () => {
   // Inject CSSMotion to replace with No transition support
   const MockCSSMotion = genCSSMotion(false);
   Object.keys(MockCSSMotion).forEach((key) => {
-    // @ts-ignore
+    // @ts-expect-error fix it later
     CSSMotion[key] = MockCSSMotion[key];
   });
 
@@ -397,13 +397,12 @@ describe('Modal.hook', () => {
 
     for (let i = 10; i > 0; i -= 1) {
       rerender(<Demo count={i} />);
-      // eslint-disable-next-line no-await-in-loop
+
       await waitFakeTimer();
 
       expect(document.body.querySelector('.ant-btn-primary')!.textContent).toEqual('确 定');
       fireEvent.click(document.body.querySelector('.ant-btn-primary')!);
 
-      // eslint-disable-next-line no-await-in-loop
       await waitFakeTimer();
     }
 

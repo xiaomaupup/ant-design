@@ -9,7 +9,7 @@ import { fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 
 const { Column, ColumnGroup } = Table;
 
-describe('Table', () => {
+describe('table', () => {
   mountTest(Table);
   rtlTest(Table);
 

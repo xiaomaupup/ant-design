@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import React from 'react';
 import KeyCode from 'rc-util/lib/KeyCode';
 
@@ -7,7 +6,7 @@ import { isStyleSupport } from '../styleChecker';
 import throttleByAnimationFrame from '../throttleByAnimationFrame';
 import TransButton from '../transButton';
 
-describe('Test utils function', () => {
+describe('test utils function', () => {
   describe('throttle', () => {
     beforeAll(() => {
       jest.useFakeTimers();
@@ -46,7 +45,7 @@ describe('Test utils function', () => {
     });
   });
 
-  describe('TransButton', () => {
+  describe('transButton', () => {
     it('can be focus/blur', () => {
       const ref = React.createRef<HTMLDivElement>();
       render(<TransButton ref={ref}>TransButton</TransButton>);

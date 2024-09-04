@@ -5,12 +5,12 @@ import Button from 'antd/es/button';
 import ConfigProvider from '..';
 import { render } from '../../../tests/utils';
 
-describe('ConfigProvider.button', () => {
+describe('configProvider.button', () => {
   beforeEach(() => {
     (global as any).triggerProps = null;
   });
 
-  it('ConfigProvider button style', () => {
+  it('configProvider button style', () => {
     const { container } = render(
       <ConfigProvider>
         <Button style={{ fontSize: '14px' }} />
@@ -21,7 +21,7 @@ describe('ConfigProvider.button', () => {
     expect(getComputedStyle(item)?.fontSize).toBe('14px');
   });
 
-  it('ConfigProvider button className', () => {
+  it('configProvider button className', () => {
     const { container } = render(
       <ConfigProvider>
         <Button className="custom-class" />
@@ -31,7 +31,7 @@ describe('ConfigProvider.button', () => {
     expect(container.querySelector('button')?.className.includes('custom-class')).toBe(true);
   });
 
-  it('ConfigProvider button styles', () => {
+  it('configProvider button styles', () => {
     const { container } = render(
       <ConfigProvider button={{ styles: { icon: { fontSize: 14 } } }}>
         <Button icon={<SearchOutlined />} />
@@ -42,7 +42,7 @@ describe('ConfigProvider.button', () => {
     expect(getComputedStyle(item)?.fontSize).toBe('14px');
   });
 
-  it('ConfigProvider button classNames', () => {
+  it('configProvider button classNames', () => {
     const { container } = render(
       <ConfigProvider button={{ classNames: { icon: 'icon-custom-class' } }}>
         <Button icon={<SearchOutlined />} />

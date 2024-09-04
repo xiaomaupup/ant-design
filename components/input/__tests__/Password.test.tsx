@@ -8,7 +8,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 import Password from '../Password';
 
-describe('Input.Password', () => {
+describe('input.Password', () => {
   focusTest(Input.Password, { refFocus: true });
   mountTest(Input.Password);
   rtlTest(Input.Password);

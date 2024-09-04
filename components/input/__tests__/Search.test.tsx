@@ -8,7 +8,7 @@ import Button from '../../button';
 import type { InputRef } from '../Input';
 import Search from '../Search';
 
-describe('Input.Search', () => {
+describe('input.Search', () => {
   focusTest(Search, { refFocus: true });
   mountTest(Search);
   rtlTest(Search);
@@ -210,7 +210,7 @@ describe('Input.Search', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/27258
-  it('Search with allowClear should have one className only', () => {
+  it('search with allowClear should have one className only', () => {
     const { container } = render(<Search allowClear className="className" />);
     expect(
       container.querySelector('.ant-input-group-wrapper')?.classList.contains('className'),

@@ -7,7 +7,7 @@ import { act, fireEvent, render } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 import type { TableRowSelection } from '../interface';
 
-describe('Table.rowSelection', () => {
+describe('table.rowSelection', () => {
   window.requestAnimationFrame = (callback) => window.setTimeout(callback, 16);
   window.cancelAnimationFrame = window.clearTimeout;
 
@@ -563,7 +563,7 @@ describe('Table.rowSelection', () => {
 
     const getCheckboxProps = (record: any) => record;
 
-    it('SELECTION_ALL', () => {
+    it('sELECTION_ALL', () => {
       jest.useFakeTimers();
       const onChange = jest.fn();
       const { container } = render(
@@ -588,7 +588,7 @@ describe('Table.rowSelection', () => {
       expect(onChange).toHaveBeenCalledWith([0, 2], expect.anything(), { type: 'all' });
     });
 
-    it('SELECTION_INVERT', () => {
+    it('sELECTION_INVERT', () => {
       jest.useFakeTimers();
       const onChange = jest.fn();
       const { container } = render(
@@ -614,7 +614,7 @@ describe('Table.rowSelection', () => {
       expect(onChange).toHaveBeenCalledWith([0], expect.anything(), { type: 'invert' });
     });
 
-    it('SELECTION_NONE', () => {
+    it('sELECTION_NONE', () => {
       jest.useFakeTimers();
       const onChange = jest.fn();
       const { container } = render(
@@ -1257,7 +1257,7 @@ describe('Table.rowSelection', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table selection should check', () => {
+  it('table selection should check', () => {
     const onChange = jest.fn();
     const { container } = render(
       <Table

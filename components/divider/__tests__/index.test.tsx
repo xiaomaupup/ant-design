@@ -4,7 +4,7 @@ import Divider from '..';
 import mountTest from '../../../tests/shared/mountTest';
 import { render } from '../../../tests/utils';
 
-describe('Divider', () => {
+describe('divider', () => {
   mountTest(Divider);
 
   it('not show children when vertical', () => {
@@ -28,22 +28,14 @@ describe('Divider', () => {
   });
 
   it('support bool dashed', () => {
-    const { container } = render(
-      <Divider dashed>
-        test test test
-      </Divider>,
-    );
+    const { container } = render(<Divider dashed>test test test</Divider>);
     expect(container?.querySelector<HTMLSpanElement>('.ant-divider-dashed')).toHaveStyle({
       borderStyle: 'dashed',
     });
   });
 
   it('support string variant', () => {
-    const { container } = render(
-      <Divider variant="dotted">
-        test dotted
-      </Divider>,
-    );
+    const { container } = render(<Divider variant="dotted">test dotted</Divider>);
     expect(container?.querySelector<HTMLSpanElement>('.ant-divider-dotted')).toHaveStyle({
       borderStyle: 'dotted',
     });

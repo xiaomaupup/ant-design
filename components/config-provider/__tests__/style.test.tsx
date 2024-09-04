@@ -60,8 +60,8 @@ import Upload from '../../upload';
 import InputNumber from '../../input-number';
 import TreeSelect from '../../tree-select';
 
-describe('ConfigProvider support style and className props', () => {
-  it('Should Space classNames works', () => {
+describe('configProvider support style and className props', () => {
+  it('should Space classNames works', () => {
     const { container } = render(
       <ConfigProvider
         space={{
@@ -79,7 +79,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-space-item')).toHaveClass('test-classNames');
   });
 
-  it('Should Space className works', () => {
+  it('should Space className works', () => {
     const { container } = render(
       <ConfigProvider
         space={{
@@ -95,7 +95,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-space')).toHaveClass('test-classNames');
   });
 
-  it('Should Space styles works', () => {
+  it('should Space styles works', () => {
     const { container } = render(
       <ConfigProvider
         space={{
@@ -115,7 +115,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-space-item')).toHaveStyle('color: red;');
   });
 
-  it('Should Space style works', () => {
+  it('should Space style works', () => {
     const { container } = render(
       <ConfigProvider
         space={{
@@ -133,7 +133,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-space')).toHaveStyle('color: red;');
   });
 
-  it('Should Divider className works', () => {
+  it('should Divider className works', () => {
     const { container } = render(
       <ConfigProvider
         divider={{
@@ -146,7 +146,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-divider')).toHaveClass('config-provider-className');
   });
 
-  it('Should Divider style works', () => {
+  it('should Divider style works', () => {
     const { container } = render(
       <ConfigProvider
         divider={{
@@ -162,7 +162,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-divider'))?.toHaveStyle({ color: 'red', height: '80px' });
   });
 
-  it('Should Drawer className & closeIcon works', () => {
+  it('should Drawer className & closeIcon works', () => {
     render(
       <ConfigProvider
         drawer={{
@@ -179,7 +179,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(document.querySelector<HTMLSpanElement>(selectors)).toBeTruthy();
   });
 
-  it('Should support closable', () => {
+  it('should support closable', () => {
     render(
       <ConfigProvider
         drawer={{
@@ -198,7 +198,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(document.querySelector('*[aria-label="Close Btn"]')).toBeTruthy();
   });
 
-  it('Should Drawer style works', () => {
+  it('should Drawer style works', () => {
     render(
       <ConfigProvider
         drawer={{
@@ -214,7 +214,7 @@ describe('ConfigProvider support style and className props', () => {
     );
   });
 
-  it('Should Carousel className works', () => {
+  it('should Carousel className works', () => {
     const { container } = render(
       <ConfigProvider
         carousel={{
@@ -232,7 +232,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.slick-slider')).toHaveClass('test-class');
   });
 
-  it('Should Carousel style works', () => {
+  it('should Carousel style works', () => {
     const { container } = render(
       <ConfigProvider carousel={{ style: { color: 'red' } }}>
         <Carousel style={{ fontSize: '16px' }}>
@@ -249,7 +249,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.slick-slider')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Cascader className & style works', () => {
+  it('should Cascader className & style works', () => {
     const options = [
       {
         value: 'zhejiang',
@@ -296,7 +296,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Collapse className & expandIcon works', () => {
+  it('should Collapse className & expandIcon works', () => {
     const items = [
       {
         key: '1',
@@ -318,7 +318,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector<HTMLSpanElement>('.cp-test-icon')).toBeTruthy();
   });
 
-  it('Should Collapse style works', () => {
+  it('should Collapse style works', () => {
     const items = [
       {
         key: '1',
@@ -339,7 +339,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-collapse')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Typography className & style works', () => {
+  it('should Typography className & style works', () => {
     const { container } = render(
       <ConfigProvider
         typography={{ className: 'cp-typography', style: { backgroundColor: 'red' } }}
@@ -352,7 +352,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Skeleton className works', () => {
+  it('should Skeleton className works', () => {
     const { container } = render(
       <ConfigProvider
         skeleton={{
@@ -366,7 +366,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-skeleton')).toHaveClass('test-class');
   });
 
-  it('Should Skeleton style works', () => {
+  it('should Skeleton style works', () => {
     const { container } = render(
       <ConfigProvider
         skeleton={{
@@ -380,7 +380,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-skeleton')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Spin className & style works', () => {
+  it('should Spin className & style works', () => {
     const { container } = render(
       <ConfigProvider
         spin={{ className: 'config-provider-spin', style: { backgroundColor: 'red' } }}
@@ -393,7 +393,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Statistic className works', () => {
+  it('should Statistic className works', () => {
     const { container } = render(
       <ConfigProvider
         statistic={{
@@ -407,7 +407,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-statistic')).toHaveClass('test-class');
   });
 
-  it('Should Statistic style works', () => {
+  it('should Statistic style works', () => {
     const { container } = render(
       <ConfigProvider
         statistic={{
@@ -421,7 +421,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-statistic')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Segmented className & style works', () => {
+  it('should Segmented className & style works', () => {
     const { container } = render(
       <ConfigProvider
         segmented={{ className: 'config-provider-segmented', style: { backgroundColor: 'red' } }}
@@ -434,7 +434,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Select className & style works', () => {
+  it('should Select className & style works', () => {
     const { container } = render(
       <ConfigProvider select={{ className: 'cp-select', style: { backgroundColor: 'red' } }}>
         <Select
@@ -450,7 +450,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Steps className & style works', () => {
+  it('should Steps className & style works', () => {
     const { container } = render(
       <ConfigProvider
         steps={{ className: 'config-provider-steps', style: { backgroundColor: 'red' } }}
@@ -463,7 +463,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Form className & style works', () => {
+  it('should Form className & style works', () => {
     const { container } = render(
       <ConfigProvider form={{ className: 'cp-form', style: { backgroundColor: 'red' } }}>
         <Form name="basic">
@@ -479,7 +479,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Image className & style & closeIcon works', () => {
+  it('should Image className & style & closeIcon works', () => {
     const { container, baseElement } = render(
       <ConfigProvider
         image={{
@@ -500,7 +500,7 @@ describe('ConfigProvider support style and className props', () => {
     ).toBeTruthy();
   });
 
-  it('Should Input className & style & classNames & styles & autoComplete & allowClear works', () => {
+  it('should Input className & style & classNames & styles & autoComplete & allowClear works', () => {
     const { container } = render(
       <ConfigProvider
         input={{
@@ -551,7 +551,7 @@ describe('ConfigProvider support style and className props', () => {
     ).toBeTruthy();
   });
 
-  it('Should Input.TextArea autoComplete & className & style & classNames & styles & allowClear works', () => {
+  it('should Input.TextArea autoComplete & className & style & classNames & styles & allowClear works', () => {
     const { container } = render(
       <ConfigProvider
         textArea={{
@@ -605,7 +605,7 @@ describe('ConfigProvider support style and className props', () => {
     ).toBeTruthy();
   });
 
-  it('Should Layout className & style works', () => {
+  it('should Layout className & style works', () => {
     const { baseElement } = render(
       <ConfigProvider
         layout={{
@@ -628,7 +628,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ background: 'red' });
   });
 
-  it('Should List className works', () => {
+  it('should List className works', () => {
     const listData = [
       {
         title: 'Test Title',
@@ -647,7 +647,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-list')).toHaveClass('test-class');
   });
 
-  it('Should List style works', () => {
+  it('should List style works', () => {
     const listData = [
       {
         title: 'Test Title',
@@ -666,7 +666,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-list')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Menu className & expandIcon works', () => {
+  it('should Menu className & expandIcon works', () => {
     const menuItems: MenuProps['items'] = [
       {
         label: <span>Test Label</span>,
@@ -694,7 +694,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector<HTMLElement>('.ant-menu-submenu-arrow')).toBeFalsy();
   });
 
-  it('Should Menu style works', () => {
+  it('should Menu style works', () => {
     const menuItems = [
       {
         label: 'Test Label',
@@ -714,7 +714,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-menu')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Mentions className & style works', () => {
+  it('should Mentions className & style works', () => {
     const { container } = render(
       <ConfigProvider
         mentions={{
@@ -748,7 +748,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-mentions')).toHaveStyle({ background: 'red' });
   });
 
-  it('Should Modal className & style & closeIcon works', () => {
+  it('should Modal className & style & closeIcon works', () => {
     const { baseElement } = render(
       <ConfigProvider
         modal={{
@@ -767,7 +767,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element?.querySelector<HTMLSpanElement>(selectors)).toBeTruthy();
   });
 
-  it('Should Result className & style works', () => {
+  it('should Result className & style works', () => {
     const { container } = render(
       <ConfigProvider result={{ className: 'cp-result', style: { backgroundColor: 'red' } }}>
         <Result />
@@ -778,7 +778,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Radio className & style works', () => {
+  it('should Radio className & style works', () => {
     const { container } = render(
       <ConfigProvider
         radio={{
@@ -796,7 +796,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-radio-wrapper')).toHaveStyle({ background: 'red' });
   });
 
-  it('Should Slider className & style works', () => {
+  it('should Slider className & style works', () => {
     const { container } = render(
       <ConfigProvider slider={{ className: 'cp-slider', style: { backgroundColor: 'red' } }}>
         <Slider />
@@ -807,7 +807,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Alert className works', () => {
+  it('should Alert className works', () => {
     const { container, rerender } = render(
       <ConfigProvider
         alert={{
@@ -841,7 +841,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelectorAll('*[aria-label="close"]')).toBeTruthy();
   });
 
-  it('Should Alert style works', () => {
+  it('should Alert style works', () => {
     const { container } = render(
       <ConfigProvider
         alert={{
@@ -855,7 +855,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-alert')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Anchor className & style works', () => {
+  it('should Anchor className & style works', () => {
     const { container } = render(
       <ConfigProvider
         anchor={{
@@ -886,7 +886,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-anchor-wrapper')).toHaveStyle({ background: 'red' });
   });
 
-  it('Should Breadcrumb className & style works', () => {
+  it('should Breadcrumb className & style works', () => {
     const { container } = render(
       <ConfigProvider
         breadcrumb={{ className: 'cp-breadcrumb', style: { backgroundColor: 'red' } }}
@@ -899,7 +899,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Checkbox className & style works', () => {
+  it('should Checkbox className & style works', () => {
     const { container } = render(
       <ConfigProvider
         checkbox={{
@@ -917,7 +917,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-checkbox-wrapper')).toHaveStyle({ background: 'red' });
   });
 
-  it('Should Pagination className & style works', () => {
+  it('should Pagination className & style works', () => {
     const { container } = render(
       <ConfigProvider
         pagination={{ className: 'cp-pagination', style: { backgroundColor: 'blue' } }}
@@ -930,7 +930,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'blue' });
   });
 
-  it('Should Progress className works', () => {
+  it('should Progress className works', () => {
     const { container } = render(
       <ConfigProvider
         progress={{
@@ -944,7 +944,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-progress')).toHaveClass('test-class');
   });
 
-  it('Should Progress style works', () => {
+  it('should Progress style works', () => {
     const { container } = render(
       <ConfigProvider
         progress={{
@@ -958,7 +958,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-progress')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Descriptions className & style works', () => {
+  it('should Descriptions className & style works', () => {
     const { container } = render(
       <ConfigProvider
         descriptions={{
@@ -978,7 +978,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-descriptions')).toHaveStyle({ background: 'red' });
   });
 
-  it('Should Empty className & style works', () => {
+  it('should Empty className & style works', () => {
     const { container } = render(
       <ConfigProvider
         empty={{
@@ -996,7 +996,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-empty')).toHaveStyle({ background: 'red' });
   });
 
-  it('Should Badge className & style & classNames works', () => {
+  it('should Badge className & style & classNames works', () => {
     const { container } = render(
       <ConfigProvider
         badge={{
@@ -1032,7 +1032,7 @@ describe('ConfigProvider support style and className props', () => {
     });
   });
 
-  it('Should Rate className & style works', () => {
+  it('should Rate className & style works', () => {
     const { container } = render(
       <ConfigProvider rate={{ className: 'cp-rate', style: { backgroundColor: 'blue' } }}>
         <Rate />
@@ -1043,7 +1043,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'blue' });
   });
 
-  it('Should Switch className & style works', () => {
+  it('should Switch className & style works', () => {
     const { container } = render(
       <ConfigProvider switch={{ className: 'cp-switch', style: { backgroundColor: 'blue' } }}>
         <Switch />
@@ -1054,7 +1054,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'blue' });
   });
 
-  it('Should Avatar className & style works', () => {
+  it('should Avatar className & style works', () => {
     const { container } = render(
       <ConfigProvider avatar={{ className: 'cp-avatar', style: { backgroundColor: 'blue' } }}>
         <Avatar />
@@ -1065,7 +1065,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'blue' });
   });
 
-  it('Should Tag className & style & closeIcon works', () => {
+  it('should Tag className & style & closeIcon works', () => {
     const { container } = render(
       <ConfigProvider
         tag={{
@@ -1088,7 +1088,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element?.querySelector<HTMLSpanElement>('.cp-test-closeIcon')).toBeTruthy();
   });
 
-  it('Should Tag support aria-* in closable', () => {
+  it('should Tag support aria-* in closable', () => {
     const { container } = render(
       <ConfigProvider
         tag={{
@@ -1110,7 +1110,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element?.querySelector('.cp-test-closeIcon')).toBeTruthy();
   });
 
-  it('Should Tag hide closeIcon when closeIcon=false', () => {
+  it('should Tag hide closeIcon when closeIcon=false', () => {
     const { container } = render(
       <ConfigProvider
         tag={{
@@ -1125,7 +1125,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element?.querySelector('.ant-tag-close-icon')).toBeFalsy();
   });
 
-  it('Should Tag show default closeIcon when closeIcon=true', () => {
+  it('should Tag show default closeIcon when closeIcon=true', () => {
     const { container } = render(
       <ConfigProvider
         tag={{
@@ -1141,7 +1141,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element?.querySelector('.anticon-close')).toBeTruthy();
   });
 
-  it('Should Table className & style works', () => {
+  it('should Table className & style works', () => {
     const { container } = render(
       <ConfigProvider
         table={{
@@ -1162,7 +1162,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector<HTMLSpanElement>('.ant-table-tbody .cp-test-icon')).toBeTruthy();
   });
 
-  it('Should Calendar className works', () => {
+  it('should Calendar className works', () => {
     const { container } = render(
       <ConfigProvider
         calendar={{
@@ -1176,7 +1176,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-picker-calendar')).toHaveClass('test-class');
   });
 
-  it('Should Calendar style works', () => {
+  it('should Calendar style works', () => {
     const { container } = render(
       <ConfigProvider
         calendar={{
@@ -1192,7 +1192,7 @@ describe('ConfigProvider support style and className props', () => {
     );
   });
 
-  it('Should Card className & style & classNames & styles works', () => {
+  it('should Card className & style & classNames & styles works', () => {
     const { container } = render(
       <ConfigProvider
         card={{
@@ -1213,7 +1213,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(head).toHaveStyle({ color: 'red' });
   });
 
-  it('Should Tabs className & style & addIcon & moreIcon & removeIcon works', () => {
+  it('should Tabs className & style & addIcon & moreIcon & removeIcon works', () => {
     const { container } = render(
       <ConfigProvider
         tabs={{
@@ -1238,7 +1238,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element?.querySelector<HTMLSpanElement>('.cp-test-removeIcon')).toBeTruthy();
   });
 
-  it('Should TimePicker className works', () => {
+  it('should TimePicker className works', () => {
     const { container } = render(
       <ConfigProvider
         timePicker={{
@@ -1252,7 +1252,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-picker')).toHaveClass('test-class');
   });
 
-  it('Should TimePicker style works', () => {
+  it('should TimePicker style works', () => {
     const { container } = render(
       <ConfigProvider
         timePicker={{
@@ -1266,7 +1266,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-picker')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should RangePicker className works', () => {
+  it('should RangePicker className works', () => {
     const { RangePicker } = TimePicker;
     const { container } = render(
       <ConfigProvider
@@ -1280,7 +1280,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-picker')).toHaveClass('test-class');
   });
 
-  it('Should RangePicker style works', () => {
+  it('should RangePicker style works', () => {
     const { RangePicker } = TimePicker;
     const { container } = render(
       <ConfigProvider
@@ -1294,7 +1294,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-picker')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should message className & style works', () => {
+  it('should message className & style works', () => {
     const Demo: React.FC = () => {
       const [messageApi, contextHolder] = message.useMessage();
       return (
@@ -1315,7 +1315,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ color: 'blue' });
   });
 
-  it('Should Upload className & style works', () => {
+  it('should Upload className & style works', () => {
     const { container } = render(
       <ConfigProvider upload={{ className: 'cp-upload', style: { color: 'blue' } }}>
         <Upload type="drag">upload</Upload>
@@ -1326,7 +1326,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element?.querySelector<HTMLDivElement>('.ant-upload')).toHaveStyle({ color: 'blue' });
   });
 
-  it('Should notification className & style & closeIcon works', () => {
+  it('should notification className & style & closeIcon works', () => {
     const Demo: React.FC = () => {
       const [api, holder] = notification.useNotification();
       return (
@@ -1354,7 +1354,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element?.querySelector<HTMLSpanElement>('.ant-notification .cp-test-icon')).toBeTruthy();
   });
 
-  it('Should Timeline className works', () => {
+  it('should Timeline className works', () => {
     const items = [
       {
         children: 'test item',
@@ -1374,7 +1374,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-timeline')).toHaveClass('test-class');
   });
 
-  it('Should Timeline style works', () => {
+  it('should Timeline style works', () => {
     const items = [
       {
         children: 'test item',
@@ -1394,7 +1394,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-timeline')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Transfer className works', () => {
+  it('should Transfer className works', () => {
     const mockData = [
       {
         key: '0-0',
@@ -1418,7 +1418,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector<HTMLSpanElement>('.cp-test-selectionsIcon')).toBeTruthy();
   });
 
-  it('Should Transfer style works', () => {
+  it('should Transfer style works', () => {
     const mockData = [
       {
         key: '0-0',
@@ -1442,7 +1442,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-transfer')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Tree className works', () => {
+  it('should Tree className works', () => {
     const treeData = [
       {
         title: 'test-title',
@@ -1463,7 +1463,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-tree')).toHaveClass('test-class');
   });
 
-  it('Should Tree style works', () => {
+  it('should Tree style works', () => {
     const treeData = [
       {
         title: 'test-title',
@@ -1486,7 +1486,7 @@ describe('ConfigProvider support style and className props', () => {
     );
   });
 
-  it('Should ColorPicker className & style works', () => {
+  it('should ColorPicker className & style works', () => {
     const { container } = render(
       <ConfigProvider
         colorPicker={{ className: 'cp-colorPicker', style: { backgroundColor: 'red' } }}
@@ -1499,7 +1499,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should DatePicker className works', () => {
+  it('should DatePicker className works', () => {
     const { container } = render(
       <ConfigProvider
         datePicker={{
@@ -1513,7 +1513,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-picker')).toHaveClass('test-class');
   });
 
-  it('Should DatePicker style works', () => {
+  it('should DatePicker style works', () => {
     const { container } = render(
       <ConfigProvider
         datePicker={{
@@ -1527,7 +1527,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(container.querySelector('.ant-picker')).toHaveStyle('color: red; font-size: 16px;');
   });
 
-  it('Should Flex className & style works', () => {
+  it('should Flex className & style works', () => {
     const { container } = render(
       <ConfigProvider flex={{ className: 'cp-flex', style: { backgroundColor: 'blue' } }}>
         <Flex>test</Flex>
@@ -1538,7 +1538,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'blue' });
   });
 
-  it('Should Dropdown className & style works', () => {
+  it('should Dropdown className & style works', () => {
     const { container } = render(
       <ConfigProvider dropdown={{ className: 'cp-dropdown', style: { backgroundColor: 'red' } }}>
         <Dropdown menu={{ items: [{ label: 'foo', key: '1' }] }} open>
@@ -1551,7 +1551,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toHaveStyle({ backgroundColor: 'red' });
   });
 
-  it('Should Tour closeIcon works', () => {
+  it('should Tour closeIcon works', () => {
     const { container } = render(
       <ConfigProvider
         tour={{ closeIcon: <span className="cp-test-closeIcon">cp-test-closeIcon</span> }}
@@ -1564,7 +1564,7 @@ describe('ConfigProvider support style and className props', () => {
     expect(element).toBeTruthy();
   });
 
-  it('Should FloatButton.Group closeIcon works', () => {
+  it('should FloatButton.Group closeIcon works', () => {
     const { container } = render(
       <ConfigProvider
         floatButtonGroup={{ closeIcon: <span className="test-cp-icon">test-cp-icon</span> }}

@@ -28,7 +28,7 @@ const Content = () => {
   );
 };
 
-it('Delay loading timer in Button component', () => {
+it('delay loading timer in Button component', () => {
   const otherTimer = 9528;
   jest.spyOn<Window, 'setTimeout'>(window, 'setTimeout').mockReturnValue(otherTimer);
   jest.restoreAllMocks();
@@ -91,7 +91,7 @@ it('Delay loading timer in Button component', () => {
 
   jest.restoreAllMocks();
 });
-it('Delay loading while use loading delay at first time', () => {
+it('delay loading while use loading delay at first time', () => {
   const Demo = () => <Button loading={{ delay: specialDelay }} />;
   const wrapper = render(<Demo />);
   expect(wrapper.container.firstChild).not.toHaveClass('ant-btn-loading');

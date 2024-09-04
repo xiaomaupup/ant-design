@@ -1,7 +1,7 @@
 import { renderHook } from '../../../tests/utils';
 import useAnimateConfig from '../hooks/useAnimateConfig';
 
-describe('Tabs.Animated', () => {
+describe('tabs.Animated', () => {
   it('boolean: false', () => {
     const { result } = renderHook(() => useAnimateConfig('test', false));
 

@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Switch image', () => {
+describe('switch image', () => {
   imageDemoTest('switch', { skip: ['loading.tsx'] });
 });

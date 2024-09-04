@@ -7,7 +7,7 @@ import { fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 
 const { BackTop } = FloatButton;
 
-describe('BackTop', () => {
+describe('backTop', () => {
   const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
   beforeEach(() => {

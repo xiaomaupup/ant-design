@@ -28,7 +28,7 @@ function expectMatchChecked(container: HTMLElement, checkedList: boolean[]) {
   });
 }
 
-describe('Segmented', () => {
+describe('segmented', () => {
   mountTest(() => <Segmented options={[]} />);
   rtlTest(() => <Segmented options={[]} />);
 

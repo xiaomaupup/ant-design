@@ -12,7 +12,7 @@ const { TextArea } = Input;
 
 focusTest(TextArea, { refFocus: true });
 
-describe('TextArea', () => {
+describe('textArea', () => {
   const originalGetComputedStyle = window.getComputedStyle;
   beforeAll(() => {
     Object.defineProperty(window, 'getComputedStyle', {
@@ -234,7 +234,7 @@ describe('TextArea', () => {
   });
 });
 
-describe('TextArea allowClear', () => {
+describe('textArea allowClear', () => {
   it('should change type when click', () => {
     const { asFragment, container } = render(<TextArea allowClear />);
     fireEvent.change(container.querySelector('textarea')!, { target: { value: '111' } });

@@ -13,7 +13,7 @@ import zhCN from '../../locale/zh_CN';
 
 jest.mock('scroll-into-view-if-needed');
 
-describe('ConfigProvider.Form', () => {
+describe('configProvider.Form', () => {
   (scrollIntoView as any).mockImplementation(() => {});
 
   beforeEach(() => {

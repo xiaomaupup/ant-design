@@ -7,12 +7,12 @@ import mountTest from '../../../tests/shared/mountTest';
 import rtlTest from '../../../tests/shared/rtlTest';
 import { render } from '../../../tests/utils';
 
-describe('TreeSelect', () => {
+describe('treeSelect', () => {
   focusTest(TreeSelect, { refFocus: true });
   mountTest(TreeSelect);
   rtlTest(TreeSelect);
 
-  describe('TreeSelect Custom Icons', () => {
+  describe('treeSelect Custom Icons', () => {
     it('should support customized icons', () => {
       const { container } = render(
         <TreeSelect

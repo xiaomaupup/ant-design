@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Segmented image', () => {
+describe('segmented image', () => {
   imageDemoTest('segmented');
 });

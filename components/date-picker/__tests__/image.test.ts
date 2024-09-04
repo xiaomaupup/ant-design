@@ -1,6 +1,6 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('DatePicker image', () => {
+describe('datePicker image', () => {
   imageDemoTest('date-picker', {
     openTriggerClassName: 'ant-picker-dropdown',
   });

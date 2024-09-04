@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import Drawer from '..';
 
-describe('Drawer.typescript', () => {
-  it('Drawer', () => {
+describe('drawer.typescript', () => {
+  it('drawer', () => {
     const onClose = jest.fn();
     const wrapper = (
       <Drawer

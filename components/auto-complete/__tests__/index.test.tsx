@@ -8,11 +8,11 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { render, screen } from '../../../tests/utils';
 import Input from '../../input';
 
-describe('AutoComplete', () => {
+describe('autoComplete', () => {
   mountTest(AutoComplete);
   rtlTest(AutoComplete);
 
-  it('AutoComplete with custom Input render perfectly', async () => {
+  it('autoComplete with custom Input render perfectly', async () => {
     render(
       <AutoComplete dataSource={['12345', '23456', '34567']}>
         <textarea />
@@ -30,7 +30,7 @@ describe('AutoComplete', () => {
     expect(screen.getByTitle('34567')).toBeInTheDocument();
   });
 
-  it('AutoComplete should work when dataSource is object array', async () => {
+  it('autoComplete should work when dataSource is object array', async () => {
     render(
       <AutoComplete
         dataSource={[
@@ -49,11 +49,11 @@ describe('AutoComplete', () => {
     expect(screen.getByTitle('abc')).toBeInTheDocument();
   });
 
-  it('AutoComplete throws error when contains invalid dataSource', () => {
+  it('autoComplete throws error when contains invalid dataSource', () => {
     const spy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     render(
-      // @ts-ignore
+      // @ts-expect-error fix it later
       <AutoComplete dataSource={[() => {}]}>
         <textarea />
       </AutoComplete>,
@@ -78,8 +78,8 @@ describe('AutoComplete', () => {
     );
     expect(screen.getByRole('combobox')).toBeInTheDocument();
     await userEvent.type(screen.getByRole('combobox'), '1');
-    expect(screen.getByTitle(/111/i)).toBeInTheDocument();
-    expect(screen.getByTitle(/222/i)).toBeInTheDocument();
+    expect(screen.getByTitle(/111/)).toBeInTheDocument();
+    expect(screen.getByTitle(/222/)).toBeInTheDocument();
   });
 
   it('should not warning when getInputElement is null', () => {

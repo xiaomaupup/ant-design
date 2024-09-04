@@ -26,7 +26,7 @@ Object.defineProperty(window, 'location', {
   },
 });
 
-describe('Anchor Render', () => {
+describe('anchor Render', () => {
   const getBoundingClientRectMock = jest.spyOn(
     HTMLHeadingElement.prototype,
     'getBoundingClientRect',

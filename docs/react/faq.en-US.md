@@ -251,9 +251,9 @@ When we try to set the form value using the `setFieldsValue` method in the form 
 // This is not real world code, just for explain
 import { Form } from 'antd';
 
-type Test = {
+interface Test {
   value: string[] | null;
-};
+}
 
 export default () => {
   const [form] = Form.useForm<Test>();

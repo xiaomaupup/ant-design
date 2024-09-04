@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 import type * as React from 'react';
 import classNames from 'classnames';
 
@@ -17,7 +15,7 @@ export function parseColor(prefixCls: string, color?: string) {
 
   if (color && !isInternalColor) {
     overlayStyle.background = color;
-    // @ts-ignore
+    // @ts-expect-error fix it later
     arrowStyle['--antd-arrow-background-color'] = color;
   }
 

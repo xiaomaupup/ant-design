@@ -12,7 +12,7 @@ import Modal from '../../modal';
 import Pagination from '../../pagination';
 import TimePicker from '../../time-picker';
 
-describe('ConfigProvider.Locale', () => {
+describe('configProvider.Locale', () => {
   function $$(selector: string): NodeListOf<Element> {
     return document.body.querySelectorAll(selector);
   }
@@ -108,7 +108,7 @@ describe('ConfigProvider.Locale', () => {
       );
     }
 
-    it('LocaleProvider', () => {
+    it('localeProvider', () => {
       testLocale(
         render(
           <LocaleProvider locale={zhCN}>
@@ -118,7 +118,7 @@ describe('ConfigProvider.Locale', () => {
       );
     });
 
-    it('LocaleProvider > ConfigProvider', () => {
+    it('localeProvider > ConfigProvider', () => {
       testLocale(
         render(
           <LocaleProvider locale={zhCN}>
@@ -130,7 +130,7 @@ describe('ConfigProvider.Locale', () => {
       );
     });
 
-    it('ConfigProvider > ConfigProvider', () => {
+    it('configProvider > ConfigProvider', () => {
       testLocale(
         render(
           <ConfigProvider locale={zhCN}>

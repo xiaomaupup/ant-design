@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Anchor image', () => {
+describe('anchor image', () => {
   imageDemoTest('anchor', { onlyViewport: true });
 });

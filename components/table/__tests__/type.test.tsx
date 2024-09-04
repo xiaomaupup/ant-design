@@ -5,8 +5,8 @@ import Table from '..';
 
 const { Column, ColumnGroup } = Table;
 
-describe('Table.typescript', () => {
-  it('Column', () => {
+describe('table.typescript', () => {
+  it('column', () => {
     const table = (
       <Table>
         <Column dataIndex="test" title="test" sorter />
@@ -14,7 +14,7 @@ describe('Table.typescript', () => {
     );
     expect(table).toBeTruthy();
   });
-  it('ColumnGroup', () => {
+  it('columnGroup', () => {
     const table = (
       <Table>
         <Column dataIndex="test" title="test" sorter />
@@ -38,7 +38,7 @@ describe('Table.typescript', () => {
     expect(table).toBeTruthy();
   });
 
-  it('ColumnProps', () => {
+  it('columnProps', () => {
     interface User {
       name: string;
     }

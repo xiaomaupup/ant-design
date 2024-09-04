@@ -4,7 +4,7 @@ import type { RadioGroupProps } from '..';
 import Radio from '..';
 import { fireEvent, render } from '../../../tests/utils';
 
-describe('Radio Group', () => {
+describe('radio Group', () => {
   const RadioGroupComponent: React.FC<RadioGroupProps> = (props) => (
     <Radio.Group {...props}>
       <Radio value="A">A</Radio>
@@ -83,7 +83,7 @@ describe('Radio Group', () => {
     expect(onChangeRadioGroup.mock.calls.length).toBe(1);
   });
 
-  it('Trigger onChange when both of radioButton and radioGroup exists', () => {
+  it('trigger onChange when both of radioButton and radioGroup exists', () => {
     const onChange = jest.fn();
 
     const RadioGroup: React.FC<RadioGroupProps> = (props) => (
@@ -174,7 +174,7 @@ describe('Radio Group', () => {
     );
   });
 
-  it('Radio type should not be override', () => {
+  it('radio type should not be override', () => {
     const onChange = jest.fn();
     const { container } = render(
       <Radio.Group onChange={onChange}>

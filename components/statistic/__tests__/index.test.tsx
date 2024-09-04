@@ -9,7 +9,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 import { formatTimeStr } from '../utils';
 
-describe('Statistic', () => {
+describe('statistic', () => {
   mountTest(Statistic);
   mountTest(Statistic.Countdown);
   rtlTest(Statistic);
@@ -105,7 +105,7 @@ describe('Statistic', () => {
     );
   });
 
-  describe('Countdown', () => {
+  describe('countdown', () => {
     it('render correctly', () => {
       const now = dayjs()
         .add(2, 'd')

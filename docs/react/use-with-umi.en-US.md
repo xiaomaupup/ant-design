@@ -175,10 +175,10 @@ Create a new `mock/products.ts` file in the root directory with the following co
 ```ts
 import { defineMock } from 'umi';
 
-type Product = {
+interface Product {
   id: string;
   name: string;
-};
+}
 
 let products: Product[] = [
   { id: '1', name: 'Umi' },

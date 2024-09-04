@@ -5,7 +5,7 @@ import { fireEvent, render } from '../../../tests/utils';
 import Transfer from '../index';
 import Search from '../search';
 
-describe('Transfer.Search', () => {
+describe('transfer.Search', () => {
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
   const dataSource = [
@@ -75,7 +75,7 @@ describe('Transfer.Search', () => {
     expect(filterOption).toHaveBeenCalledTimes(dataSource.length);
   });
 
-  it('The filterOption parameter is correct when use input in search box', () => {
+  it('the filterOption parameter is correct when use input in search box', () => {
     const filterOption = jest.fn();
 
     const { container } = testLibRender(

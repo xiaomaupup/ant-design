@@ -10,7 +10,7 @@ import Menu from '../../menu';
 
 const { Sider, Content, Footer, Header } = Layout;
 
-describe('Layout', () => {
+describe('layout', () => {
   mountTest(Layout);
   mountTest(Content);
   mountTest(Sider);
@@ -252,7 +252,7 @@ describe('Layout', () => {
   });
 });
 
-describe('Sider', () => {
+describe('sider', () => {
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
   afterEach(() => {

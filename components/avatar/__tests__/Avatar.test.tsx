@@ -9,7 +9,7 @@ import useBreakpoint from '../../grid/hooks/useBreakpoint';
 
 jest.mock('../../grid/hooks/useBreakpoint');
 
-describe('Avatar Render', () => {
+describe('avatar Render', () => {
   mountTest(Avatar);
   rtlTest(Avatar);
 
@@ -35,20 +35,20 @@ describe('Avatar Render', () => {
     });
   });
 
-  it('Render long string correctly', () => {
+  it('render long string correctly', () => {
     const { container } = render(<Avatar>TestString</Avatar>);
     expect(container.querySelectorAll('.ant-avatar-string').length).toBe(1);
   });
 
   it('should render fallback string correctly', () => {
-    const div = global.document.createElement('div');
-    global.document.body.appendChild(div);
+    const div = globalThis.document.createElement('div');
+    globalThis.document.body.appendChild(div);
     const { container } = render(<Avatar src="http://error.url">Fallback</Avatar>);
     fireEvent.error(container.querySelector('img')!);
     const children = container.querySelectorAll('.ant-avatar-string');
     expect(children.length).toBe(1);
     expect(children[0].innerHTML).toBe('Fallback');
-    global.document.body.removeChild(div);
+    globalThis.document.body.removeChild(div);
   });
 
   it('should handle onError correctly', () => {
@@ -77,8 +77,8 @@ describe('Avatar Render', () => {
     const LOAD_FAILURE_SRC = 'http://error.url';
     const LOAD_SUCCESS_SRC = 'https://api.dicebear.com/7.x/pixel-art/svg';
 
-    const div = global.document.createElement('div');
-    global.document.body.appendChild(div);
+    const div = globalThis.document.createElement('div');
+    globalThis.document.body.appendChild(div);
 
     // simulate error src url
     const { container, rerender } = render(<Avatar src={LOAD_FAILURE_SRC}>Fallback</Avatar>);
@@ -99,7 +99,7 @@ describe('Avatar Render', () => {
     expect(container.firstChild).toMatchSnapshot();
     expect(container.querySelectorAll('.ant-avatar-image').length).toBe(1);
 
-    global.document.body.removeChild(div);
+    globalThis.document.body.removeChild(div);
   });
 
   it('should calculate scale of avatar children correctly', () => {
@@ -154,8 +154,8 @@ describe('Avatar Render', () => {
   });
 
   it('fallback', () => {
-    const div = global.document.createElement('div');
-    global.document.body.appendChild(div);
+    const div = globalThis.document.createElement('div');
+    globalThis.document.body.appendChild(div);
     const { container } = render(
       <Avatar shape="circle" src="http://error.url">
         A
@@ -163,7 +163,7 @@ describe('Avatar Render', () => {
     );
     fireEvent.error(container.querySelector('img')!);
     expect(container.firstChild).toMatchSnapshot();
-    global.document.body.removeChild(div);
+    globalThis.document.body.removeChild(div);
   });
 
   it('should exist crossorigin attribute', () => {
@@ -192,7 +192,7 @@ describe('Avatar Render', () => {
     expect(onClick).toHaveBeenCalled();
   });
 
-  it('Avatar.Group support shape props', () => {
+  it('avatar.Group support shape props', () => {
     const { container } = render(
       <Avatar.Group shape="square">
         <Avatar>A</Avatar>
@@ -223,7 +223,7 @@ describe('Avatar Render', () => {
     expect(container.querySelector('.ant-avatar-lg')).toBeTruthy();
   });
 
-  it('Avatar.Group support max series props and prompt to deprecated', async () => {
+  it('avatar.Group support max series props and prompt to deprecated', async () => {
     const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     jest.useFakeTimers();
     const { container } = render(
@@ -264,7 +264,7 @@ describe('Avatar Render', () => {
       'Warning: [antd: Avatar.Group] `maxPopoverPlacement` is deprecated. Please use `max={{ popover: PopoverProps }}` instead.',
     );
   });
-  it('Avatar.Group support max object props', () => {
+  it('avatar.Group support max object props', () => {
     const { container } = render(
       <Avatar.Group
         max={{

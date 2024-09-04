@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Pagination image', () => {
+describe('pagination image', () => {
   imageDemoTest('pagination');
 });

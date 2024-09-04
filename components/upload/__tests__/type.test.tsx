@@ -4,8 +4,8 @@ import type { UploadListProps, UploadProps } from '..';
 import Upload from '..';
 import UploadList from '../UploadList';
 
-describe('Upload.typescript', () => {
-  it('Upload', () => {
+describe('upload.typescript', () => {
+  it('upload', () => {
     const upload = (
       <Upload>
         <span>click to upload</span>
@@ -25,9 +25,9 @@ describe('Upload.typescript', () => {
   });
 
   it('onChange params', () => {
-    type IFile = {
+    interface IFile {
       customFile: File;
-    };
+    }
 
     const upload = (
       <Upload<IFile> onChange={({ file }) => file.response?.customFile}>
@@ -39,9 +39,9 @@ describe('Upload.typescript', () => {
   });
 
   it('onChange fileList', () => {
-    type IFile = {
+    interface IFile {
       customFile: File;
-    };
+    }
 
     const upload = (
       <Upload<IFile> onChange={({ fileList }) => fileList.map((file) => file.response?.customFile)}>
@@ -212,7 +212,7 @@ describe('Upload.typescript', () => {
     expect(upload3).toBeTruthy();
   });
 
-  it('UploadProps type', () => {
+  it('uploadProps type', () => {
     const uploadProps: UploadProps<number | string> = {
       customRequest({ onSuccess }) {
         onSuccess?.(1234);
@@ -222,7 +222,7 @@ describe('Upload.typescript', () => {
     expect(<Upload {...uploadProps} />).toBeTruthy();
   });
 
-  it('UploadListProps type', () => {
+  it('uploadListProps type', () => {
     const uploadListProps: UploadListProps<number | string> = {
       locale: {},
       removeIcon: (file) => <div>{JSON.stringify(file.response)}</div>,

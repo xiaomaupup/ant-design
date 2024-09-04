@@ -9,8 +9,8 @@ interface FormValues {
   path1?: { path2?: number };
 }
 
-describe('Form.typescript', () => {
-  it('Form.Item', () => {
+describe('form.typescript', () => {
+  it('form.Item', () => {
     const form = (
       <Form>
         <Form.Item name="test">
@@ -64,7 +64,7 @@ describe('Form.typescript', () => {
     });
   });
 
-  it('FormItem renderProps support generic', () => {
+  it('formItem renderProps support generic', () => {
     const Demo: React.FC = () => (
       <Form<FormValues>>
         <Form.Item<FormValues>>

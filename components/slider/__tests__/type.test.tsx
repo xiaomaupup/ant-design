@@ -3,7 +3,7 @@ import * as React from 'react';
 import type { SliderRangeProps } from '..';
 import Slider from '..';
 
-describe('Slider.typescript', () => {
+describe('slider.typescript', () => {
   it('single value', () => {
     const value = 0;
     const onChange = (v: number) => v;

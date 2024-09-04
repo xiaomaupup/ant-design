@@ -25,7 +25,7 @@ jest.mock('@rc-component/trigger', () => {
   });
 });
 
-describe('ConfigProvider.Popup', () => {
+describe('configProvider.Popup', () => {
   beforeEach(() => {
     (global as any).triggerProps = null;
   });
@@ -34,15 +34,21 @@ describe('ConfigProvider.Popup', () => {
     <>
       <Select
         open
-        options={new Array(20).fill(null).map((_, index) => ({ value: index, label: index }))}
+        options={Array.from({ length: 20 })
+          .fill(null)
+          .map((_, index) => ({ value: index, label: index }))}
       />
       <TreeSelect
         open
-        treeData={new Array(20).fill(null).map((_, index) => ({ value: index, title: index }))}
+        treeData={Array.from({ length: 20 })
+          .fill(null)
+          .map((_, index) => ({ value: index, title: index }))}
       />
       <Cascader
         open
-        options={new Array(20).fill(null).map((_, index) => ({ value: index, label: index }))}
+        options={Array.from({ length: 20 })
+          .fill(null)
+          .map((_, index) => ({ value: index, label: index }))}
       />
     </>
   );
@@ -79,7 +85,7 @@ describe('ConfigProvider.Popup', () => {
   });
 
   describe('config popupOverflow', () => {
-    it('Select', () => {
+    it('select', () => {
       render(
         <ConfigProvider popupOverflow="scroll">
           <Select open />
@@ -89,7 +95,7 @@ describe('ConfigProvider.Popup', () => {
       expect(triggerProps().builtinPlacements!.topLeft!.htmlRegion).toBe('scroll');
     });
 
-    it('TreeSelect', () => {
+    it('treeSelect', () => {
       render(
         <ConfigProvider popupOverflow="scroll">
           <TreeSelect open />
@@ -99,7 +105,7 @@ describe('ConfigProvider.Popup', () => {
       expect(triggerProps().builtinPlacements!.topLeft!.htmlRegion).toBe('scroll');
     });
 
-    it('Cascader', () => {
+    it('cascader', () => {
       render(
         <ConfigProvider popupOverflow="scroll">
           <Cascader open />

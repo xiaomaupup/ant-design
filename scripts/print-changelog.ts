@@ -1,7 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-await-in-loop, no-console */
-import { spawn } from 'child_process';
-import path from 'path';
+import { spawn } from 'node:child_process';
+import path from 'node:path';
 import { input, select } from '@inquirer/prompts';
 import chalk from 'chalk';
 import fs from 'fs-extra';
@@ -15,7 +13,7 @@ const { JSDOM } = jsdom;
 const { window } = new JSDOM();
 const { document } = new JSDOM('').window;
 
-global.document = document;
+globalThis.document = document;
 
 const $ = jQuery<jsdom.DOMWindow>(window) as unknown as JQueryStatic;
 

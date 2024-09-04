@@ -9,7 +9,7 @@ import { fireEvent, render } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 import Select from '../../select';
 
-describe('Pagination', () => {
+describe('pagination', () => {
   mountTest(Pagination);
   rtlTest(Pagination);
 
@@ -69,7 +69,7 @@ describe('Pagination', () => {
     expect(container.querySelectorAll('.custom-select').length).toBeTruthy();
   });
 
-  describe('ConfigProvider', () => {
+  describe('configProvider', () => {
     it('should be rendered correctly in RTL', () => {
       const { asFragment } = render(
         <ConfigProvider direction="rtl">

@@ -1,4 +1,4 @@
-/* eslint-disable react/no-string-refs, react/prefer-es6-class */
+/* eslint-disable react/prefer-es6-class */
 import React from 'react';
 
 import Upload from '..';
@@ -6,7 +6,7 @@ import mountTest from '../../../tests/shared/mountTest';
 import { act, fireEvent, render, waitFor } from '../../../tests/utils';
 import { setup, teardown } from './mock';
 
-describe('Upload.Dragger', () => {
+describe('upload.Dragger', () => {
   mountTest(Upload.Dragger);
 
   beforeEach(() => setup());

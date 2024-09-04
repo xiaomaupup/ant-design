@@ -64,7 +64,6 @@ const useThemeAnimation = () => {
     event: React.MouseEvent<HTMLElement, MouseEvent>,
     isDark: boolean,
   ) => {
-    // @ts-ignore
     if (!(event && typeof document.startViewTransition === 'function')) {
       return;
     }
@@ -85,11 +84,10 @@ const useThemeAnimation = () => {
       'color-scheme',
     );
     document
-      // @ts-ignore
+      // @ts-expect-error fix it later
       .startViewTransition(async () => {
         // wait for theme change end
         while (colorBgElevated === animateRef.current.colorBgElevated) {
-          // eslint-disable-next-line no-await-in-loop
           await new Promise((resolve) => {
             setTimeout(resolve, 1000 / 60);
           });
@@ -111,7 +109,7 @@ const useThemeAnimation = () => {
 
   // inject transition style
   useEffect(() => {
-    // @ts-ignore
+    // @ts-expect-error fix it later
     if (typeof document.startViewTransition === 'function') {
       updateCSS(viewTransitionStyle, 'view-transition-style');
     }

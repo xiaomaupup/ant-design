@@ -1,10 +1,10 @@
 /* eslint-disable no-template-curly-in-string */
 import Pagination from 'rc-pagination/lib/locale/mn_MN';
 
-import type { Locale } from '.';
 import Calendar from '../calendar/locale/mn_MN';
 import DatePicker from '../date-picker/locale/mn_MN';
 import TimePicker from '../time-picker/locale/mn_MN';
+import type { Locale } from '.';
 
 const typeTemplate = '${label} нь хүчинтэй ${type} биш';
 

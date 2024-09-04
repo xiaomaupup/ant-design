@@ -47,7 +47,7 @@ const columnsFixed: ColumnsType<any> = [
   },
 ];
 
-describe('Table', () => {
+describe('table', () => {
   it('renders empty table', () => {
     const { asFragment } = render(<Table dataSource={[]} columns={columns} pagination={false} />);
     expect(asFragment().firstChild).toMatchSnapshot();

@@ -10,7 +10,7 @@ jest.mock('../../_util/styleChecker', () => ({
   isStyleSupport: () => true,
 }));
 
-describe('Typography.Editable', () => {
+describe('typography.Editable', () => {
   const LINE_STR_COUNT = 20;
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
   let mockRectSpy: ReturnType<typeof spyElementPrototypes>;

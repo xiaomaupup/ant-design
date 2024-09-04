@@ -10,7 +10,7 @@ import { act, fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 import type { BaseButtonProps } from '../button';
 
-describe('Button', () => {
+describe('button', () => {
   mountTest(Button);
   mountTest(() => <Button size="large" />);
   mountTest(() => <Button size="small" />);
@@ -40,7 +40,7 @@ describe('Button', () => {
     resetWarned();
     const mockWarn = jest.spyOn(console, 'error').mockImplementation(() => {});
     const size = 'who am I';
-    // @ts-expect-error: Type '"who am I"' is not assignable to type 'SizeType'.ts(2322)
+    // @ts-expect-error fix it later: Type '"who am I"' is not assignable to type 'SizeType'.ts(2322)
     render(<Button.Group size={size} />);
     expect(mockWarn).toHaveBeenCalledWith('Warning: [antd: Button.Group] Invalid prop `size`.');
 
@@ -345,7 +345,7 @@ describe('Button', () => {
     expect(window.getComputedStyle(container.querySelector('#link')!).pointerEvents).toBe('none');
   });
 
-  it('Correct type', () => {
+  it('correct type', () => {
     const onBtnClick: React.MouseEventHandler<HTMLButtonElement> = () => {};
     const onAnchorClick: React.MouseEventHandler<HTMLAnchorElement> = () => {};
 
@@ -439,7 +439,7 @@ describe('Button', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/47605
-  it('Compatible with original `type` behavior', async () => {
+  it('compatible with original `type` behavior', async () => {
     const { container } = render(<Button type={'' as any} />);
     expect(container.querySelector('.ant-btn-default')).toBeTruthy();
   });

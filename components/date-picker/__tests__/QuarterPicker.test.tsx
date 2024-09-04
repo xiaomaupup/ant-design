@@ -6,7 +6,7 @@ import { render } from '../../../tests/utils';
 
 const { QuarterPicker } = DatePicker;
 
-describe('QuarterPicker', () => {
+describe('quarterPicker', () => {
   it('should support style prop', () => {
     resetWarned();
     const warnSpy = jest.spyOn(console, 'error').mockImplementation(() => {});

@@ -1,6 +1,6 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Progress image', () => {
+describe('progress image', () => {
   imageDemoTest('progress', {
     ssr: true,
   });

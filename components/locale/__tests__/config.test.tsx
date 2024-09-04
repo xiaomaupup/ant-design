@@ -14,7 +14,7 @@ const Demo: React.FC<{ type: string }> = ({ type }) => {
   return null;
 };
 
-describe('Locale Provider demo', () => {
+describe('locale Provider demo', () => {
   it('change type', async () => {
     jest.useFakeTimers();
 

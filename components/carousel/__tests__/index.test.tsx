@@ -6,7 +6,7 @@ import mountTest from '../../../tests/shared/mountTest';
 import rtlTest from '../../../tests/shared/rtlTest';
 import { render, waitFakeTimer } from '../../../tests/utils';
 
-describe('Carousel', () => {
+describe('carousel', () => {
   mountTest(Carousel);
   rtlTest(Carousel);
 

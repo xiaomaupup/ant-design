@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Tooltip tour', () => {
+describe('tooltip tour', () => {
   imageDemoTest('tour');
 });

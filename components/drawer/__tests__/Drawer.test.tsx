@@ -16,7 +16,7 @@ const DrawerTest: React.FC<DrawerProps> = ({ getContainer }) => (
   </div>
 );
 
-describe('Drawer', () => {
+describe('drawer', () => {
   mountTest(Drawer);
   rtlTest(Drawer);
 
@@ -178,7 +178,7 @@ describe('Drawer', () => {
     expect(baseElement.querySelectorAll('button.forceRender').length).toBe(1);
   });
 
-  describe('Drawer loading', () => {
+  describe('drawer loading', () => {
     it('have a spinner', () => {
       const { container: wrapper } = render(
         <Drawer open loading getContainer={false}>
@@ -212,7 +212,7 @@ describe('Drawer', () => {
     expect(wrapper.firstChild).toMatchSnapshot();
   });
 
-  it('ConfigProvider should not warning', () => {
+  it('configProvider should not warning', () => {
     const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     render(

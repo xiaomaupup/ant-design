@@ -7,7 +7,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { act, fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 import Button from '../../button';
 
-describe('Popconfirm', () => {
+describe('popconfirm', () => {
   mountTest(() => <Popconfirm title="test" />);
   rtlTest(() => <Popconfirm title="test" />);
 

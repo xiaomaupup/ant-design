@@ -5,7 +5,7 @@ import Table from '..';
 import { resetWarned } from '../../_util/warning';
 import { render } from '../../../tests/utils';
 
-describe('Table.order', () => {
+describe('table.order', () => {
   window.requestAnimationFrame = (callback) => window.setTimeout(callback, 16);
   window.cancelAnimationFrame = window.clearTimeout;
 

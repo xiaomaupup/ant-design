@@ -1,4 +1,3 @@
-/* eslint-disable no-unsafe-optional-chaining */
 /* eslint-disable react/no-multi-comp */
 import React, { useEffect, useState } from 'react';
 
@@ -24,7 +23,7 @@ import type {
 // https://github.com/Semantic-Org/Semantic-UI-React/blob/72c45080e4f20b531fda2e3e430e384083d6766b/test/specs/modules/Dropdown/Dropdown-test.js#L73
 const nativeEvent = { nativeEvent: { stopImmediatePropagation: () => {} } };
 
-describe('Table.filter', () => {
+describe('table.filter', () => {
   window.requestAnimationFrame = (callback) => window.setTimeout(callback, 16);
   window.cancelAnimationFrame = window.clearTimeout;
 
@@ -1387,7 +1386,7 @@ describe('Table.filter', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/20854
-  it('Not cache for onChange state', () => {
+  it('not cache for onChange state', () => {
     const onChange = jest.fn();
 
     const { container } = render(
@@ -1784,7 +1783,7 @@ describe('Table.filter', () => {
   });
 
   // Warning: An update to Item ran an effect, but was not wrapped in act(...).
-  it('Column with filter and children filters properly.', () => {
+  it('column with filter and children filters properly.', () => {
     const App: React.FC = () => {
       const [filteredInfo, setFilteredInfo] = useState<Record<string, FilterValue | null>>({});
       const [sortedInfo, setSortedInfo] = useState<SorterResult<any> | SorterResult<any>[]>({});
@@ -1861,7 +1860,7 @@ describe('Table.filter', () => {
     );
   });
 
-  it('Columns with filters should filter correctly after reset it.', () => {
+  it('columns with filters should filter correctly after reset it.', () => {
     interface DataType {
       key: React.Key;
       name?: string;

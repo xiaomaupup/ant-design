@@ -1,6 +1,6 @@
 import { easeInOutCubic } from '../easings';
 
-describe('Test easings', () => {
+describe('test easings', () => {
   it('easeInOutCubic return value', () => {
     const nums: number[] = [];
     for (let index = 0; index < 5; index++) {

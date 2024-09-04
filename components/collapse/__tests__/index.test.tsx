@@ -3,8 +3,7 @@ import React from 'react';
 import { resetWarned } from '../../_util/warning';
 import { act, fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 
-describe('Collapse', () => {
-  // eslint-disable-next-line global-require
+describe('collapse', () => {
   const Collapse = require('..').default;
 
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
@@ -238,7 +237,7 @@ describe('Collapse', () => {
     });
   });
 
-  it('Collapse.Panel usage', () => {
+  it('collapse.Panel usage', () => {
     const { container } = render(
       <Collapse bordered={false}>
         <Collapse.Panel key="test panel1" header="test panel1">
@@ -252,7 +251,7 @@ describe('Collapse', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Check expandIcon aria-label value', () => {
+  it('check expandIcon aria-label value', () => {
     const { container, rerender } = render(
       <Collapse activeKey="1">
         <Collapse.Panel header="header" key="1" />

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 
 import Space from '..';
@@ -20,7 +19,7 @@ import TimePicker from '../../time-picker';
 import Tooltip from '../../tooltip';
 import TreeSelect from '../../tree-select';
 
-describe('Space.Compact', () => {
+describe('space.Compact', () => {
   mountTest(Space.Compact);
   mountTest(() => (
     <Space.Compact>
@@ -320,7 +319,7 @@ describe('Space.Compact', () => {
     ).toBe(false);
   });
 
-  it('Tooltip content supports function', () => {
+  it('tooltip content supports function', () => {
     render(
       <Space.Compact>
         <Input placeholder="Debug Popover context" />
@@ -352,7 +351,7 @@ describe('Space.Compact', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/41876
-  it('Space.Compact should inherit the size from ConfigProvider if the componentSize is set', () => {
+  it('space.Compact should inherit the size from ConfigProvider if the componentSize is set', () => {
     const { container } = render(
       <ConfigProvider componentSize="large">
         <Space.Compact>
@@ -364,7 +363,7 @@ describe('Space.Compact', () => {
     expect(container.querySelectorAll('.ant-select-lg')).toHaveLength(1);
   });
 
-  it('The size property of Space.Compact should have an higher priority over the componentSize property of ConfigProvider', () => {
+  it('the size property of Space.Compact should have an higher priority over the componentSize property of ConfigProvider', () => {
     const { container } = render(
       <ConfigProvider componentSize="large">
         <Space.Compact size="small">

@@ -36,7 +36,7 @@ const { TextArea } = Input;
 
 jest.mock('scroll-into-view-if-needed');
 
-describe('Form', () => {
+describe('form', () => {
   mountTest(Form);
   mountTest(Form.Item);
 
@@ -581,10 +581,10 @@ describe('Form', () => {
     });
   });
 
-  it('Form.Item should support data-*、aria-* and custom attribute', () => {
+  it('form.Item should support data-*、aria-* and custom attribute', () => {
     const { container } = render(
       <Form>
-        {/* @ts-ignore */}
+        {/* @ts-expect-error fix it later */}
         <Form.Item data-text="123" aria-hidden="true" cccc="bbbb">
           text
         </Form.Item>
@@ -604,7 +604,7 @@ describe('Form', () => {
     );
   });
 
-  it('No warning when use noStyle and children is empty', () => {
+  it('no warning when use noStyle and children is empty', () => {
     render(
       <Form>
         <Form.Item name="noWarning" noStyle />
@@ -687,7 +687,7 @@ describe('Form', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/20706
-  it('Error change should work', async () => {
+  it('error change should work', async () => {
     const { container } = render(
       <Form>
         <Form.Item
@@ -710,7 +710,6 @@ describe('Form', () => {
       </Form>,
     );
 
-    /* eslint-disable no-await-in-loop */
     for (let i = 0; i < 3; i += 1) {
       await changeValue(0, 'bamboo');
       await changeValue(0, '');
@@ -721,7 +720,6 @@ describe('Form', () => {
       await changeValue(0, 'p');
       expect(container.querySelector('.ant-form-item-explain')?.textContent).toEqual('not a p');
     }
-    /* eslint-enable */
   });
 
   // https://github.com/ant-design/ant-design/issues/20813
@@ -825,7 +823,7 @@ describe('Form', () => {
     expect(container.querySelectorAll('.ant-form-item-explain').length).toBeTruthy();
   });
 
-  it('Form.Item with `help` should display error style when validate failed', async () => {
+  it('form.Item with `help` should display error style when validate failed', async () => {
     const { container } = render(
       <Form>
         <Form.Item
@@ -1025,7 +1023,6 @@ describe('Form', () => {
   it('validation message should has alert role', async () => {
     // https://github.com/ant-design/ant-design/issues/25711
     const { container } = render(
-      // eslint-disable-next-line no-template-curly-in-string
       <Form validateMessages={{ required: 'name is good!' }}>
         <Form.Item name="test" rules={[{ required: true }]}>
           <input />
@@ -1067,7 +1064,7 @@ describe('Form', () => {
 
     for (let i = 0; i < 5; i += 1) {
       fireEvent.click(container.querySelector('button')!);
-      // eslint-disable-next-line no-await-in-loop
+
       await waitFakeTimer();
     }
 
@@ -1181,7 +1178,7 @@ describe('Form', () => {
     expect(container.querySelector('.ant-form-item-explain')).toBeTruthy();
   });
 
-  describe('Form item hidden', () => {
+  describe('form item hidden', () => {
     it('should work', () => {
       const { container } = render(
         <Form>
@@ -1343,7 +1340,7 @@ describe('Form', () => {
       <Form>
         <Form.Item
           name="light"
-          // @ts-ignore
+          // @ts-expect-error fix it later
           _internalItemRender={{
             mark: 'pro_table_render',
             render: (_: any, doms: any) => (
@@ -1364,7 +1361,7 @@ describe('Form', () => {
     expect(container.querySelector('.bamboo')!).toHaveTextContent(/warning title/i);
   });
 
-  it('Form Item element id will auto add form_item prefix if form name is empty and item name is in the black list', async () => {
+  it('form Item element id will auto add form_item prefix if form name is empty and item name is in the black list', async () => {
     const mockFn = jest.spyOn(Util, 'getFieldId');
     const itemName = 'parentNode';
     // mock getFieldId old logic
@@ -1421,7 +1418,7 @@ describe('Form', () => {
   });
 
   describe('tooltip', () => {
-    it('ReactNode', async () => {
+    it('reactNode', async () => {
       const { container } = render(
         <Form>
           <Form.Item label="light" tooltip={<span>Bamboo</span>}>
@@ -1708,7 +1705,7 @@ describe('Form', () => {
     expect(document.querySelector('.ant-form-item-margin-offset')).toBeTruthy();
   });
 
-  it('Form.Item.useStatus should work', async () => {
+  it('form.Item.useStatus should work', async () => {
     const {
       Item: { useStatus },
     } = Form;
@@ -1767,7 +1764,7 @@ describe('Form', () => {
     );
   });
 
-  it('Form.Item.useStatus should supports get error messages and warning messages', async () => {
+  it('form.Item.useStatus should supports get error messages and warning messages', async () => {
     const {
       Item: { useStatus },
     } = Form;
@@ -2244,7 +2241,7 @@ describe('Form', () => {
     });
   });
 
-  it('InputNumber with hasFeedback should keep dom stable', () => {
+  it('inputNumber with hasFeedback should keep dom stable', () => {
     const Demo = () => (
       <Form>
         <Form.Item

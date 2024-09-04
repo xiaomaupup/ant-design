@@ -6,10 +6,9 @@ import scrollTo from '../../_util/scrollTo';
 import { resetWarned } from '../../_util/warning';
 import { act, fireEvent, render } from '../../../tests/utils';
 
-/* eslint-disable import/first */
 jest.mock('../../_util/scrollTo');
 
-describe('Table.pagination', () => {
+describe('table.pagination', () => {
   const columns = [
     {
       title: 'Name',
@@ -418,7 +417,7 @@ describe('Table.pagination', () => {
    * `pagination` is not designed to accept `true` value, but in practice, many people assign `true`
    * to `pagination`, since they misunderstand that `pagination` can accept a boolean value.
    */
-  it('Accepts pagination as true', () => {
+  it('accepts pagination as true', () => {
     const { asFragment } = render(createTable({ pagination: true as any } as TableProps<any>));
     expect(asFragment().firstChild).toMatchSnapshot();
   });

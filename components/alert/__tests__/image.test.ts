@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Alert image', () => {
+describe('alert image', () => {
   imageDemoTest('alert');
 });

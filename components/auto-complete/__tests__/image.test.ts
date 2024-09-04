@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('AutoComplete image', () => {
+describe('autoComplete image', () => {
   imageDemoTest('auto-complete');
 });

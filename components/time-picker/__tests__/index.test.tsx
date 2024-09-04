@@ -11,7 +11,7 @@ import { render } from '../../../tests/utils';
 
 dayjs.extend(customParseFormat);
 
-describe('TimePicker', () => {
+describe('timePicker', () => {
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
   afterEach(() => {

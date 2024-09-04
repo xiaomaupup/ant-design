@@ -7,7 +7,7 @@ import mountTest from '../../../tests/shared/mountTest';
 import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render } from '../../../tests/utils';
 
-describe('Radio Button', () => {
+describe('radio Button', () => {
   focusTest(Button, { refFocus: true });
   mountTest(Button);
 
@@ -34,7 +34,7 @@ describe('Radio Button', () => {
   });
 });
 
-describe('Radio Group', () => {
+describe('radio Group', () => {
   const RadioGroupComponent = React.forwardRef<HTMLDivElement, RadioGroupProps>((props, ref) => (
     <Radio.Group {...props} ref={ref}>
       <Radio value="A">A</Radio>
@@ -98,7 +98,7 @@ describe('Radio Group', () => {
     expect(onChangeRadioGroup.mock.calls.length).toBe(1);
   });
 
-  it('Trigger onChange when both of Button and radioGroup exists', () => {
+  it('trigger onChange when both of Button and radioGroup exists', () => {
     const onChange = jest.fn();
 
     const { container, rerender } = render(
@@ -185,7 +185,7 @@ describe('Radio Group', () => {
     );
   });
 
-  it('Radio type should not be override', () => {
+  it('radio type should not be override', () => {
     const onChange = jest.fn();
     const { container } = render(
       <Radio.Group onChange={onChange}>

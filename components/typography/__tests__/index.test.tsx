@@ -17,7 +17,7 @@ import Typography from '../Typography';
 
 jest.mock('copy-to-clipboard');
 
-describe('Typography', () => {
+describe('typography', () => {
   mountTest(Paragraph);
   mountTest(Base);
   mountTest(Title);
@@ -49,7 +49,7 @@ describe('Typography', () => {
       },
     });
     mockGetBoundingClientRect.mockImplementation(function fn() {
-      // @ts-ignore
+      // @ts-expect-error fix it later
       let html = this.innerHTML;
       html = html.replace(/<[^>]*>/g, '');
       const lines = Math.ceil(html.length / LINE_STR_COUNT);
@@ -78,7 +78,7 @@ describe('Typography', () => {
     window.getComputedStyle = originGetComputedStyle;
   });
 
-  describe('Title', () => {
+  describe('title', () => {
     it('warning if `level` not correct', () => {
       render(<Title level={false as unknown as TitleProps['level']} />);
 
@@ -88,7 +88,7 @@ describe('Typography', () => {
     });
   });
 
-  describe('Base', () => {
+  describe('base', () => {
     describe('copyable', () => {
       /**
        * @param name Test case name

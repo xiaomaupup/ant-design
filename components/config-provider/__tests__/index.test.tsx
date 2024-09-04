@@ -12,7 +12,7 @@ import Select from '../../select';
 import Table from '../../table';
 import Form from '../../form';
 
-describe('ConfigProvider', () => {
+describe('configProvider', () => {
   mountTest(() => (
     <ConfigProvider>
       <div />

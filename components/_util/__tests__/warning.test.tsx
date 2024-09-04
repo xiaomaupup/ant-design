@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import { devUseWarning as useWarning } from '../warning';
 
-describe('Test warning', () => {
+describe('test warning', () => {
   let spy: jest.SpyInstance;
 
   beforeAll(() => {
@@ -22,7 +22,7 @@ describe('Test warning', () => {
     spy.mockReset();
   });
 
-  it('Test noop', async () => {
+  it('test noop', async () => {
     const { noop } = await import('../warning');
     const value = noop();
 
@@ -32,14 +32,14 @@ describe('Test warning', () => {
   });
 
   describe('process.env.NODE_ENV !== "production"', () => {
-    it('If `false`, exec `console.error`', async () => {
+    it('if `false`, exec `console.error`', async () => {
       const warning = (await import('../warning')).default;
       warning(false, 'error');
 
       expect(spy).toHaveBeenCalled();
     });
 
-    it('If `true`, do not exec `console.error`', async () => {
+    it('if `true`, do not exec `console.error`', async () => {
       const warning = (await import('../warning')).default;
       warning(true, 'error message');
 
@@ -78,7 +78,7 @@ describe('Test warning', () => {
     afterEach(() => {
       restoreNodeEnv();
     });
-    it('Whether `true` or `false`, do not exec `console.error`', async () => {
+    it('whether `true` or `false`, do not exec `console.error`', async () => {
       const { default: warning, noop } = await import('../warning');
 
       expect(warning).toEqual(noop);

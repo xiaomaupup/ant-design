@@ -3,7 +3,7 @@ import React from 'react';
 import Pagination from '..';
 import { render } from '../../../tests/utils';
 
-describe('Pagination simple mode', () => {
+describe('pagination simple mode', () => {
   it('should support showTotal in simple mode', () => {
     const { container } = render(
       <Pagination

@@ -7,7 +7,7 @@ import { act, fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 import Tooltip from '../../tooltip';
 import Badge from '../index';
 
-describe('Badge', () => {
+describe('badge', () => {
   mountTest(Badge);
   rtlTest(Badge);
   rtlTest(() => (
@@ -186,7 +186,7 @@ describe('Badge', () => {
     expect(container.querySelectorAll('.ant-scroll-number-only-unit')[2].textContent).toBe('5');
   });
 
-  it('Badge should work when status/color is empty string', () => {
+  it('badge should work when status/color is empty string', () => {
     const { container } = render(
       <>
         <Badge color="" text="text" />
@@ -197,7 +197,7 @@ describe('Badge', () => {
     expect(container.querySelectorAll('.ant-badge')).toHaveLength(2);
   });
 
-  it('Badge should display count when color and count are both exist', () => {
+  it('badge should display count when color and count are both exist', () => {
     const { container } = render(
       <>
         <Badge className="badge1" text="badge" color="pink" count={44} />
@@ -211,7 +211,7 @@ describe('Badge', () => {
     expect(container.querySelectorAll('.ant-badge-status-dot')).toHaveLength(2);
   });
 
-  it('Badge not render status-text when text is empty string', () => {
+  it('badge not render status-text when text is empty string', () => {
     const { container } = render(<Badge status="default" text={undefined} />);
 
     expect(container.querySelectorAll('.ant-badge > .ant-badge-status-text')).toHaveLength(0);

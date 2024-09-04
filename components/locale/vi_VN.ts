@@ -1,10 +1,10 @@
 /* eslint-disable no-template-curly-in-string */
 import Pagination from 'rc-pagination/lib/locale/vi_VN';
 
-import type { Locale } from '.';
 import Calendar from '../calendar/locale/vi_VN';
 import DatePicker from '../date-picker/locale/vi_VN';
 import TimePicker from '../time-picker/locale/vi_VN';
+import type { Locale } from '.';
 
 const typeTemplate = '${label} không phải kiểu ${type} hợp lệ';
 

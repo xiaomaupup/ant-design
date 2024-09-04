@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { render } from '../../tests/utils';
 
-describe('SetUp.Test', () => {
+describe('setUp.Test', () => {
   it('diff of React 18 & React 17', () => {
     const { container } = render(
       <>

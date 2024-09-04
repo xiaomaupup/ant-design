@@ -30,7 +30,7 @@ const CacheOuter: React.FC = memo(() => (
   </>
 ));
 
-it("Rendering on LocaleProvider won't trigger rendering on child component.", () => {
+it("rendering on LocaleProvider won't trigger rendering on child component.", () => {
   const { container, unmount } = pureRender(<CacheOuter />);
   expect(outerCount).toBe(0);
   expect(innerCount).toBe(1);

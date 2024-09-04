@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { UploadOutlined } from '@ant-design/icons';
 import type { UploadFile, UploadProps } from 'antd';
-import { Button, Form, message, Upload } from 'antd';
+import { Button, Form, Upload, message } from 'antd';
 
 interface OSSDataType {
   dir: string;
@@ -75,7 +75,7 @@ const AliyunOSSUpload = ({ value, onChange }: AliyunOSSUploadProps) => {
 
     const suffix = file.name.slice(file.name.lastIndexOf('.'));
     const filename = Date.now() + suffix;
-    // @ts-ignore
+    // @ts-expect-error fix it later
     file.url = OSSData.dir + filename;
 
     return file;

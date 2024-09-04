@@ -3,7 +3,7 @@ import React from 'react';
 import FloatButton from '..';
 import { fireEvent, render } from '../../../tests/utils';
 
-describe('FloatButtonGroup', () => {
+describe('floatButtonGroup', () => {
   it('should correct render', () => {
     const { container } = render(
       <FloatButton.Group>

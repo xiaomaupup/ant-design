@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import { calcRangeKeys } from '../utils/dictUtil';
 import SwitcherIconCom from '../utils/iconUtil';
 
-describe('Tree util', () => {
+describe('tree util', () => {
   describe('calcRangeKeys', () => {
     const treeData = [
       { key: '0-0', children: [{ key: '0-0-0' }, { key: '0-0-1' }] },
@@ -44,7 +44,7 @@ describe('Tree util', () => {
     });
   });
 
-  describe('SwitcherIconCom', () => {
+  describe('switcherIconCom', () => {
     const prefixCls = 'tree';
     it('returns a loading icon when loading', () => {
       const { container } = render(

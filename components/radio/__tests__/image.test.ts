@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Radio image', () => {
+describe('radio image', () => {
   imageDemoTest('radio');
 });

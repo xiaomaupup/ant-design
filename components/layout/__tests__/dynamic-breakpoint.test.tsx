@@ -22,7 +22,7 @@ const Content = () => {
   );
 };
 
-it('Dynamic breakpoint in Sider component', () => {
+it('dynamic breakpoint in Sider component', () => {
   const add = jest.fn();
   const remove = jest.fn();
   const newMatch = jest.spyOn(window, 'matchMedia').mockReturnValue({

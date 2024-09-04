@@ -1,4 +1,4 @@
-/* eslint-disable global-require, import/no-dynamic-require, jest/no-export */
+/* eslint-disable jest/no-export */
 import React from 'react';
 
 import ConfigProvider from '../../components/config-provider';

@@ -13,7 +13,7 @@ const { DirectoryTree, TreeNode } = Tree;
 
 jest.mock('lodash/debounce');
 
-describe('Directory Tree', () => {
+describe('directory Tree', () => {
   mountTest(Tree);
   mountTest(DirectoryTree);
 
@@ -147,7 +147,7 @@ describe('Directory Tree', () => {
     expect(leaf3).not.toHaveClass('ant-tree-node-selected');
   });
 
-  it('DirectoryTree should expend all when use treeData and defaultExpandAll is true', () => {
+  it('directoryTree should expend all when use treeData and defaultExpandAll is true', () => {
     const treeData = [
       {
         key: '0-0-0',
@@ -314,7 +314,7 @@ describe('Directory Tree', () => {
     const { container } = render(
       createTree({
         defaultExpandAll: true,
-        // @ts-ignore
+        // @ts-expect-error fix it later
         treeData,
         onSelect,
         fieldNames: { key: 'id', title: 'label', children: 'child' },

@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('Dropdown image', () => {
+describe('dropdown image', () => {
   imageDemoTest('dropdown', { skip: ['dropdown-button.tsx'] });
 });

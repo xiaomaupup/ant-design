@@ -5,7 +5,7 @@ import mountTest from '../../../tests/shared/mountTest';
 import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render, waitFakeTimer } from '../../../tests/utils';
 
-describe('BackTop', () => {
+describe('backTop', () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });

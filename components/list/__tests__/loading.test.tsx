@@ -4,7 +4,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 import List from '..';
 import { render } from '../../../tests/utils';
 
-describe('List', () => {
+describe('list', () => {
   it('renders empty loading', () => {
     const loading = { spinning: true };
     const { container: wrapper } = render(

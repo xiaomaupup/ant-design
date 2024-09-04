@@ -7,7 +7,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { render } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 
-describe('List', () => {
+describe('list', () => {
   mountTest(List);
   mountTest(List.Item);
 

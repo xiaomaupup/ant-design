@@ -110,7 +110,7 @@ const InternalSwitch = React.forwardRef<HTMLButtonElement, SwitchProps>((props, 
 
   return wrapCSSVar(
     <Wave component="Switch">
-      {/* @ts-ignore */}
+      {/* @ts-expect-error fix it later */}
       <RcSwitch
         {...restProps}
         checked={checked}

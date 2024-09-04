@@ -114,7 +114,9 @@ export interface SliderRangeProps extends SliderBaseProps {
 
 type SliderRange = Exclude<GetProp<RcSliderProps, 'range'>, boolean>;
 
-export type Opens = { [index: number]: boolean };
+export interface Opens {
+  [index: number]: boolean;
+}
 
 function getTipFormatter(tipFormatter?: Formatter, legacyTipFormatter?: Formatter) {
   if (tipFormatter || tipFormatter === null) {
@@ -366,7 +368,7 @@ const Slider = React.forwardRef<SliderRef, SliderSingleProps | SliderRangeProps>
   const mergedStyle: React.CSSProperties = { ...slider?.style, ...style };
 
   return wrapCSSVar(
-    // @ts-ignore
+    // @ts-expect-error fix it later
     <RcSlider
       {...restProps}
       step={restProps.step}

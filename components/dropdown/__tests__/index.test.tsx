@@ -24,7 +24,7 @@ jest.mock('@rc-component/trigger', () => {
   };
 });
 
-describe('Dropdown', () => {
+describe('dropdown', () => {
   const items = [
     {
       label: 'foo',

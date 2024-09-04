@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useState } from 'react';
 
 import Space from '..';
@@ -7,7 +6,7 @@ import rtlTest from '../../../tests/shared/rtlTest';
 import { fireEvent, render } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 
-describe('Space', () => {
+describe('space', () => {
   mountTest(Space);
   rtlTest(Space);
 

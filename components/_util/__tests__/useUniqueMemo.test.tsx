@@ -3,7 +3,7 @@ import React from 'react';
 import { act, render } from '../../../tests/utils';
 import useUniqueMemo from '../hooks/useUniqueMemo';
 
-describe('Table', () => {
+describe('table', () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });

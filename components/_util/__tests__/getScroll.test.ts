@@ -50,7 +50,7 @@ describe('getScroll', () => {
     scrollToSpy.mockRestore();
   });
 
-  it('When window is undef, getScroll value is zero', () => {
+  it('when window is undef, getScroll value is zero', () => {
     const spy = jest.spyOn(global, 'window', 'get').mockImplementation(() => undefined as any);
     expect(getScroll(null)).toBe(0);
     spy.mockRestore();

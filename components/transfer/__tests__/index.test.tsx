@@ -87,7 +87,7 @@ const generateData = (n = 20) => {
   return data;
 };
 
-describe('Transfer', () => {
+describe('transfer', () => {
   mountTest(Transfer);
   rtlTest(Transfer);
 

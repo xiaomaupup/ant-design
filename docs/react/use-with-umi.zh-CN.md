@@ -175,10 +175,10 @@ export default ProductList;
 ```ts
 import { defineMock } from 'umi';
 
-type Product = {
+interface Product {
   id: string;
   name: string;
-};
+}
 
 let products: Product[] = [
   { id: '1', name: 'Umi' },

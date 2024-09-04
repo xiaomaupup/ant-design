@@ -1,5 +1,5 @@
 import { imageDemoTest } from '../../../tests/shared/imageTest';
 
-describe('TreeSelect image', () => {
+describe('treeSelect image', () => {
   imageDemoTest('tree-select');
 });

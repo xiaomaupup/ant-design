@@ -9,7 +9,7 @@ import Table from '../../table';
 import type { CheckboxGroupProps } from '../index';
 import Checkbox from '../index';
 
-describe('CheckboxGroup', () => {
+describe('checkboxGroup', () => {
   mountTest(Checkbox.Group);
   rtlTest(Checkbox.Group);
 
@@ -205,7 +205,7 @@ describe('CheckboxGroup', () => {
     expect(onChange).not.toHaveBeenCalled();
   });
 
-  it('Table rowSelection', () => {
+  it('table rowSelection', () => {
     const onChange = jest.fn();
     const { container } = render(
       <Checkbox.Group onChange={onChange}>

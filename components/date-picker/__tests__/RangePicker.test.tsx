@@ -18,7 +18,7 @@ type RangeValue<DateType extends object> =
 
 const { RangePicker } = DatePicker;
 
-describe('RangePicker', () => {
+describe('rangePicker', () => {
   focusTest(RangePicker, { refFocus: true, blurDelay: 110 });
 
   beforeEach(() => {
@@ -121,7 +121,7 @@ describe('RangePicker', () => {
   });
 
   describe('ranges', () => {
-    it('RangePicker support preset ranges with Tags', () => {
+    it('rangePicker support preset ranges with Tags', () => {
       const { container } = render(
         <RangePicker
           open
@@ -142,7 +142,7 @@ describe('RangePicker', () => {
     expect(inputLists[inputLists.length - 1].placeholder).toEqual('End date');
   });
 
-  it('RangePicker picker quarter placeholder', () => {
+  it('rangePicker picker quarter placeholder', () => {
     const { container } = render(<RangePicker picker="quarter" locale={enUS} />);
     expect(container.querySelectorAll('input')[0]?.placeholder).toEqual('Start quarter');
     expect(container.querySelectorAll('input')[1]?.placeholder).toEqual('End quarter');

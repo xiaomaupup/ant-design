@@ -3,7 +3,7 @@ import React from 'react';
 import { fireEvent, render } from '../../../tests/utils';
 import useSyncState from '../hooks/useSyncState';
 
-describe('Table', () => {
+describe('table', () => {
   it('useSyncState', () => {
     const Test = () => {
       const [getVal, setVal] = useSyncState('light');

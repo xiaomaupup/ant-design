@@ -80,7 +80,7 @@ function filter<OptionType extends DefaultOptionType = DefaultOptionType>(
   );
 }
 
-describe('Cascader', () => {
+describe('cascader', () => {
   excludeAllWarning();
 
   focusTest(Cascader, { refFocus: true });

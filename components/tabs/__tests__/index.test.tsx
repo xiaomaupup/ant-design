@@ -9,7 +9,7 @@ import ConfigProvider from '../../config-provider';
 
 const { TabPane } = Tabs;
 
-describe('Tabs', () => {
+describe('tabs', () => {
   mountTest(() => (
     <Tabs>
       <TabPane tab="xx" key="xx" />

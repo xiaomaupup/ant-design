@@ -1,10 +1,9 @@
-/* eslint-disable no-template-curly-in-string */
 import Pagination from 'rc-pagination/lib/locale/fi_FI';
 
-import type { Locale } from '.';
 import Calendar from '../calendar/locale/fi_FI';
 import DatePicker from '../date-picker/locale/fi_FI';
 import TimePicker from '../time-picker/locale/fi_FI';
+import type { Locale } from '.';
 
 const localeValues: Locale = {
   locale: 'fi',

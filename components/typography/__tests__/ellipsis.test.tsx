@@ -18,7 +18,7 @@ jest.mock('../../_util/styleChecker', () => ({
   isStyleSupport: () => true,
 }));
 
-describe('Typography.Ellipsis', () => {
+describe('typography.Ellipsis', () => {
   const LINE_STR_COUNT = 20;
   const LINE_HEIGHT = 16;
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
@@ -307,8 +307,8 @@ describe('Typography.Ellipsis', () => {
     });
 
     // https://github.com/ant-design/ant-design/issues/36786
-    it('Tooltip should recheck on parent visible change', () => {
-      const originIntersectionObserver = global.IntersectionObserver;
+    it('tooltip should recheck on parent visible change', () => {
+      const originIntersectionObserver = globalThis.IntersectionObserver;
 
       let elementChangeCallback: () => void;
       const observeFn = jest.fn();
@@ -350,7 +350,7 @@ describe('Typography.Ellipsis', () => {
       unmount();
       expect(disconnectFn).toHaveBeenCalled();
 
-      global.IntersectionObserver = originIntersectionObserver;
+      globalThis.IntersectionObserver = originIntersectionObserver;
     });
 
     it('should calculate padding', () => {

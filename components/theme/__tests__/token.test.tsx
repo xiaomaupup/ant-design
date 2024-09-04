@@ -11,7 +11,7 @@ import genRadius from '../themes/shared/genRadius';
 
 const { useToken } = theme;
 
-describe('Theme', () => {
+describe('theme', () => {
   const getHookToken = (config?: ThemeConfig) => {
     let token: any;
     const Demo = () => {
@@ -43,7 +43,7 @@ describe('Theme', () => {
     );
   });
 
-  it('ConfigProvider with seed', () => {
+  it('configProvider with seed', () => {
     const Demo = React.forwardRef((_, ref: any) => {
       const themeObj = useToken();
       ref.current = themeObj;
@@ -189,7 +189,7 @@ describe('Theme', () => {
     ];
 
     tests.forEach(([screen, value, error]: any) => {
-      it(`Screen ${screen} is too big`, () => {
+      it(`screen `, () => {
         rowShouldThrow(
           { [screen]: value, [`${screen}Min`]: value, [`${screen}Max`]: value + 10 },
           error,
@@ -209,7 +209,7 @@ describe('Theme', () => {
     ];
 
     tests.forEach(([screen, value, error]: any) => {
-      it(`Screen ${screen}Min is too big regarding ${screen}`, () => {
+      it(`screen `, () => {
         rowShouldThrow({ [screen]: value }, error);
       });
     });
@@ -225,7 +225,7 @@ describe('Theme', () => {
     ];
 
     tests.forEach(([screen, value, error]: any) => {
-      it(`Screen ${screen} is too big regarding ${screen}Max`, () => {
+      it(`screen `, () => {
         rowShouldThrow({ [screen]: value }, error);
       });
     });

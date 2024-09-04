@@ -16,7 +16,7 @@ import Radio from '../../radio';
 import Switch from '../../switch';
 import { isTooltipOpen } from './util';
 
-describe('Tooltip', () => {
+describe('tooltip', () => {
   mountTest(Tooltip);
   rtlTest(Tooltip);
   beforeEach(() => {

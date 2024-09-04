@@ -8,7 +8,7 @@ import { render } from '../../../tests/utils';
 import type { ItemType } from '../Breadcrumb';
 import Breadcrumb from '../index';
 
-describe('Breadcrumb', () => {
+describe('breadcrumb', () => {
   mountTest(Breadcrumb);
   rtlTest(Breadcrumb);
   accessibilityTest(Breadcrumb);
@@ -100,7 +100,7 @@ describe('Breadcrumb', () => {
     });
   });
 
-  it('Breadcrumb.Item deprecation warning', () => {
+  it('breadcrumb.Item deprecation warning', () => {
     render(
       <Breadcrumb>
         <Breadcrumb.Item>Location</Breadcrumb.Item>
@@ -111,7 +111,7 @@ describe('Breadcrumb', () => {
     );
   });
 
-  it('Breadcrumb.separator deprecation warning', () => {
+  it('breadcrumb.separator deprecation warning', () => {
     render(
       <Breadcrumb>
         <Breadcrumb.Separator>:</Breadcrumb.Separator>
@@ -245,7 +245,7 @@ describe('Breadcrumb', () => {
           items={[
             {
               title: 'xxx',
-              // @ts-ignore
+              // @ts-expect-error fix it later
               'data-custom': 'custom-item',
             },
             {
@@ -360,7 +360,7 @@ describe('Breadcrumb', () => {
     expect(item).toHaveClass(testClassName);
   });
 
-  it('Breadcrumb.Item menu type', () => {
+  it('breadcrumb.Item menu type', () => {
     expect(<Breadcrumb.Item menu={{ selectable: true }} />).toBeTruthy();
   });
 
@@ -386,7 +386,7 @@ describe('Breadcrumb', () => {
     expect(document.querySelector('.ant-dropdown')).toBeTruthy();
   });
 
-  it('Breadcrumb params type test', () => {
+  it('breadcrumb params type test', () => {
     interface Params {
       key1?: number;
       key2?: string;

@@ -15,7 +15,7 @@ import { setup, teardown } from './mock';
 
 (globalThis as any).IS_REACT_ACT_ENVIRONMENT = true;
 
-describe('Upload', () => {
+describe('upload', () => {
   mountTest(Upload);
   rtlTest(Upload);
 
@@ -630,7 +630,7 @@ describe('Upload', () => {
 
     const customRequest = jest.fn(async (options) => {
       // stop here to make sure new fileList has been set and passed to Upload
-      // eslint-disable-next-line no-promise-executor-return
+
       await new Promise((resolve) => setTimeout(resolve, 0));
       options.onProgress({ percent: 0 });
       const url = Promise.resolve('https://ant.design');
@@ -878,7 +878,7 @@ describe('Upload', () => {
     expect((fileList[0] as any).uid).toBeTruthy();
   });
 
-  it('Proxy should support deepClone', async () => {
+  it('proxy should support deepClone', async () => {
     const onChange = jest.fn();
 
     const { container: wrapper } = render(
@@ -990,7 +990,7 @@ describe('Upload', () => {
   });
 
   // https://github.com/ant-design/ant-design/issues/36869
-  it('Prevent auto batch', async () => {
+  it('prevent auto batch', async () => {
     const mockFile1 = new File(['bamboo'], 'bamboo.png', { type: 'image/png' });
     const mockFile2 = new File(['light'], 'light.png', { type: 'image/png' });
 
@@ -1042,7 +1042,7 @@ describe('Upload', () => {
 
     const customRequest = jest.fn(async (options) => {
       // stop here to make sure new fileList has been set and passed to Upload
-      // eslint-disable-next-line no-promise-executor-return
+
       await new Promise((resolve) => setTimeout(resolve, 0));
       options.onProgress({ percent: 0 });
       const url = Promise.resolve<string>('https://ant.design');

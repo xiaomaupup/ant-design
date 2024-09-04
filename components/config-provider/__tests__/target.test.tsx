@@ -5,8 +5,8 @@ import { act, render } from '../../../tests/utils';
 import Affix from '../../affix';
 import Anchor from '../../anchor';
 
-describe('ConfigProvider.getTargetContainer', () => {
-  it('Affix', () => {
+describe('configProvider.getTargetContainer', () => {
+  it('affix', () => {
     jest.useFakeTimers();
     const getTargetContainer = jest.fn(() => window);
     render(
@@ -25,7 +25,7 @@ describe('ConfigProvider.getTargetContainer', () => {
     jest.useRealTimers();
   });
 
-  it('Anchor', () => {
+  it('anchor', () => {
     jest.useFakeTimers();
     const getTargetContainer = jest.fn(() => window);
     render(

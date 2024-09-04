@@ -5,7 +5,7 @@ import Cascader from '..';
 import { render } from '../../../tests/utils';
 import type { CascaderPanelAutoProps, CascaderPanelProps } from '../Panel';
 
-describe('Cascader.typescript', () => {
+describe('cascader.typescript', () => {
   it('options value', () => {
     const options = [
       {
@@ -54,7 +54,7 @@ describe('Cascader.typescript', () => {
     ).toBeFalsy();
   });
 
-  it('Generic', () => {
+  it('generic', () => {
     interface MyOptionData extends BaseOptionType {
       customizeLabel: string;
       customizeValue: string;

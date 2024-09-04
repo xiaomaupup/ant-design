@@ -8,7 +8,7 @@ import type { TooltipRef } from '../../tooltip';
 
 const { _InternalPanelDoNotUseOrYouWillBeFired: InternalPanelDoNotUseOrYouWillBeFired } = Popover;
 
-describe('Popover', () => {
+describe('popover', () => {
   mountTest(Popover);
 
   const eventObject = expect.objectContaining({

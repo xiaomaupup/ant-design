@@ -5,7 +5,7 @@ import { render } from '../../../tests/utils';
 
 const { Sider, Footer, Header } = Layout;
 
-describe('Layout.Warning', () => {
+describe('layout.Warning', () => {
   (['Layout', 'Header', 'Footer', 'Sider'] as const).forEach((tag) => {
     const ComponentMap = { Layout, Header, Footer, Sider };
 

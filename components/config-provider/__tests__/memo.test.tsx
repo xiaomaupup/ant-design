@@ -9,7 +9,7 @@ interface Props {
 }
 
 // https://github.com/ant-design/ant-design/issues/27617
-describe('ConfigProvider', () => {
+describe('configProvider', () => {
   const Child: React.FC<Props> = ({ spy }) => {
     React.useEffect(() => spy());
     return <div />;

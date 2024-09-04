@@ -6,7 +6,7 @@ import { render, resetMockDate, setMockDate } from '../../../tests/utils';
 
 const { WeekPicker } = DatePicker;
 
-describe('WeekPicker', () => {
+describe('weekPicker', () => {
   beforeEach(() => {
     setMockDate();
   });

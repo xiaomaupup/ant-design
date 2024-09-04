@@ -8,7 +8,7 @@ import type { TextAreaRef } from '../TextArea';
 
 const { TextArea } = Input;
 
-describe('Input.Focus', () => {
+describe('input.Focus', () => {
   let inputSpy: ReturnType<typeof spyElementPrototypes>;
   let textareaSpy: ReturnType<typeof spyElementPrototypes>;
   let focus: ReturnType<typeof jest.fn>;

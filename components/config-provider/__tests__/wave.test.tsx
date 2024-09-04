@@ -6,7 +6,7 @@ import Button from '../../button';
 
 jest.mock('rc-util/lib/Dom/isVisible', () => () => true);
 
-describe('ConfigProvider.Wave', () => {
+describe('configProvider.Wave', () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });

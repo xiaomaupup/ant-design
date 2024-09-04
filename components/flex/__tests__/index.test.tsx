@@ -17,7 +17,7 @@ class ClassCom extends React.PureComponent<{ className?: string }> {
   }
 }
 
-describe('Flex', () => {
+describe('flex', () => {
   mountTest(() => (
     <Flex>
       <div>test1</div>
@@ -30,7 +30,7 @@ describe('Flex', () => {
       <div>test2</div>
     </Flex>
   ));
-  it('Flex', () => {
+  it('flex', () => {
     const { container, rerender } = render(<Flex justify="center">test</Flex>);
     expect(container.querySelector('.ant-flex')).toHaveStyle({ justifyContent: 'center' });
     rerender(<Flex flex="0 1 auto">test</Flex>);
@@ -38,7 +38,7 @@ describe('Flex', () => {
     rerender(<Flex gap={100}>test</Flex>);
     expect(container.querySelector('.ant-flex')).toHaveStyle({ gap: '100px' });
   });
-  it('Component work', () => {
+  it('component work', () => {
     const testFcRef = React.createRef<HTMLDivElement>();
     const testClsRef = React.createRef<ClassCom>();
     const { container, rerender } = render(<Flex>test</Flex>);

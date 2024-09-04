@@ -5,7 +5,7 @@ import { resetWarned } from '../../_util/warning';
 import { render, waitFakeTimer } from '../../../tests/utils';
 import ConfigProvider from '../../config-provider';
 
-describe('Modal.confirm warning', () => {
+describe('modal.confirm warning', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     resetWarned();

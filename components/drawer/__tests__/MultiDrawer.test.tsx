@@ -99,7 +99,7 @@ const MultiDrawer: React.FC<DrawerPropsType> = (props) => {
   );
 };
 
-describe('Drawer', () => {
+describe('drawer', () => {
   it('render right MultiDrawer', () => {
     const { container } = render(<MultiDrawer placement="right" />);
     fireEvent.click(container.querySelector('button#open_drawer')!);

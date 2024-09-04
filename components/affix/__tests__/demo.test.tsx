@@ -17,11 +17,11 @@ rootPropsTest(
   {
     beforeRender: () => {
       spyElementPrototype(HTMLElement, 'getBoundingClientRect', function getBoundingClientRect() {
-        // @ts-ignore
+        // @ts-expect-error fix it later
         if (this.id === 'holder') {
           return { top: 0, bottom: 100 };
         }
-        // @ts-ignore
+        // @ts-expect-error fix it later
         if (this.className === 'fixed') {
           return { top: -100, bottom: -100 };
         }

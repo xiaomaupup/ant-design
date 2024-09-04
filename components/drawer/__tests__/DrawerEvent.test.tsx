@@ -10,7 +10,7 @@ const DrawerTest: React.FC<DrawerProps> = (props) => (
   </Drawer>
 );
 
-describe('Drawer', () => {
+describe('drawer', () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });

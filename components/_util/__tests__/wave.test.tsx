@@ -14,14 +14,13 @@ jest.mock('rc-util/lib/Dom/isVisible', () => {
   return mockFn;
 });
 
-describe('Wave component', () => {
+describe('wave component', () => {
   mountTest(Wave);
 
   let obCnt = 0;
   let disCnt = 0;
 
   beforeAll(() => {
-    /* eslint-disable class-methods-use-this */
     class FakeResizeObserver {
       observe = () => {
         obCnt += 1;
@@ -303,7 +302,7 @@ describe('Wave component', () => {
     unmount();
   });
 
-  it('Wave style should append to validate element', () => {
+  it('wave style should append to validate element', () => {
     const { container } = render(
       <Wave>
         <div className="bamboo" style={{ borderColor: 'red' }} />
@@ -326,7 +325,7 @@ describe('Wave component', () => {
     expect(container.querySelector('.ant-wave')).toBeTruthy();
   });
 
-  it('Wave can match target', () => {
+  it('wave can match target', () => {
     const { container } = render(
       <Wave>
         <div>
@@ -342,7 +341,7 @@ describe('Wave component', () => {
     expect(container.querySelector('.ant-wave')).toBeTruthy();
   });
 
-  it('Checkbox with uncheck should not trigger wave', () => {
+  it('checkbox with uncheck should not trigger wave', () => {
     const onChange = jest.fn();
     const { container } = render(<Checkbox defaultChecked onChange={onChange} />);
 

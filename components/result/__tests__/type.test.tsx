@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Result from '..';
 
-describe('Result.typescript', () => {
+describe('result.typescript', () => {
   it('status', () => {
     const result = (
       <>

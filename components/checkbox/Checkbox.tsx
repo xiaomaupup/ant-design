@@ -152,7 +152,7 @@ const InternalCheckbox: React.ForwardRefRenderFunction<CheckboxRef, CheckboxProp
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        {/* @ts-ignore */}
+        {/* @ts-expect-error fix it later */}
         <RcCheckbox
           aria-checked={ariaChecked}
           {...checkboxProps}

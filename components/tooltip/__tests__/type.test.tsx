@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import Tooltip from '..';
 
-describe('Tooltip.typescript', () => {
-  it('Tooltip children should accept ReactNode', () => {
+describe('tooltip.typescript', () => {
+  it('tooltip children should accept ReactNode', () => {
     const tooltip = (
       <Tooltip title="title">
         <div />
@@ -15,7 +15,7 @@ describe('Tooltip.typescript', () => {
     expect(tooltip2).toBeTruthy();
   });
 
-  it('Tooltip support zIndex', () => {
+  it('tooltip support zIndex', () => {
     const tooltip = (
       <Tooltip title="title" zIndex={999}>
         <div />

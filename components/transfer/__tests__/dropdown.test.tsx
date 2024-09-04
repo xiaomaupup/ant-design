@@ -17,7 +17,7 @@ const listProps = {
   pagination: { pageSize: 4 },
 };
 
-describe('Transfer.Dropdown', () => {
+describe('transfer.Dropdown', () => {
   function clickItem(container: HTMLElement, index: number) {
     const items = Array.from(
       container

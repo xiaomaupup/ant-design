@@ -11,7 +11,7 @@ jest.mock('rc-util/lib/Dom/isVisible', () => {
   return mockFn;
 });
 
-describe('Switch', () => {
+describe('switch', () => {
   focusTest(Switch, { refFocus: true });
   mountTest(Switch);
   rtlTest(Switch);

@@ -6,14 +6,14 @@ import { fireEvent, render, renderHook, waitFakeTimer, waitFor } from '../../../
 import Base from '../Base';
 import useCopyClick from '../hooks/useCopyClick';
 
-describe('Typography copy', () => {
+describe('typography copy', () => {
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
   afterEach(() => {
     errorSpy.mockReset();
   });
 
-  describe('Base', () => {
+  describe('base', () => {
     describe('copyable', () => {
       function copyTest({
         name,

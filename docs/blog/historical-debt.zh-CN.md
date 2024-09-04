@@ -57,8 +57,8 @@ Warning: [antd: XXX] `old prop` is deprecated. Please use `new prop` instead.
 ```tsx
 export interface SampleRef {
   nativeElement: HTMLElement;
-  focus(): void;
-  blur(): void;
+  focus: () => void;
+  blur: () => void;
 }
 ```
 

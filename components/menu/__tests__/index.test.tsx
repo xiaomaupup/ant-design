@@ -27,7 +27,7 @@ type MouseEvent = 'click' | 'mouseEnter' | 'mouseLeave';
 
 const { SubMenu } = Menu;
 
-describe('Menu', () => {
+describe('menu', () => {
   const triggerAllTimer = () => {
     for (let i = 0; i < 10; i += 1) {
       act(() => {
@@ -139,7 +139,7 @@ describe('Menu', () => {
 
   rtlTest(RtlDemo);
 
-  it('If has select nested submenu item ,the menu items on the grandfather level should be highlight', () => {
+  it('if has select nested submenu item ,the menu items on the grandfather level should be highlight', () => {
     const { container } = render(
       <Menu defaultSelectedKeys={['1-3-2']} mode="vertical">
         <SubMenu key="1" title="submenu1">
@@ -735,7 +735,7 @@ describe('Menu', () => {
     expect(onMouseEnter).toHaveBeenCalled();
   });
 
-  it('MenuItem should not render Tooltip when inlineCollapsed is false', () => {
+  it('menuItem should not render Tooltip when inlineCollapsed is false', () => {
     const { container } = render(
       <Menu defaultSelectedKeys={['mail']} defaultOpenKeys={['mail']} mode="horizontal">
         <Menu.Item key="mail" icon={<MailOutlined />}>
@@ -760,7 +760,7 @@ describe('Menu', () => {
     expect(container.querySelectorAll('.ant-tooltip-inner').length).toBe(0);
   });
 
-  it('MenuItem should render icon and icon should be the first child when icon exists', () => {
+  it('menuItem should render icon and icon should be the first child when icon exists', () => {
     const { container } = render(
       <Menu>
         <Menu.Item key="mail" icon={<MailOutlined />}>
@@ -888,7 +888,7 @@ describe('Menu', () => {
     jest.useRealTimers();
   });
 
-  it('Menu.Item with icon children auto wrap span', () => {
+  it('menu.Item with icon children auto wrap span', () => {
     const { asFragment } = render(
       <Menu>
         <Menu.Item key="1" icon={<MailOutlined />}>
@@ -933,7 +933,7 @@ describe('Menu', () => {
     expect(onOpenChange).toHaveBeenCalledWith([]);
   });
 
-  it('Use first char as Icon when collapsed', () => {
+  it('use first char as Icon when collapsed', () => {
     const { container } = render(
       <Menu mode="inline" inlineCollapsed>
         <Menu.SubMenu title="Light" />
@@ -1093,7 +1093,7 @@ describe('Menu', () => {
     );
   });
 
-  it('Overflow indicator className should not override menu class', () => {
+  it('overflow indicator className should not override menu class', () => {
     const { container } = render(
       <TriggerMockContext.Provider value={{ popupVisible: true }}>
         <Menu

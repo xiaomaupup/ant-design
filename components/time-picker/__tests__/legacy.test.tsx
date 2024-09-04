@@ -9,7 +9,7 @@ import { fireEvent, render } from '../../../tests/utils';
 
 dayjs.extend(customParseFormat);
 
-describe('TimePicker.Legacy', () => {
+describe('timePicker.Legacy', () => {
   const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
   afterEach(() => {

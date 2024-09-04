@@ -22,7 +22,7 @@ const Link = React.forwardRef<HTMLElement, LinkProps>(({ ellipsis, rel, ...restP
     rel: rel === undefined && restProps.target === '_blank' ? 'noopener noreferrer' : rel,
   };
 
-  // @ts-expect-error: https://github.com/ant-design/ant-design/issues/26622
+  // @ts-expect-error fix it later: https://github.com/ant-design/ant-design/issues/26622
   delete mergedProps.navigate;
 
   return <Base {...mergedProps} ref={ref} ellipsis={!!ellipsis} component="a" />;
