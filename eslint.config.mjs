@@ -1,25 +1,19 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js';
+// eslint.config.mjs
+import antfu from '@antfu/eslint-config';
 
-export default [
-  {
-    ignores: [
-      'node_modules',
-      'dist',
-      '_site',
-      'es/**/*',
-      'lib/**/*',
-      '.dumi/tmp',
-      '.dumi/tmp-production',
-    ],
-  },
-  {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.md'],
-    languageOptions: { globals: globals.browser },
-  },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  pluginReactConfig,
-];
+export default antfu({
+  ignores: [
+    '**/node_modules/**',
+    '**/dist/**',
+    '**/_site/**',
+    '**/es/**',
+    '**/lib/**',
+    '**/.dumi/tmp/**',
+    '**/.dumi/tmp-production/**',
+    '**/*.snap',
+  ],
+  type: 'lib',
+  stylistic: false,
+  typescript: true,
+  react: true,
+});
