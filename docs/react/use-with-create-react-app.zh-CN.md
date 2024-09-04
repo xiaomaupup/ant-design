@@ -34,15 +34,15 @@ $ npm run start
 ├── README.md
 ├── package.json
 ├── public
-│   ├── favicon.ico
-│   └── index.html
+│   ├── favicon.ico
+│   └── index.html
 ├── src
-│   ├── App.css
-│   ├── App.js
-│   ├── App.test.js
-│   ├── index.css
-│   ├── index.js
-│   └── logo.svg
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   └── logo.svg
 └── yarn.lock
 ```
 

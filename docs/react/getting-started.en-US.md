@@ -121,7 +121,9 @@ If you use `create-react-app` follow the instructions [here](/docs/react/use-wit
 Jest does not support `esm` modules, and Ant Design uses them. In order to test your Ant Design application with Jest you have to add the following to your Jest config :
 
 ```json
-"transform": { "^.+\\.(ts|tsx|js|jsx)?$": "ts-jest" }
+{
+  "transform": { "^.+\\.(ts|tsx|js|jsx)?$": "ts-jest" }
+}
 ```
 
 ## Import on Demand

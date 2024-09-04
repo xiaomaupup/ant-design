@@ -11,6 +11,7 @@ export default antfu({
     '**/.dumi/tmp/**',
     '**/.dumi/tmp-production/**',
     '**/*.snap',
+    '**/*.md',
   ],
   type: 'lib',
   stylistic: false,

@@ -64,7 +64,7 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAA
 | onClick | 点击 MenuItem 调用此函数 | function({ item, key, keyPath, domEvent }) | - |  |
 | onDeselect | 取消选中时调用，仅在 multiple 生效 | function({ item, key, keyPath, selectedKeys, domEvent }) | - |  |
 | onOpenChange | SubMenu 展开/关闭的回调 | function(openKeys: string\[]) | - |  |
-| onSelect | 被选中时调用 | function({ item, key, keyPath, selectedKeys, domEvent }) | -   |  |
+| onSelect | 被选中时调用 | function({ item, key, keyPath, selectedKeys, domEvent }) | - |  |
 
 > 更多属性查看 [rc-menu](https://github.com/react-component/menu#api)
 

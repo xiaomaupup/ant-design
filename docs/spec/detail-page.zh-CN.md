@@ -49,7 +49,7 @@ title: 详情页
 
 基础详情单页直接平铺所有需要展示的的信息，推荐使用这种详情展示方式。
 
-#### [模板 -  基础详情](https://preview.pro.ant.design/profile/basic)
+#### [模板 - 基础详情](https://preview.pro.ant.design/profile/basic)
 
 <ImagePreview>
 <img class="preview-img no-padding" src="https://gw.alipayobjects.com/mdn/rms_08e378/afts/img/A*Z78YSLlHYFUAAAAAAAAAAABkARQnAQ">
@@ -85,7 +85,7 @@ title: 详情页
 
 将信息复杂度较高、相关性较弱的信息拆分为多个部分，并通过 页签 、分步、卡片分区、卡片内分组等形式按照相关性分组，用来处理复杂度较高的详情内容。
 
-#### [模板 -  高级详情](https://preview.pro.ant.design/profile/advanced)
+#### [模板 - 高级详情](https://preview.pro.ant.design/profile/advanced)
 
 <ImagePreview>
 <img class="preview-img no-padding" src="https://gw.alipayobjects.com/mdn/rms_08e378/afts/img/A*772pTpKDNkwAAAAAAAAAAABkARQnAQ">

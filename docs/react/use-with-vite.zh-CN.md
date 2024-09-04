@@ -31,15 +31,15 @@ $ npm run dev
 
 ```
 ├── public
-│   └── vite.svg
+│   └── vite.svg
 ├── src
-│   └── assets
+│   └── assets
 │       └── react.svg
-│   ├── App.css
-│   ├── App.js
-│   ├── index.css
-│   ├── main.js
-│   └── logo.svg
+│   ├── App.css
+│   ├── App.js
+│   ├── index.css
+│   ├── main.js
+│   └── logo.svg
 ├── index.html
 ├── package.json
 └── vite.config.js

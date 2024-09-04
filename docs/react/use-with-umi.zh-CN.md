@@ -20,7 +20,7 @@ $ mkdir myapp && cd myapp
 $ pnpm create umi
 ```
 
-> 如果你使用 npm，可执行  `npm create umi`，效果一致；如果你使用 yarn，可执行  `yarn create umi`，效果也一致；如果你使用 bun，那说明你是个非常潮的人，可执行 `bunx create-umi`（注意，`create` 和 `umi` 之间有个 `-`）。
+> 如果你使用 npm，可执行 `npm create umi`，效果一致；如果你使用 yarn，可执行 `yarn create umi`，效果也一致；如果你使用 bun，那说明你是个非常潮的人，可执行 `bunx create-umi`（注意，`create` 和 `umi` 之间有个 `-`）。
 
 这里选「Simple App」，因为我们要从 “0” 开始。
 
@@ -272,7 +272,7 @@ export default function Page() {
 
 ## ProLayout
 
-一个标准的中后台页面，一般都需要一个布局，这个布局很多时候都是高度雷同的，[ProLayout](https://procomponents.ant.design/components/layout/) 封装了常用的菜单、面包屑、页头等功能，提供了一个不依赖的框架且开箱即用的高级布局组件。并且支持  `side`, `mix`, `top`  三种模式，更是内置了菜单选中、菜单生成面包屑、自动设置页面标题的逻辑。
+一个标准的中后台页面，一般都需要一个布局，这个布局很多时候都是高度雷同的，[ProLayout](https://procomponents.ant.design/components/layout/) 封装了常用的菜单、面包屑、页头等功能，提供了一个不依赖的框架且开箱即用的高级布局组件。并且支持 `side`, `mix`, `top` 三种模式，更是内置了菜单选中、菜单生成面包屑、自动设置页面标题的逻辑。
 
 先修改配置，为每个路由新增 name 字段，用于给 ProLayout 做菜单渲染使用。
 
@@ -355,7 +355,7 @@ info  - File sizes after gzip:
 event - Build index.html
 ```
 
-构建会打包所有的资源，包含 JavaScript, CSS, Web Fonts, 图片, HTML 等。你可以在  `dist/`  目录下找到这些文件。
+构建会打包所有的资源，包含 JavaScript, CSS, Web Fonts, 图片, HTML 等。你可以在 `dist/` 目录下找到这些文件。
 
 ## 下一步
 
@@ -369,9 +369,9 @@ event - Build index.html
 
 你可以：
 
-- 访问  [Umi 官网](https://umijs.org/)
-- 了解  [Umi 的路由](https://umijs.org/docs/guides/routes)
-- 了解比 Umi 集成度更高的  [Umi Max](https://umijs.org/docs/max/introduce)
-- 了解开箱即用的中后台脚手架  [Ant Design Pro](https://pro.ant.design/)
-- 了解高级布局  [ProLayout](https://procomponents.ant.design/components/layout)
-- 了解高级表格  [ProTable](https://procomponents.ant.design/components/table)
+- 访问 [Umi 官网](https://umijs.org/)
+- 了解 [Umi 的路由](https://umijs.org/docs/guides/routes)
+- 了解比 Umi 集成度更高的 [Umi Max](https://umijs.org/docs/max/introduce)
+- 了解开箱即用的中后台脚手架 [Ant Design Pro](https://pro.ant.design/)
+- 了解高级布局 [ProLayout](https://procomponents.ant.design/components/layout)
+- 了解高级表格 [ProTable](https://procomponents.ant.design/components/table)

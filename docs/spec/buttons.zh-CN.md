@@ -63,7 +63,7 @@ title: 按钮
 
 ### 特殊按钮
 
-#### 虚线按钮  Dashed button
+#### 虚线按钮 Dashed button
 
 <ImagePreview>
 <img class="preview-img no-padding" src="https://gw.alipayobjects.com/mdn/rms_08e378/afts/img/A*gPmNQ6_YCcoAAAAAAAAAAABkARQnAQ">

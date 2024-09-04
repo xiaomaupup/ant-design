@@ -13,7 +13,7 @@ Ant Design is hosted on GitHub as an open-source project, making it easy to comm
 
 ## What is GitHub Actions
 
-GitHub Actions is a platform for automating software development workflows, Developers can easily customize and configure their own workflows by adding YAML format files to the `.github/workflows` directory to define the workflow and implement CI (continuous integration). By Understanding GitHub Actions.We can grasp some concepts within workflows through [understanding GitHub actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions).
+GitHub Actions is a platform for automating software development workflows, Developers can easily customize and configure their own workflows by adding YAML format files to the `.github/workflows` directory to define the workflow and implement CI (continuous integration). By Understanding GitHub Actions.We can grasp some concepts within workflows through [understanding GitHub actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions).
 
 - **Event**: Triggers a workflow run, such as when someone creates an issue, a pull request, or pushes code to a branch.
 - **Job**: A workflow consists of one or more jobs that run in parallel by default, but can be set to run sequentially. Each job can contain multiple steps.
@@ -244,7 +244,7 @@ To further optimize dependency installation speed, we can add pnpm caching. Afte
 # ...
 ```
 
-The initiated pull request also triggered the CI job correctly, and our pnpm store has been cached. From now on, Every time CI triggered from now on, it will check the content of the `pnpm-lock.yaml` file to determine whether to read the cache directly.
+The initiated pull request also triggered the CI job correctly, and our pnpm store has been cached. From now on, Every time CI triggered from now on, it will check the content of the `pnpm-lock.yaml` file to determine whether to read the cache directly.
 
 ![pr-CI-preview](https://user-images.githubusercontent.com/32004925/234617748-8bc4f0fd-b29a-4b01-b416-1c16eed03acb.png)
 
