@@ -314,7 +314,7 @@ describe('typography.Ellipsis', () => {
       const observeFn = jest.fn();
       const disconnectFn = jest.fn();
 
-      (global as any).IntersectionObserver = class MockIntersectionObserver {
+      (globalThis as any).IntersectionObserver = class MockIntersectionObserver {
         constructor(callback: () => IntersectionObserverCallback) {
           elementChangeCallback = callback;
         }

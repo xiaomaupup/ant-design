@@ -19,7 +19,7 @@ export default antfu({
   rules: {
     'node/prefer-global/process': 'off',
     'jsdoc/empty-tags': 'off',
-    'jest/no-export': 'off',
+    'ts/no-require-imports': 'off',
     'ts/explicit-function-return-type': 'off',
   },
 });
